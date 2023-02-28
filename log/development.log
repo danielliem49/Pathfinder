@@ -3841,3 +3841,25 @@ Completed 200 OK in 3ms (Views: 0.3ms | Allocations: 711)
   [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
   [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "first_name", "last_name", "bio") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "demo@user.io"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-02-28 22:09:22.103349"], ["updated_at", "2023-02-28 22:09:22.103349"], ["first_name", "Demo"], ["last_name", "Lition"], ["bio", nil]]
   [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/session" for ::1 at 2023-02-28 15:08:49 -0800
+Started GET "/favicon.ico" for ::1 at 2023-02-28 15:08:49 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"favicon"}
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1255)
+
+
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.9ms | Allocations: 15)
+Completed 200 OK in 20ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 4602)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-02-28 15:08:51 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"favicon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 336)
+
+

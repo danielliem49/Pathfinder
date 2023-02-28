@@ -1,0 +1,25 @@
+{
+  "name": "pathfinder",
+  "version": "1.0.0",
+  "description": "Pathfinder is a clone of the popular hiking app AllTrails.",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "engines": {
+    "node": "16.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielliem49/Pathfinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielliem49/Pathfinder/issues"
+  },
+  "homepage": "https://github.com/danielliem49/Pathfinder#readme"
+}

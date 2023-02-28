@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: pathfinder_production
-  username: pathfinder
-  password: <%= ENV["PATHFINDER_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
