@@ -1,6 +1,6 @@
 {
   "proxy": "http://localhost:5500",
-  "name": "frontend",
+  "name": "pathfinder_frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

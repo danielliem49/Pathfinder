@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, NavLink } from "react-router-dom";
 import * as sessionActions from "../../store/session";
 import './SignupForm.css';
 
@@ -38,58 +38,46 @@ function SignupFormPage() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <ul>
-                {errors.map(error => <li key={error}>{error}</li>)}
-            </ul>
-            <h2>Sign up today to start planning your next adventure</h2>
-            <label>
-                First Name
-                <input
-                    type="text"
-                    value={first_name}
-                    onChange={(e) => setFirst_name(e.target.value)}
-                    required
-                />
-            </label>
-            <label>
-                Last Name
-                <input
-                    type="text"
-                    value={last_name}
-                    onChange={(e) => setLast_name(e.target.value)}
-                    required
-                />
-            </label>
-            <label>
-                Email
-                <input
-                    type="text"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-            </label>
-            <label>
-                Password
-                <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-            </label>
-            <label>
-                Confirm Password
-                <input
-                    type="password"
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
-                    required
-                />
-            </label>
-            <button type="submit">Sign Up</button>
-        </form>
+        <>
+        <div className="signup-body">
+        <div className="signup-container">
+            <form className="signup-form" onSubmit={handleSubmit}>
+                <div className="signup-form-header">
+                    <h1>Sign up today to <br></br> start your next adventure.</h1>
+                </div>
+                <ul className="signup-errors">
+                    {errors.map(error => <li key={error}>{error}</li>)}
+                </ul>
+
+{/* Change Signupform inputs */}
+                <label className="signup-input-labels">First Name
+                    <input className="signup-inputs" type="text" value={first_name} onChange={(e) => setFirst_name(e.target.value)} required />
+                </label>
+                <label className="signup-input-labels">Last Name
+                    <input className="signup-inputs" type="text" value={last_name} onChange={(e) => setLast_name(e.target.value)} required />
+                </label>
+                <label className="signup-input-labels">Email
+                    <input className="signup-inputs" type="text" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                </label>   
+                <label className="signup-input-labels">Password
+                    <input className="signup-inputs" type="text" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                </label>
+                <label className="signup-input-labels">Confirm Password
+                    <input className="signup-inputs" type="text" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
+                </label> 
+                <br></br>
+                <br></br>
+                <button className="signup-button" type="submit">Create a free account</button>
+            </form> 
+
+            <div className="signup-form-group">
+                <span className="prenavlink-text">Already have an account? </span>
+                <NavLink to="/login" className="navlink">Log in</NavLink>
+            </div>
+
+        </div>
+        </div>
+        </>
     );
 }
 

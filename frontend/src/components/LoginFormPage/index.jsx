@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Redirect, NavLink } from 'react-router-dom';
 import './LoginForm.css';
 
 function LoginFormPage() {
@@ -37,30 +37,44 @@ function LoginFormPage() {
     }
 
     return (
-        <div class="container">
-            <form class="form" onSubmit={handleSubmit}>
-                <div class="form-header">
+        <>
+        <div className="login-body">
+        <div className="login-container">
+            <form className="login-form" onSubmit={handleSubmit}>
+                <div className="login-form-header">
                     <h1>Welcome back.</h1>
-                    <p>Log in and start exploring.</p>
+                    <h1>Log in and start exploring.</h1>
                 </div>
-                <ul class="errors">
+
+                <ul className="login-errors">
                     {errors.map(error => <li key={error}>{error}</li>)}
                 </ul>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="text" value={credential} onChange={(e) => setCredential(e.target.value)} required />
+
+                <div className='login-form-input-group'>
+                <input className="login-inputs" type="text" value={credential} onChange={(e) => setCredential(e.target.value)} required />
+                <span className="login-input-labels">Email Address</span>
                 </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+
+                <div className='login-form-input-group'>
+                <input className="login-inputs" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                <span className="login-input-labels">Password</span>
                 </div>
-                <div class="form-group">
-                    <button type="submit">Log In</button>
-                    <button type="submit" onClick={handleDemoLogin}>Demo Log In</button>
-                </div>
-            </form>
+
+                <br></br>
+                <br></br>
+                <button className="login-button" type="submit">Log In</button>
+                <button className="login-button" type="submit" onClick={handleDemoLogin}>Demo Log In</button>
+                
+            </form> 
+
+            <div className="login-navlink-group">
+                <span className="prenavlink-text">Don't have an account? </span>
+                <NavLink to="/signup" className="navlink">Sign Up for free</NavLink>
+            </div>
         </div>
-    );
+        </div>
+        </>
+    )
 }
 
 export default LoginFormPage;

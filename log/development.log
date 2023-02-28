@@ -2925,3 +2925,849 @@ Processing by Api::SessionsController#destroy as JSON
 Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 5128)
 
 
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 09:20:50 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1269)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-27 09:21:14 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"credential"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (12.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-27 17:21:15.048494"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 5.3ms | Allocations: 541)
+Completed 200 OK in 374ms (Views: 21.4ms | ActiveRecord: 34.7ms | Allocations: 20662)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-27 09:21:22 -0800
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-27 17:21:22.987202"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 3.9ms | Allocations: 5505)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2023-02-27 09:21:42 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"first_name"=>"Daniel", "last_name"=>"Liem", "email"=>"danielliem49@gmail.com", "password"=>"[FILTERED]", "user"=>{"email"=>"danielliem49@gmail.com", "first_name"=>"Daniel", "last_name"=>"Liem", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "danielliem49@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "first_name", "last_name", "bio") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "danielliem49@gmail.com"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-02-27 17:21:43.249940"], ["updated_at", "2023-02-27 17:21:43.249940"], ["first_name", "Daniel"], ["last_name", "Liem"], ["bio", nil]]
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:9:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "danielliem49@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-27 17:21:43.258192"], ["id", 2]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.2ms | Allocations: 271)
+Completed 200 OK in 279ms (Views: 0.7ms | ActiveRecord: 5.0ms | Allocations: 10489)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-27 09:21:46 -0800
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "danielliem49@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-27 17:21:46.222103"], ["id", 2]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 2.7ms | Allocations: 5412)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 09:30:02 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 17ms (Views: 0.3ms | Allocations: 664)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-27 09:37:08 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"credential"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (4.9ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-27 17:37:08.555815"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.8ms | Allocations: 219)
+Completed 200 OK in 341ms (Views: 1.3ms | ActiveRecord: 23.2ms | Allocations: 8452)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-27 09:37:19 -0800
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-27 17:37:19.617325"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+Completed 200 OK in 60ms (Views: 0.4ms | ActiveRecord: 4.9ms | Allocations: 5095)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-27 10:03:23 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"credential"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-27 18:03:24.337358"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 219)
+Completed 200 OK in 329ms (Views: 0.9ms | ActiveRecord: 30.3ms | Allocations: 8280)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-27 10:03:30 -0800
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-27 18:03:30.262788"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 2.9ms | Allocations: 5125)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 10:09:15 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 18ms (Views: 1.4ms | Allocations: 670)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 10:09:32 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 13ms (Views: 0.3ms | Allocations: 658)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 10:17:09 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 9ms (Views: 0.2ms | Allocations: 664)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 10:18:05 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 7ms (Views: 0.9ms | Allocations: 643)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 11:02:32 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 7ms (Views: 0.5ms | Allocations: 661)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 11:47:58 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 12ms (Views: 0.2ms | Allocations: 668)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-02-27 11:48:04 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 11:48:10 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 4ms (Views: 0.4ms | Allocations: 713)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-02-27 11:48:10 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 11:48:53 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 4ms (Views: 0.6ms | Allocations: 667)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 11:49:01 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 673)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 11:58:06 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 16ms (Views: 1.0ms | Allocations: 673)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 14:53:50 -0800
+
+ActiveRecord::NoDatabaseError - We could not find your database: hike_a_trail_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 14:53:57 -0800
+
+ActiveRecord::NoDatabaseError - We could not find your database: hike_a_trail_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 14:53:59 -0800
+
+ActiveRecord::NoDatabaseError - We could not find your database: hike_a_trail_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 14:54:05 -0800
+
+ActiveRecord::NoDatabaseError - We could not find your database: hike_a_trail_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 14:54:47 -0800
+
+ActiveRecord::NoDatabaseError - We could not find your database: hike_a_trail_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 14:55:01 -0800
+
+ActiveRecord::NoDatabaseError - We could not find your database: hike_a_trail_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 14:56:09 -0800
+
+ActiveRecord::NoDatabaseError - We could not find your database: hike_a_trail_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 14:56:28 -0800
+
+ActiveRecord::NoDatabaseError - We could not find your database: hike_a_trail_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 14:58:04 -0800
+
+ActiveRecord::NoDatabaseError - We could not find your database: hike_a_trail_development. Which can be found in the database configuration file located at config/database.yml.
+To resolve this issue:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hike_a_trail_development"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hike_a_trail_test"[0m
+  [1m[35m (146.3ms)[0m  [1m[35mCREATE DATABASE "hike_a_trail_development" ENCODING = 'unicode'[0m
+  [1m[35m (57.9ms)[0m  [1m[35mCREATE DATABASE "hike_a_trail_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "bio" character varying)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230226222940)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230221081840);
+
+[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-27 23:00:14.042070"], ["updated_at", "2023-02-27 23:00:14.042070"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "57d935402bbb7f727f6f3112d74a9de9c6c4c508"], ["created_at", "2023-02-27 23:00:14.048684"], ["updated_at", "2023-02-27 23:00:14.048684"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "first_name" character varying NOT NULL, "last_name" character varying NOT NULL, "bio" character varying)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230226222940)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230221081840);
+
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-27 23:00:14.078337"], ["updated_at", "2023-02-27 23:00:14.078337"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2023-02-27 23:00:14.080888"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "57d935402bbb7f727f6f3112d74a9de9c6c4c508"], ["created_at", "2023-02-27 23:00:14.083637"], ["updated_at", "2023-02-27 23:00:14.083637"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "first_name", "last_name", "bio") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "demo@user.io"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-02-27 23:00:14.373867"], ["updated_at", "2023-02-27 23:00:14.373867"], ["first_name", "Demo"], ["last_name", "Lition"], ["bio", nil]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Destroy (1.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "session_token", "created_at", "updated_at", "first_name", "last_name", "bio") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "demo@user.io"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-02-27 23:00:19.369351"], ["updated_at", "2023-02-27 23:00:19.369351"], ["first_name", "Demo"], ["last_name", "Lition"], ["bio", nil]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:00:32 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1208)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:01:17 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 760)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-27 15:13:34 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"danielliem49@gmail.com", "password"=>"[FILTERED]", "session"=>{"credential"=>"danielliem49@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "danielliem49@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+Completed 401 Unauthorized in 79ms (Views: 0.8ms | ActiveRecord: 21.4ms | Allocations: 10303)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-27 15:13:39 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"danielliem49@gmail.com", "password"=>"[FILTERED]", "session"=>{"credential"=>"danielliem49@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "danielliem49@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+Completed 401 Unauthorized in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1300)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-27 15:13:46 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"credential"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-27 23:13:46.957294"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.0ms | Allocations: 541)
+Completed 200 OK in 298ms (Views: 6.8ms | ActiveRecord: 11.9ms | Allocations: 14381)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-27 15:13:49 -0800
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-27 23:13:49.728882"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 5520)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:21:35 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 17ms (Views: 0.8ms | Allocations: 723)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:23:33 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 11ms (Views: 1.0ms | Allocations: 714)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:24:07 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.3ms | Allocations: 717)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:24:17 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | Allocations: 717)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:27:06 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 7ms (Views: 0.7ms | Allocations: 717)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:28:08 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | Allocations: 702)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:29:34 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.4ms | Allocations: 717)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:31:07 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 5ms (Views: 1.7ms | Allocations: 717)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:44:35 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 57ms (Views: 0.5ms | Allocations: 715)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:46:22 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 5ms (Views: 0.5ms | Allocations: 703)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:46:31 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | Allocations: 702)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:49:06 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 68ms (Views: 0.9ms | Allocations: 714)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 15:49:55 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.3ms | Allocations: 708)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-27 16:06:14 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"1", "password"=>"[FILTERED]", "session"=>{"credential"=>"1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+Completed 401 Unauthorized in 41ms (Views: 0.3ms | ActiveRecord: 15.6ms | Allocations: 4222)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-27 16:06:16 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"1", "password"=>"[FILTERED]", "session"=>{"credential"=>"1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1212)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-27 16:06:16 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"1", "password"=>"[FILTERED]", "session"=>{"credential"=>"1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1212)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-27 16:06:17 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"1", "password"=>"[FILTERED]", "session"=>{"credential"=>"1", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "1"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1230)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 16:10:31 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 714)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 16:12:46 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 4ms (Views: 0.5ms | Allocations: 702)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 16:38:12 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 33ms (Views: 0.7ms | Allocations: 702)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 16:39:47 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 6ms (Views: 0.8ms | Allocations: 726)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 17:09:43 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 6ms (Views: 0.3ms | Allocations: 708)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 17:13:21 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 5ms (Views: 0.2ms | Allocations: 702)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 17:15:51 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 5ms (Views: 0.4ms | Allocations: 714)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 17:15:55 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 714)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 17:34:41 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 10ms (Views: 0.5ms | Allocations: 711)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 21:37:24 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 9ms (Views: 0.6ms | Allocations: 718)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 22:04:46 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 12ms (Views: 1.4ms | Allocations: 711)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 22:06:28 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 7ms (Views: 1.0ms | Allocations: 712)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 22:07:00 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | Allocations: 705)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-27 22:07:21 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 723)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 09:19:10 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 15ms (Views: 1.3ms | Allocations: 700)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 09:19:22 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 717)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 09:22:12 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 13ms (Views: 1.3ms | Allocations: 708)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 09:23:07 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 4ms (Views: 0.5ms | Allocations: 717)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 09:26:12 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 6ms (Views: 0.6ms | Allocations: 711)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 09:26:53 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.3ms | Allocations: 705)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 09:29:15 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 4ms (Views: 0.3ms | Allocations: 717)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 09:30:39 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 6ms (Views: 0.3ms | Allocations: 720)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 09:30:51 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 705)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 10:20:31 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 8ms (Views: 0.4ms | Allocations: 711)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 10:21:24 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 714)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 10:25:08 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 5ms (Views: 0.9ms | Allocations: 705)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 10:32:16 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 6ms (Views: 0.4ms | Allocations: 708)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 10:37:54 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 6ms (Views: 0.4ms | Allocations: 723)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 10:50:17 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 10ms (Views: 0.7ms | Allocations: 705)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 10:51:16 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | Allocations: 693)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 10:52:03 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 5ms (Views: 1.4ms | Allocations: 708)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 11:03:56 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 5ms (Views: 0.3ms | Allocations: 718)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 11:04:16 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 723)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 11:07:24 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 14ms (Views: 0.1ms | Allocations: 697)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 11:08:44 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 702)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 11:10:45 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 3ms (Views: 0.4ms | Allocations: 702)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 11:12:54 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 1.1ms | Allocations: 705)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 11:19:28 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 6ms (Views: 0.2ms | Allocations: 702)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-28 11:19:59 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"credential"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (2.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-28 19:19:59.537831"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (20.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.5ms | Allocations: 220)
+Completed 200 OK in 372ms (Views: 5.0ms | ActiveRecord: 42.9ms | Allocations: 8392)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-28 11:20:04 -0800
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-02-28 19:20:04.089544"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 5139)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 11:25:48 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 5ms (Views: 0.4ms | Allocations: 705)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 11:28:26 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 12ms (Views: 0.5ms | Allocations: 726)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 11:30:13 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 6ms (Views: 0.2ms | Allocations: 702)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 11:30:18 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 693)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 12:32:02 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 3ms (Views: 0.2ms | Allocations: 693)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 12:34:42 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | Allocations: 705)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 12:34:58 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 729)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 12:50:54 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 8ms (Views: 0.4ms | Allocations: 721)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 13:07:00 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 6ms (Views: 0.2ms | Allocations: 715)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 13:08:50 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 3ms (Views: 0.3ms | Allocations: 711)
+
+

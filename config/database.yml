@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: authenticate_me_development
+  database: pathfinder_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: authenticate_me
+  #username: hike_a_trail
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: authenticate_me_test
+  database: pathfinder_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: authenticate_me_production
-  username: authenticate_me
-  password: <%= ENV["AUTHENTICATE_ME_DATABASE_PASSWORD"] %>
+  database: pathfinder_production
+  username: pathfinder
+  password: <%= ENV["PATHFINDER_DATABASE_PASSWORD"] %>
