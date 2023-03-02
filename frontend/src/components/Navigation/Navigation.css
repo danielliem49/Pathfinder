@@ -1,0 +1,46 @@
+
+/* for whole app */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* for navbar */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: 60px;
+    padding: 0 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.nav-login-button {
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #2b381f;
+    height: 32px;
+    padding: 0 16px;
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+.nav-login-button:hover {
+    background-color: #c6cac2;
+}
+
+.nav-logo {
+    background-image: url('/assets/pathfinder-logo-banner.png');
+    background-size: 120px;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 40px;
+    margin-left: -30px;
+}

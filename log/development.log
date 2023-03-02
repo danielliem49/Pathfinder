@@ -3863,3 +3863,2168 @@ Processing by StaticPagesController#frontend_index as */*
 Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 336)
 
 
+Started GET "/api/session" for ::1 at 2023-02-28 16:03:40 -0800
+Started GET "/favicon.ico" for ::1 at 2023-02-28 16:03:40 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"favicon"}
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1330)
+
+
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 12)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.0ms | Allocations: 7336)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-02-28 16:03:42 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"favicon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 323)
+
+
+Started GET "/api/session" for ::1 at 2023-02-28 16:24:30 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 24ms (Views: 0.8ms | Allocations: 773)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-02-28 16:24:30 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"favicon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 1.5ms | Allocations: 288)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-02-28 16:24:39 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"favicon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 3.6ms | Allocations: 286)
+
+
+Started GET "/favicon.ico" for ::1 at 2023-02-28 16:24:41 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"favicon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.3ms | Allocations: 283)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 16:25:44 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1398)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:06:51 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 7ms (Views: 0.4ms | Allocations: 802)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:07:16 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 786)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:07:48 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 753)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:08:15 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 9ms (Views: 1.9ms | Allocations: 789)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:08:24 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 770)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:08:36 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 779)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:08:44 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 767)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:09:58 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 770)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:10:43 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 3ms (Views: 0.3ms | Allocations: 771)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-02-28 17:10:48 -0800
+Processing by StaticPagesController#frontend_index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 15)
+Completed 200 OK in 7ms (Views: 4.4ms | Allocations: 2325)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:11:03 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.4ms | Allocations: 852)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:14:28 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 5ms (Views: 0.8ms | Allocations: 779)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:21:08 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 8ms (Views: 0.3ms | Allocations: 773)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:27:56 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 6ms (Views: 0.4ms | Allocations: 776)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 17:59:57 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 10ms (Views: 0.7ms | Allocations: 764)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-28 18:13:25 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"credential"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (2.1ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 02:13:26.256548"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 2.0ms | Allocations: 538)
+Completed 200 OK in 433ms (Views: 5.7ms | ActiveRecord: 27.6ms | Allocations: 22853)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-28 18:13:41 -0800
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 02:13:41.862934"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+Completed 200 OK in 13ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 5636)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:40:35 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 8)
+Completed 200 OK in 11ms (Views: 6.5ms | Allocations: 326)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 19:40:38 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 7ms (Views: 0.6ms | Allocations: 782)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:40:39 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.8ms | Allocations: 6)
+Completed 200 OK in 6ms (Views: 5.1ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.jpg" for 127.0.0.1 at 2023-02-28 19:41:06 -0800
+Processing by StaticPagesController#frontend_index as JPEG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.0ms | Allocations: 282)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:41:10 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.3ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:42:13 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.4ms | Allocations: 284)
+
+
+Started GET "/frontend/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:47:13 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"frontend/assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 1.1ms | Allocations: 6)
+Completed 200 OK in 10ms (Views: 5.7ms | Allocations: 280)
+
+
+Started GET "/frontend/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:47:19 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"frontend/assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 280)
+
+
+Started GET "/frontend/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:47:23 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"frontend/assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/fr/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:47:26 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"fr/assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:47:28 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.3ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:47:45 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:47:59 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.1ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:48:01 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.2ms | Allocations: 280)
+
+
+Started GET "/frontend/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:48:07 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"frontend/assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.3ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 19:48:16 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 282)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 20:50:06 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 7ms (Views: 0.7ms | Allocations: 762)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 20:50:06 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.6ms | Allocations: 6)
+Completed 200 OK in 4ms (Views: 2.7ms | Allocations: 281)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-28 20:51:18 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"credential"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 04:51:18.368699"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.7ms | Allocations: 219)
+Completed 200 OK in 335ms (Views: 2.3ms | ActiveRecord: 28.3ms | Allocations: 8559)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-28 20:51:32 -0800
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 04:51:32.129461"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 5248)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-28 20:55:58 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"credential"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+  [1m[36mUser Exists? (4.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 04:55:58.382056"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.5ms | Allocations: 217)
+Completed 200 OK in 280ms (Views: 0.9ms | ActiveRecord: 11.0ms | Allocations: 5531)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-28 20:56:03 -0800
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 04:56:03.665916"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 5197)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-28 20:56:20 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"credential"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 04:56:20.584575"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 0.1ms | Allocations: 217)
+Completed 200 OK in 280ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 5534)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-28 20:56:25 -0800
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 04:56:25.757524"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 5197)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:01:09 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 292)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:10:55 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:11:06 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 8ms (Views: 5.6ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:11:17 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 280)
+
+
+Started GET "/frontend/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:11:28 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"frontend/assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 1.0ms | Allocations: 280)
+
+
+Started GET "/frontend/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:11:37 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"frontend/assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 281)
+
+
+Started GET "/frontend/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:11:39 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"frontend/assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 281)
+
+
+Started GET "/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:11:51 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 6ms (Views: 3.7ms | Allocations: 280)
+
+
+Started GET "/frontend/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:11:54 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"frontend/assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:12:05 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.3ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:15:22 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 1.0ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:15:25 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:15:38 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 1.9ms | Allocations: 6)
+Completed 200 OK in 3ms (Views: 2.7ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:15:41 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.3ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:16:15 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 8ms (Views: 0.9ms | Allocations: 782)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:16:15 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 6.4ms | Allocations: 225)
+Completed 200 OK in 11ms (Views: 10.2ms | Allocations: 504)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:16:15 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:16:16 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 773)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:16:16 -0800
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:16:16 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.6ms | Allocations: 58)
+Completed 200 OK in 2ms (Views: 1.4ms | Allocations: 355)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:16:47 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.3ms | Allocations: 770)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:16:47 -0800
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:16:47 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.9ms | Allocations: 30)
+Completed 200 OK in 12ms (Views: 9.6ms | Allocations: 315)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 1.1ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:16:49 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 773)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:16:49 -0800
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:16:49 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.3ms | Allocations: 301)
+
+
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 1.3ms | Allocations: 909)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:16:51 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 776)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:16:51 -0800
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:16:51 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 280)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:17:48 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 15ms (Views: 13.7ms | Allocations: 282)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:17:50 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 280)
+
+
+Started GET "/assets/bgd-1.jpg" for 127.0.0.1 at 2023-02-28 21:17:57 -0800
+Processing by StaticPagesController#frontend_index as JPEG
+  Parameters: {"path"=>"assets/bgd-1"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.1ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:18:02 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:18:25 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 1.8ms | Allocations: 6)
+Completed 200 OK in 19ms (Views: 9.9ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:18:28 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:18:39 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:23:52 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.7ms | Allocations: 6)
+Completed 200 OK in 4ms (Views: 2.8ms | Allocations: 281)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:25:47 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 4ms (Views: 2.3ms | Allocations: 281)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:25:49 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:25:50 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:25:52 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:25:53 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:25:54 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:25:55 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:25:56 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:29:29 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.6ms | Allocations: 6)
+Completed 200 OK in 4ms (Views: 1.9ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:29:30 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 281)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:30:46 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.4ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:30:47 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:31:35 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 8ms (Views: 0.4ms | Allocations: 770)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:31:35 -0800
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:31:35 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+Processing by StaticPagesController#frontend_index as PNG
+  Rendered public/index.html (Duration: 0.6ms | Allocations: 401)
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+Completed 200 OK in 1ms (Views: 1.0ms | Allocations: 700)
+
+
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.4ms | Allocations: 482)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:33:43 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 6ms (Views: 0.6ms | Allocations: 779)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:33:43 -0800
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:33:43 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendered public/index.html (Duration: 1.2ms | Allocations: 315)
+Completed 200 OK in 4ms (Views: 3.0ms | Allocations: 745)
+
+
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 1.1ms | Allocations: 545)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:34:53 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | Allocations: 767)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:34:53 -0800
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:34:53 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+Processing by StaticPagesController#frontend_index as PNG
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 335)
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+Completed 200 OK in 1ms (Views: 1.2ms | Allocations: 633)
+
+
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.4ms | Allocations: 483)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:35:01 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 2ms (Views: 0.2ms | Allocations: 770)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:35:02 -0800
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:35:02 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.7ms | Allocations: 21)
+Completed 200 OK in 3ms (Views: 2.3ms | Allocations: 303)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.3ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:36:07 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 12ms (Views: 0.6ms | Allocations: 764)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:36:07 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 6)
+Completed 200 OK in 18ms (Views: 9.1ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:36:07 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:36:39 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 10ms (Views: 1.0ms | Allocations: 770)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:36:39 -0800
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:36:39 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendered public/index.html (Duration: 0.8ms | Allocations: 296)
+Completed 200 OK in 4ms (Views: 2.0ms | Allocations: 833)
+
+
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 4ms (Views: 4.3ms | Allocations: 546)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:38:02 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 5ms (Views: 0.6ms | Allocations: 764)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:38:03 -0800
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:38:03 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 40)
+Completed 200 OK in 6ms (Views: 3.5ms | Allocations: 339)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 1.3ms | Allocations: 281)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:38:18 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.0ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:38:21 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:40:50 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 6)
+Completed 200 OK in 9ms (Views: 6.6ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:41:00 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 6ms (Views: 4.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:43:15 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 7ms (Views: 3.7ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:43:26 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 281)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:47:23 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.6ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:47:38 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 1.2ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:47:47 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:47:48 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:50:55 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 11ms (Views: 0.8ms | Allocations: 770)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:50:55 -0800
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:50:55 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 1.7ms | Allocations: 26)
+Completed 200 OK in 27ms (Views: 22.3ms | Allocations: 307)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 1.0ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:50:56 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 788)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:50:56 -0800
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:50:56 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 293)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 21:51:00 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | Allocations: 755)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 21:51:00 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:51:06 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 0.7ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:51:38 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 282)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:52:14 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:52:17 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:52:19 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:52:21 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:52:22 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:54:04 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 6)
+Completed 200 OK in 7ms (Views: 4.8ms | Allocations: 281)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:54:33 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.4ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:55:41 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:55:57 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 6ms (Views: 3.9ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:56:00 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 281)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:56:03 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:56:05 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 21:56:25 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.4ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:00:21 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.7ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:00:25 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:00:26 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:00:27 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.3ms | Allocations: 281)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:02:33 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 3ms (Views: 1.9ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:03:48 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 4ms (Views: 2.3ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:04:45 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:04:48 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:04:49 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:04:53 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.3ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:05:04 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.4ms | Allocations: 281)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:05:06 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:05:07 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:05:10 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:05:11 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:05:12 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:06:35 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 6)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:06:46 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:07:17 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 1.0ms | Allocations: 282)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:07:27 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:07:28 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.8ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:07:34 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:07:56 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.4ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:07:59 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 22:08:40 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 7ms (Views: 0.5ms | Allocations: 759)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 22:08:40 -0800
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:08:40 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 2.0ms | Allocations: 192)
+Completed 200 OK in 7ms (Views: 3.4ms | Allocations: 468)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.3ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 22:10:48 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 9ms (Views: 0.5ms | Allocations: 767)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:10:48 -0800
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 22:10:48 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.6ms | Allocations: 63)
+Completed 200 OK in 4ms (Views: 2.5ms | Allocations: 351)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:11:41 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 6)
+Completed 200 OK in 6ms (Views: 5.1ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:14:46 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.7ms | Allocations: 6)
+Completed 200 OK in 4ms (Views: 2.5ms | Allocations: 280)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-28 22:15:55 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"asd", "password"=>"[FILTERED]", "session"=>{"credential"=>"asd", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "asd"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+Completed 401 Unauthorized in 68ms (Views: 0.6ms | ActiveRecord: 17.9ms | Allocations: 4153)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-02-28 22:18:37 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 779)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-02-28 22:18:37 -0800
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:18:37 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 8)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 288)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-28 22:22:13 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"credential"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (2.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 06:22:13.444210"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.3ms | Allocations: 219)
+Completed 200 OK in 328ms (Views: 2.0ms | ActiveRecord: 27.5ms | Allocations: 8353)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-28 22:23:10 -0800
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 06:23:10.865411"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+Completed 200 OK in 20ms (Views: 0.8ms | ActiveRecord: 4.2ms | Allocations: 5205)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:23:13 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:23:31 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 285)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:23:34 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:23:35 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:23:44 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:23:46 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:24:26 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.7ms | Allocations: 6)
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:28:15 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/assets/pathfinder-logo-icon.png" for 127.0.0.1 at 2023-02-28 22:28:19 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/assets/pathfindero-icon.png" for 127.0.0.1 at 2023-02-28 22:48:18 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfindero-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-02-28 22:48:19 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.3ms | Allocations: 281)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-02-28 22:52:47 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"credential"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (1.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 06:52:47.634402"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 2.2ms | Allocations: 219)
+Completed 200 OK in 335ms (Views: 2.9ms | ActiveRecord: 17.0ms | Allocations: 8396)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-02-28 22:52:53 -0800
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 06:52:53.161328"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+Completed 200 OK in 28ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 5202)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-02-28 22:52:54 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 09:07:52 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 14ms (Views: 0.8ms | Allocations: 768)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:07:52 -0800
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-03-01 09:07:52 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.7ms | Allocations: 6)
+Completed 200 OK in 7ms (Views: 4.4ms | Allocations: 281)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.9ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 09:07:59 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 3ms (Views: 0.2ms | Allocations: 779)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-03-01 09:07:59 -0800
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:07:59 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 12ms (Views: 2.8ms | Allocations: 303)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 09:09:11 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 4ms (Views: 0.4ms | Allocations: 764)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-03-01 09:09:11 -0800
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:09:11 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.8ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 3.0ms | Allocations: 287)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.3ms | Allocations: 280)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2023-03-01 09:09:19 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"credential"=>"demo@user.io", "password"=>"[FILTERED]", "session"=>{"credential"=>"demo@user.io", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29:in `find_by_credentials'
+  [1m[36mUser Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (2.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 17:09:19.884226"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 1.1ms | Allocations: 219)
+Completed 200 OK in 341ms (Views: 1.7ms | ActiveRecord: 23.4ms | Allocations: 8420)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 09:30:24 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/show.json.jbuilder (Duration: 26.6ms | Allocations: 231)
+Completed 200 OK in 94ms (Views: 30.8ms | ActiveRecord: 30.6ms | Allocations: 4443)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-03-01 09:30:59 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-03-01 09:31:02 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2023-03-01 09:31:32 -0800
+Processing by Api::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `current_user'
+  [1m[36mUser Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:75:in `generate_unique_session_token'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo@user.io"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mUser Update (2.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "[FILTERED]"], ["updated_at", "2023-03-01 17:31:32.566597"], ["id", 1]]
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:63:in `reset_session_token!'
+Completed 200 OK in 55ms (Views: 0.4ms | ActiveRecord: 13.2ms | Allocations: 5224)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 09:31:35 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 794)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-03-01 09:31:35 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:33:33 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 09:33:36 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 21ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 776)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-03-01 09:33:36 -0800
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:33:36 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.6ms | Allocations: 6)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 338)
+
+
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 284)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:34:42 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.6ms | Allocations: 6)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:34:44 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:35:37 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:35:41 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-03-01 09:38:41 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.5ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 09:38:45 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 8ms (Views: 0.4ms | Allocations: 779)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:38:45 -0800
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-03-01 09:38:45 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendered public/index.html (Duration: 2.3ms | Allocations: 507)
+Completed 200 OK in 13ms (Views: 11.3ms | Allocations: 871)
+
+
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.9ms | Allocations: 208)
+Completed 200 OK in 2ms (Views: 2.1ms | Allocations: 578)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-03-01 09:38:53 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-03-01 09:39:00 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-03-01 09:39:09 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-logo-banner.png" for 127.0.0.1 at 2023-03-01 09:39:12 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-logo-banner"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 280)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-01 09:40:49 -0800
+Processing by StaticPagesController#frontend_index as HTML
+  Parameters: {"path"=>"login"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.3ms | Allocations: 281)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 09:41:11 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 15ms (Views: 0.8ms | Allocations: 776)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:41:12 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 6)
+Completed 200 OK in 26ms (Views: 24.9ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 09:41:31 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 8ms (Views: 0.2ms | Allocations: 776)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:41:32 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 6)
+Completed 200 OK in 54ms (Views: 47.3ms | Allocations: 281)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:49:32 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 6)
+Completed 200 OK in 5ms (Views: 3.3ms | Allocations: 281)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 09:56:05 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 24ms (Views: 0.8ms | Allocations: 773)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:56:05 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:56:08 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.0ms | Allocations: 280)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:56:10 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 0.6ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 09:58:05 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 8ms (Views: 0.2ms | Allocations: 791)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 09:58:09 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.6ms | Allocations: 6)
+Completed 200 OK in 16ms (Views: 7.6ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 10:02:45 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 8ms (Views: 1.1ms | Allocations: 749)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 10:02:45 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 1.2ms | Allocations: 6)
+Completed 200 OK in 10ms (Views: 6.9ms | Allocations: 280)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 10:20:43 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 13ms (Views: 3.3ms | Allocations: 785)
+
+
+Started GET "/assets/pathfinder-icon.png" for 127.0.0.1 at 2023-03-01 10:20:43 -0800
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"assets/pathfinder-icon"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.5ms | Allocations: 281)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 10:21:11 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 8ms (Views: 0.3ms | Allocations: 764)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 10:21:52 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 4ms (Views: 0.4ms | Allocations: 764)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 10:27:30 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 7ms (Views: 0.4ms | Allocations: 782)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 10:29:09 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 5ms (Views: 0.6ms | Allocations: 779)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 10:46:32 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 18ms (Views: 1.1ms | Allocations: 776)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 10:50:50 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 18ms (Views: 0.8ms | Allocations: 779)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 10:51:37 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 14ms (Views: 1.2ms | Allocations: 773)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 10:54:43 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 6ms (Views: 0.4ms | Allocations: 770)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2272054490536738320)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTrails (20230301193007)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2272054490536738320)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2272054490536738320)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTrails (20230301193007)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2272054490536738320)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2272054490536738320)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTrails (20230301193007)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (22.7ms)[0m  [1m[35mCREATE TABLE "trails" ("id" bigserial primary key, "trail_name" character varying NOT NULL, "latitude" float NOT NULL, "longitude" float NOT NULL, "length" integer NOT NULL, "difficulty_level" character varying NOT NULL, "elevation_gain" integer NOT NULL, "route_type" character varying NOT NULL, "estimated_time" character varying NOT NULL, "description" text NOT NULL, "tags" character varying DEFAULT '' NOT NULL, "park_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_27972d635e"
+FOREIGN KEY ("park_id")
+  REFERENCES "parks" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2272054490536738320)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2272054490536738320)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeUserbioTypeStringToText (20230301193739)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "users" ALTER COLUMN "bio" TYPE text[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230301193739"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParks (20230301194308)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE TABLE "parks" ("id" bigserial primary key, "park_name" character varying NOT NULL, "latitude" float NOT NULL, "longitude" float NOT NULL, "contact" character varying NOT NULL, "description" text NOT NULL, "country" character varying NOT NULL, "state" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_parks_on_park_name" ON "parks" ("park_name")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230301194308"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2272054490536738320)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2272054490536738320)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTrails (20230301195132)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "trails" ("id" bigserial primary key, "trail_name" character varying NOT NULL, "latitude" float NOT NULL, "longitude" float NOT NULL, "length" integer NOT NULL, "difficulty_level" character varying NOT NULL, "elevation_gain" integer NOT NULL, "route_type" character varying NOT NULL, "estimated_time" character varying NOT NULL, "description" text NOT NULL, "tags" character varying DEFAULT '' NOT NULL, "park_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_27972d635e"
+FOREIGN KEY ("park_id")
+  REFERENCES "parks" ("id")
+)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE INDEX "index_trails_on_park_id" ON "trails" ("park_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_trails_on_trail_name" ON "trails" ("trail_name")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230301195132"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2272054490536738320)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 11:56:02 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1034)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 16:03:20 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 6ms (Views: 0.8ms | Allocations: 1016)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 16:23:09 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 7ms (Views: 0.9ms | Allocations: 1039)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-01 16:23:13 -0800
+Processing by Api::SessionsController#show as JSON
+Completed 200 OK in 4ms (Views: 0.3ms | Allocations: 780)
+
+

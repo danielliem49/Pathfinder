@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 
-
 function Navigation() {
     const sessionUser = useSelector(state => state.session.user);
 
@@ -17,19 +16,29 @@ function Navigation() {
     } else {
         sessionLinks = (
             <>
-                <NavLink to="/login">Log In</NavLink>
+                <NavLink to="/login"><button className='nav-login-button'>Log In</button></NavLink>
             </>
         );
     }
 
     return (
-        <ul>
-            <li>
-                <NavLink exact to="/">Home</NavLink>
+        <div className='nav-container'>
+
+            <div>
+                <div>
+                    <NavLink to="/">
+                    <div className='nav-logo'></div>
+                    </NavLink>           
+                </div>
+            </div>
+
+            <div>
                 {sessionLinks}
-            </li>
-        </ul>
+            </div>
+
+        </div>
     );
 }
 
 export default Navigation;
+

@@ -46,6 +46,7 @@ function LoginFormPage() {
                     <h1>Log in and start exploring.</h1>
                 </div>
 
+
                 <ul className="login-errors">
                     {errors.map(error => <li key={error}>{error}</li>)}
                 </ul>
@@ -60,16 +61,17 @@ function LoginFormPage() {
                 <span className="login-input-labels">Password</span>
                 </div>
 
-                <br></br>
-                <br></br>
+                <div className="icon"></div>
+
+
                 <button className="login-button" type="submit">Log In</button>
                 <button className="login-button" type="submit" onClick={handleDemoLogin}>Demo Log In</button>
                 
             </form> 
 
-            <div className="login-navlink-group">
-                <span className="prenavlink-text">Don't have an account? </span>
-                <NavLink to="/signup" className="navlink">Sign Up for free</NavLink>
+            <div className="login-signup-link-group">
+                <span>Don't have an account? </span>
+                <NavLink to="/signup" className="login-signup-link">Sign Up for free</NavLink>
             </div>
         </div>
         </div>

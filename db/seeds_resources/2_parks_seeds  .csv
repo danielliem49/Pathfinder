@@ -1,0 +1,1 @@
+park_name : string,latitude : float,longitude : float,contact : string,description : text,country : string,state : string

@@ -17,13 +17,14 @@ ApplicationRecord.transaction do
     ApplicationRecord.connection.reset_pk_sequence!('users')
 
     puts "Creating users..."
-    # Create one user with an easy to remember username, email, and password:
-    User.create!(
-    first_name: 'Demo',
-    last_name:'Lition', 
-    email: 'demo@user.io', 
-    password: 'password'
-    )
+    
+    # # Create one user with an easy to remember username, email, and password:
+    # User.create!(
+    # first_name: 'Demo',
+    # last_name:'Lition', 
+    # email: 'demo@user.io', 
+    # password: 'password'
+    # )
 
     # # More users
     # 10.times do 

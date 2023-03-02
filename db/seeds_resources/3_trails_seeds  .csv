@@ -1,0 +1,2 @@
+trail_name : string,latitude : float,longitude : float,length : integer,difficulty_level : string,elevation_gain : integer,route_type : string,estimated_time : string,description : text,tags : string,park_id : bigint
+,,,,,,,,,,

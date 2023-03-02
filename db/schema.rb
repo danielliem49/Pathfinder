@@ -10,9 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_26_222940) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_01_195132) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "parks", force: :cascade do |t|
+    t.string "park_name", null: false
+    t.float "latitude", null: false
+    t.float "longitude", null: false
+    t.string "contact", null: false
+    t.text "description", null: false
+    t.string "country", null: false
+    t.string "state", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["park_name"], name: "index_parks_on_park_name", unique: true
+  end
+
+  create_table "trails", force: :cascade do |t|
+    t.string "trail_name", null: false
+    t.float "latitude", null: false
+    t.float "longitude", null: false
+    t.integer "length", null: false
+    t.string "difficulty_level", null: false
+    t.integer "elevation_gain", null: false
+    t.string "route_type", null: false
+    t.string "estimated_time", null: false
+    t.text "description", null: false
+    t.string "tags", default: "", null: false
+    t.bigint "park_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["park_id"], name: "index_trails_on_park_id"
+    t.index ["trail_name"], name: "index_trails_on_trail_name", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
@@ -22,9 +53,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_26_222940) do
     t.datetime "updated_at", null: false
     t.string "first_name", null: false
     t.string "last_name", null: false
-    t.string "bio"
+    t.text "bio"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["session_token"], name: "index_users_on_session_token", unique: true
   end
 
+  add_foreign_key "trails", "parks"
 end

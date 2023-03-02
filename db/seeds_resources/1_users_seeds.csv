@@ -1,0 +1,6 @@
+first_name : string,last_name : string,email : string,password : string
+,Lition,demo@user.io,password
+Daniel,Liem,danielliem49@gmail.com,password
+Chris,Liem,chris_liem93@yahoo.com,password
+Alexander,Liem,alex_liem@live.com,password
+Jonathan,Liem,jonathan_liem@hotmail.com,password
