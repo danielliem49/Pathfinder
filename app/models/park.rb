@@ -16,7 +16,7 @@
 class Park < ApplicationRecord
 
     validates_presence_of :park_name, :latitude, :longitude, :contact, :description, :country, :state
-    validates_uniqueness_of :trail_name
+    validates_uniqueness_of :park_name
 
     has_many :trails,
         foreign_key: :park_id,

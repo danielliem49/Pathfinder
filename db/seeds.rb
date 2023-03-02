@@ -6,15 +6,20 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+require_relative "easy_seeds.rb"
 
-ApplicationRecord.transaction do 
+# ApplicationRecord.transaction do 
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
+    Trail.destroy_all
+    Park.destroy_all
     User.destroy_all
 
     puts "Resetting primary keys..."
     # For easy testing, so that after seeding, the first `User` has `id` of 1
     ApplicationRecord.connection.reset_pk_sequence!('users')
+    ApplicationRecord.connection.reset_pk_sequence!('parks')
+    ApplicationRecord.connection.reset_pk_sequence!('trails')
 
     puts "Creating users..."
     
@@ -36,5 +41,9 @@ ApplicationRecord.transaction do
     # }) 
     # end
 
+    
+    class_names = [User, Park, Trail]
+    EasySeeds.create_easy_seed_data(class_names)
+
     puts "Done!"
-end
+# end

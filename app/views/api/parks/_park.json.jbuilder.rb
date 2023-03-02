@@ -1,0 +1,1 @@
+json.extract! park, :id, :park_name, :latitude, :longitude, :contact, :description, :country, :state

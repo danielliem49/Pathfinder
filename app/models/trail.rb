@@ -6,7 +6,7 @@
 #  trail_name       :string           not null
 #  latitude         :float            not null
 #  longitude        :float            not null
-#  length           :integer          not null
+#  length           :float            not null
 #  difficulty_level :string           not null
 #  elevation_gain   :integer          not null
 #  route_type       :string           not null

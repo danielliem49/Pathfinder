@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_01_195132) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_02_015728) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,7 +31,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_195132) do
     t.string "trail_name", null: false
     t.float "latitude", null: false
     t.float "longitude", null: false
-    t.integer "length", null: false
+    t.float "length", null: false
     t.string "difficulty_level", null: false
     t.integer "elevation_gain", null: false
     t.string "route_type", null: false
