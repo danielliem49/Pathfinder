@@ -38,43 +38,41 @@ function LoginFormPage() {
 
     return (
         <>
-        <div className="login-body">
-        <div className="login-container">
-            <form className="login-form" onSubmit={handleSubmit}>
-                <div className="login-form-header">
-                    <h1>Welcome back.</h1>
-                    <h1>Log in and start exploring.</h1>
+            <div className="login-body">
+                <div className="login-container">
+                    <form className="login-form" onSubmit={handleSubmit}>
+                        <div className="login-form-header">
+                            <h1>Welcome back.</h1>
+                            <h1>Log in and start exploring.</h1>
+                        </div>
+
+
+                        <ul className="login-errors">
+                            {errors.map(error => <li key={error}>{error}</li>)}
+                        </ul>
+
+                        <div className='login-form-input-group'>
+                            <input className="login-inputs" type="text" value={credential} onChange={(e) => setCredential(e.target.value)} required />
+                            <span className="login-input-labels">Email Address</span>
+                        </div>
+
+                        <div className='login-form-input-group'>
+                            <input className="login-inputs" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                            <span className="login-input-labels">Password</span>
+                        </div>
+
+                        <div className="icon"></div>
+
+                        <button className="login-button" type="submit">Log In</button>
+                        <button className="login-button" type="submit" onClick={handleDemoLogin}>Demo Log In</button>
+                    </form>
+
+                    <div className="login-signup-link-group">
+                        <span>Don't have an account? </span>
+                        <NavLink to="/signup" className="login-signup-link">Sign Up for free</NavLink>
+                    </div>
                 </div>
-
-
-                <ul className="login-errors">
-                    {errors.map(error => <li key={error}>{error}</li>)}
-                </ul>
-
-                <div className='login-form-input-group'>
-                <input className="login-inputs" type="text" value={credential} onChange={(e) => setCredential(e.target.value)} required />
-                <span className="login-input-labels">Email Address</span>
-                </div>
-
-                <div className='login-form-input-group'>
-                <input className="login-inputs" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-                <span className="login-input-labels">Password</span>
-                </div>
-
-                <div className="icon"></div>
-
-
-                <button className="login-button" type="submit">Log In</button>
-                <button className="login-button" type="submit" onClick={handleDemoLogin}>Demo Log In</button>
-                
-            </form> 
-
-            <div className="login-signup-link-group">
-                <span>Don't have an account? </span>
-                <NavLink to="/signup" className="login-signup-link">Sign Up for free</NavLink>
             </div>
-        </div>
-        </div>
         </>
     )
 }

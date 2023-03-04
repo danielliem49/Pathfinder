@@ -5,6 +5,9 @@ import Splash from "./components/Splash";
 import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
+import TrailShow from "./components/TrailShow";
+import ParkShow from "./components/ParkShow";
+
 
 function App() {
   return (
@@ -16,6 +19,12 @@ function App() {
         </Route>
         <Route path="/signup">
           <SignupFormPage />
+        </Route>
+        <Route path="/trails/:trailId">
+          <TrailShow />
+        </Route>
+        <Route path="/parks/:parkId">
+          <ParkShow />
         </Route>
         <Route path="/">
           <Splash />

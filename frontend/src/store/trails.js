@@ -35,3 +35,17 @@ export const getTrails = (state) => {
 export const getTrail = (trailId) => (state) => {
     return (state.trails ? state.trails[trailId] : null)
 }
+
+export default function trailsReducer(oldState = {}, action) {
+    const newState = { ...oldState };
+    switch (action.type) {
+        case RECEIVE_TRAILS:
+            return action.trails;
+        case RECEIVE_TRAIL:
+            const trail = action.trail;
+            newState[trail.id] = trail;
+            return newState;
+        default:
+            return oldState;
+    }
+}

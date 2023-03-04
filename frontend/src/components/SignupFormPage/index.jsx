@@ -39,21 +39,21 @@ function SignupFormPage() {
 
     return (
         <>
-        <div className="signup-body">
-        <div className="signup-container">
-            <form className="signup-form" onSubmit={handleSubmit}>
-                <div className="signup-form-header">
-                    <h1>Sign up today. </h1>
-                    <h1>And start your next adventure.</h1>
-                </div>
-                <ul className="signup-errors">
-                    {errors.map(error => <li key={error}>{error}</li>)}
-                </ul>
+            <div className="signup-body">
+                <div className="signup-container">
+                    <form className="signup-form" onSubmit={handleSubmit}>
+                        <div className="signup-form-header">
+                            <h1>Sign up today. </h1>
+                            <h1>And start your next adventure.</h1>
+                        </div>
+                        <ul className="signup-errors">
+                            {errors.map(error => <li key={error}>{error}</li>)}
+                        </ul>
 
-                <div className='signup-form-input-group'>
-                    <input className="signup-inputs" type="text" value={first_name} onChange={(e) => setFirst_name(e.target.value)} required />
-                    <span className="signup-input-labels">First Name</span>
-                </div>
+                        <div className='signup-form-input-group'>
+                            <input className="signup-inputs" type="text" value={first_name} onChange={(e) => setFirst_name(e.target.value)} required />
+                            <span className="signup-input-labels">First Name</span>
+                        </div>
 
                         <div className='signup-form-input-group'>
                             <input className="signup-inputs" type="text" value={last_name} onChange={(e) => setLast_name(e.target.value)} required />
@@ -75,18 +75,18 @@ function SignupFormPage() {
                             <span className="signup-input-labels">Confirm Password</span>
                         </div>
 
-                <div className="icon"></div>
+                        <div className="icon"></div>
 
-                <button className="signup-button" type="submit">Create a free account</button>
-            </form> 
+                        <button className="signup-button" type="submit">Create a free account</button>
+                    </form>
 
-            <div className="signup-login-link-group">
-                <span>Already have an account? </span>
-                <NavLink to="/login" className="signup-login-link">Log in</NavLink>
+                    <div className="signup-login-link-group">
+                        <span>Already have an account? </span>
+                        <NavLink to="/login" className="signup-login-link">Log in</NavLink>
+                    </div>
+
+                </div>
             </div>
-
-        </div>
-        </div>
         </>
     );
 }

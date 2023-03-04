@@ -26,6 +26,6 @@ class Trail < ApplicationRecord
         foreign_key: :park_id,
         class_name: :Park
 
-    has_many_attached :photos, dependent: :purge_later
+    has_many_attached :images, dependent: :purge_later
     # has_many :tags
 end

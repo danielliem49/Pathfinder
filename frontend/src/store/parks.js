@@ -35,3 +35,17 @@ export const getParks = (state) => {
 export const getPark = (parkId) => (state) => {
     return (state.parks ? state.parks[parkId] : null)
 }
+
+export default function parksReducer(oldState = {}, action) {
+    const newState = { ...oldState };
+    switch (action.type) {
+        case RECEIVE_PARKS:
+            return action.parks;
+        case RECEIVE_PARK:
+            const park = action.park;
+            newState[park.id] = park;
+            return newState;
+        default:
+            return oldState;
+    }
+}

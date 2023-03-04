@@ -36,7 +36,8 @@ class EasySeeds
             object_id, url, filename = row
             class_instance = class_image_name.find_by_id(object_id)
             puts class_instance, url, filename
-            class_instance.image.attach(io: URI.open(url), filename: filename)
+            # puts class_instance.images
+            class_instance.images.attach(io: URI.open(url), filename: filename)
             puts "Attached to #{filename}"
 
         end
@@ -67,7 +68,7 @@ class EasySeeds
 
     end
     
-   
+    
     ##Gets tables from csvs 
     def self.tables_from_csvs
         
@@ -119,7 +120,7 @@ class EasySeeds
         return header_and_type
     end
 
-     
+
     #Used for converting your data to the relevant data types, all data from csvs comes in as string by default
     #Its important to note that this isn't suppose to turn it into the datatype for your SQL table, but rather the format that ruby needs to understand the CSV item as, since all data from CSV comes in as a string by default.
     #datum: string, refers to the actual piece of data you are using

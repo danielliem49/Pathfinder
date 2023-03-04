@@ -1,1 +1,4 @@
 /public
+/storage/*
+!/storage/.keep 
+/config/master.key

@@ -27,8 +27,8 @@ function Navigation() {
             <div>
                 <div>
                     <NavLink to="/">
-                    <div className='nav-logo'></div>
-                    </NavLink>           
+                        <div className='nav-logo'></div>
+                    </NavLink>
                 </div>
             </div>
 

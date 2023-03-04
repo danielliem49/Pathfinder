@@ -1,8 +1,8 @@
 import {createStore, combineReducers, applyMiddleware, compose} from "redux"
 import thunk from "redux-thunk"
 import session from './session';
-
-
+import trailsReducer from "./trails";
+import parksReducer from "./parks";
 
 let enhancer;
 
@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const rootReducer = combineReducers({
-    session
+    session, trails: trailsReducer, parks: parksReducer
 });
 
 const configureStore = (preloadedState) => {

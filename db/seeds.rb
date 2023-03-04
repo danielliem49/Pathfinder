@@ -1,12 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
 
 require_relative "easy_seeds.rb"
+require "open-uri"
 
 # ApplicationRecord.transaction do 
     puts "Destroying tables..."
@@ -21,8 +15,7 @@ require_relative "easy_seeds.rb"
     ApplicationRecord.connection.reset_pk_sequence!('parks')
     ApplicationRecord.connection.reset_pk_sequence!('trails')
 
-    puts "Creating users..."
-    
+    # puts "Creating users..."
     # # Create one user with an easy to remember username, email, and password:
     # User.create!(
     # first_name: 'Demo',
@@ -43,7 +36,12 @@ require_relative "easy_seeds.rb"
 
     
     class_names = [User, Park, Trail]
+    # table_strings = ['users', 'parks', 'trails']
+    # EasySeeds.destroy_tables(class_names, table_strings)
     EasySeeds.create_easy_seed_data(class_names)
+
+    class_image_names = [Park, Trail]
+    EasySeeds.attach_images(class_image_names)
 
     puts "Done!"
 # end

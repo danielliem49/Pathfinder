@@ -20,6 +20,8 @@ class Park < ApplicationRecord
 
     has_many :trails,
         foreign_key: :park_id,
-        class_name: :Trail
+        class_name: :Trail,
+        dependent: :destroy
 
+    has_many_attached :images, dependent: :purge_later
 end
