@@ -25,6 +25,7 @@ require "open-uri"
     # )
 
     # # More users
+    
     # 10.times do 
     # User.create!({
     #     first_name: Faker::Internet.unique.username(specifier: 3),

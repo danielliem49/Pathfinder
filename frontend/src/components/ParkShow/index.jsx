@@ -17,29 +17,45 @@ function ParkShow() {
     const dispatch = useDispatch();
     const { parkId } = useParams();
     const park = useSelector(getPark(parkId));
-    console.log(parkId)
-    console.log(park)
-
+    
     useEffect(() => {
         dispatch(fetchPark(parkId))
     }, [dispatch, parkId])
-
-
+    
     return (
         <>
             {park?.parkName && (
                 <h1>{park.parkName}</h1>
-            )}
+                )}
 
             {park?.description && (
                 <p>Description: {park.description}</p>
             )}
 
-            {park?.trails && (
+            {/* {park?.trails && (
                 park.trails.map((trail) =>
-                    <Link to={`/trails/${trail.id}`}>{trail.trailName}</Link>
+                    <p>Trails: 
+                        <Link to={`/trails/${trail.id}`}>{trail.trailName}</Link>
+                    </p>
                 )
+            )} */}
+
+            {park?.trails && (
+                <div>
+                    <p>Trails:</p>
+                    {park.trails.map((trail) => (
+
+                        <p key={trail.id}>
+                            <span>
+                                {/* <Link to={`/trails/${trail.id}`}>{trail.trailName}</Link> */}
+                            </span>
+                        </p>
+                    ))}
+                </div>
             )}
+
+            
+
         </>
     )
 }

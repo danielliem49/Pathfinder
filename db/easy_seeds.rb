@@ -35,6 +35,7 @@ class EasySeeds
         data.each_with_index do |row|
             object_id, url, filename = row
             class_instance = class_image_name.find_by_id(object_id)
+            puts class_instance
             puts class_instance, url, filename
             # puts class_instance.images
             class_instance.images.attach(io: URI.open(url), filename: filename)

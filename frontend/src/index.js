@@ -16,6 +16,16 @@ if (process.env.NODE_ENV !== "production") {
   window.sessionActions = sessionActions;
 }
 
+
+const renderApplication = () => {
+  ReactDOM.render(
+    <React.StrictMode>
+      <Root />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+}
+
 function Root() {
   return (
     <Provider store={store}>
@@ -26,14 +36,6 @@ function Root() {
   );
 }
 
-const renderApplication = () => {
-  ReactDOM.render(
-    <React.StrictMode>
-      <Root />
-    </React.StrictMode>,
-    document.getElementById('root')
-  );
-}
 
 // if (sessionStorage.getItem("X-CSRF-Token") === null) {
 //   restoreCSRF().then(renderApplication);

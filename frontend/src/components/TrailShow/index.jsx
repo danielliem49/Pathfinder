@@ -24,17 +24,6 @@ function TrailShow() {
         dispatch(fetchTrail(trailId))
     }, [dispatch, trailId])
 
-    // return (
-    //     <>
-    //         <h1>{trail.trailName}</h1>
-    //         <p>Length: {trail.length}</p>
-    //         <p>Difficulty: {trail.difficultyLevel}</p>
-    //         <p>Elevation Gain: {trail.elevationGain}</p>
-    //         <p>Route Type: {trail.routeType}</p>
-    //         <p>Estimated Time: {trail.estimatedTime}</p>
-    //     </>
-    // )
-
 
     return (
         <>
