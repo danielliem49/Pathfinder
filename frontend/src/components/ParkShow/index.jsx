@@ -43,13 +43,14 @@ function ParkShow() {
             {park?.trails && (
                 <div>
                     <p>Trails:</p>
+                    {console.log(park.trails)}
                     {park.trails.map((trail) => (
 
-                        <p key={trail.id}>
+                        <div key={trail.id}>
                             <span>
-                                {/* <Link to={`/trails/${trail.id}`}>{trail.trailName}</Link> */}
+                                <Link to={`/trails/${trail.id}`}>{trail.trail_name}</Link>
                             </span>
-                        </p>
+                        </div>
                     ))}
                 </div>
             )}

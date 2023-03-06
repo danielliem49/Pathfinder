@@ -5,14 +5,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getTrails, fetchTrails } from '../../store/trails';
 import { getParks, fetchParks } from '../../store/parks';
 import { Link, useHistory } from 'react-router-dom';
+
 import stringify from 'query-string';
 import TrailMapWrapper from '../TrailMap';
 
 function Splash() {
     const dispatch = useDispatch();
-    const history = useHistory();
     const trails = useSelector(getTrails);
     const parks = useSelector(getParks);
+    const history = useHistory();
+
     // const trails = useSelector(state => state.trails.list)
     // const parks = useSelector(state => state.parks.list)
 
@@ -21,9 +23,6 @@ function Splash() {
         dispatch(fetchTrails())
         dispatch(fetchParks(parks))
     }, [dispatch])
-
-    console.log(trails)
-    console.log(parks)
 
     function handleMarkerClick(trail) {
         history.push(`/trails/${trail.id}`);
@@ -41,30 +40,19 @@ function Splash() {
         });
     }
 
-    // console.log(trails)
-
     return (
         <>
-
             <div>
                 <h1>Welcome back, </h1>
             </div>
 
             <div>
-            <TrailMapWrapper 
-                apiKey={process.env.REACT_APP_MAPS_API_KEY}
-                trails={trails}
-                markerEventHandlers={{ click: handleMarkerClick }}
-                mapEventHandlers={{ click: handleMapClick }}
-            />
-            </div>
-
-            <div>
-                <h2>Trails</h2>
+                <h2>Local trails near you:</h2>
                 <ul>
                     {trails.map((trail) =>
                         <li key={trail.id}>
                             <Link to={`/trails/${trail.id}`}>{trail.trailName}</Link>
+                            <p>{trail.images.blobs}</p>
                         </li>
                     )}
                 </ul>

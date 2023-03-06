@@ -19,7 +19,6 @@ class EasySeeds
     def self.create_easy_seed_data(class_names)
       tables, table_strings = csv_to_seeds = EasySeeds.tables_from_csvs
       (0...tables.length).each{|i| EasySeeds.single_seeder(tables[i], class_names[i], table_strings[i])}
-    
     end
 
     #Attaches images
@@ -37,10 +36,8 @@ class EasySeeds
             class_instance = class_image_name.find_by_id(object_id)
             puts class_instance
             puts class_instance, url, filename
-            # puts class_instance.images
             class_instance.images.attach(io: URI.open(url), filename: filename)
             puts "Attached to #{filename}"
-
         end
       end
     end
@@ -150,6 +147,3 @@ class EasySeeds
       end
     end
 end
-
-
-      

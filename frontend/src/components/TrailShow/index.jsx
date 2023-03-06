@@ -1,7 +1,9 @@
 import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTrail, fetchTrail } from '../../store/trails';
+import stringify from 'query-string';
+import TrailMapWrapper from '../TrailMap';
 
 /*
 Export as the default a `PostShow` functional component that receives no props.
@@ -15,35 +17,59 @@ need to render the required information to the screen.
 
 function TrailShow() {
     const dispatch = useDispatch();
+    const history = useHistory();
     const { trailId } = useParams();
-    console.log(trailId)
     const trail = useSelector(getTrail(trailId));
-    console.log(trail)
 
     useEffect(() => {
         dispatch(fetchTrail(trailId))
     }, [dispatch, trailId])
 
+    function handleMarkerClick(trail) {
+        history.push(`/trails/${trail.id}`);
+    }
+
+    function handleMapClick(event) {
+        const { latLng } = event;
+        const queryParams = stringify({
+            lat: latLng.toJSON().lat,
+            lng: latLng.toJSON().lng
+        });
+        history.push({
+            pathname: '/trails/new',
+            search: queryParams
+        });
+    }
+
 
     return (
         <>
-            {trail?.trailName && (
-                <h1>{trail.trailName}</h1>
-            )}
-            {trail?.length && (
-                <p>Length: {trail.length}</p>
-            )}
-            {trail?.difficultyLevel && (
-                <p>Difficulty: {trail.difficultyLevel}</p>
-            )}
-            {trail?.elevationGain && (
-                <p>Elevation Gain: {trail.elevationGain}</p>
-            )}
-            {trail?.routeType && (
-                <p>Route Type: {trail.routeType}</p>
-            )}
-            {trail?.estimatedTime && (
-                <p>Estimated Time: {trail.estimatedTime}</p>
+            {trail && (
+                <>
+                    <h1>{trail.trailName}</h1>
+                    <p>Length: {trail.length}</p>
+                    <p>Difficulty: {trail.difficultyLevel}</p>
+                    <p>Elevation Gain: {trail.elevationGain}</p>
+                    <p>Route Type: {trail.routeType}</p>
+                    <p>Estimated Time: {trail.estimatedTime}</p>
+                    {/* <div>
+                        {trail.images && trail.images.map(image => (
+                            <img src={image.url} key={image.id} />
+                        ))}
+                    </div> */}
+
+                    {console.log(trail.images)}
+
+
+                    <div>
+                        <TrailMapWrapper
+                            apiKey={process.env.REACT_APP_MAPS_API_KEY}
+                            trailId={trailId}
+                            markerEventHandlers={{ click: handleMarkerClick }}
+                            mapEventHandlers={{ click: handleMapClick }}
+                        />
+                    </div>
+                </>
             )}
         </>
     )
