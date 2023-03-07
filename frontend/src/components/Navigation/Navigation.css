@@ -38,9 +38,9 @@ body {
 
 .nav-logo {
     background-image: url('/assets/pathfinder-logo-banner.png');
-    background-size: 120px;
+    background-size: 135px;
     background-repeat: no-repeat;
-    width: 120px;
-    height: 40px;
+    width: 135px;
+    height: 45px;
     margin-left: -30px;
 }

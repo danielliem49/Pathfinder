@@ -1,4 +1,9 @@
 trail_name:string,latitude:float,longitude:float,length:float,difficulty_level:string,elevation_gain:integer,route_type:string,estimated_time:string,description:text,tags:string,park_id:bigint
+Padar Island Trail,-8.67725,119.55549,2.6,Moderate,223,Out & back,1h 14m,"Padar Island is a small uninhabited island within the Komodo archipelago. 
+
+The topography of the island is rugged, with steep volcanic mountains and hills set against deep bays.
+
+The views at the end of this trail of the pink sand beaches and emerald green hills, contrasted with the impossibly turquoise waters make this one of the most stunning views in all of Indonesia.",Hiking/Walking/Beach,8
 Mount Batur Summit Main Trail,-8.25008,115.39797,9.3,Hard,681,Out & back,5h 30m,"Mount Batur is one of the most popular hikes in Bali. This is a very popular area for backpacking and hiking, so you'll likely encounter other people while exploring.
 
 It is located an hour north of the city of Ubud.
@@ -9,6 +14,11 @@ Climbers are required to use the services of a road guide to climb this mountain
 Ijen Crater Trail,-8.07407,114.32236,9.3,Hard,577,Out & back,3h 40m,"Mount Ijen is like no other volcano on Earth! It is home to the world's largest acidic crater lake, the site of a dangerous sulfur mining operation, and, of course, it radiates a rare natural phenomenon known as the electric blue flames.
 
 The path heading up to Mount Ijen is quite difficult, rocky, and steep. To hike this mountain, you need a local guide to take you to the area of blue flames and the sunrise viewpoint. It is also recommended to bring a special mask because of the sulfur smell. ",Hiking/Walking/Rocky/No Shade/Lake,2
+Mount Merapi Summit Trail,-7.50335,110.45583,9.8,Hard,1253,Out & back,4h 50m,"SAFETY ALERT: Mount Merapi (Gunung Merapi) is a volcano that is active and in permanent eruption. It is therefore advisable to check the weather and geological forecasts as well as the state of the trails before walking in this area. For more information please visit the park page. 
+
+This mountain is one of the most active volcanoes in Indonesia, the climbing terrain is quite steep and it is recommended to hire a guide.
+
+The hiking trail will pass through rocky roads and forest vegetation that is not too dense. At night, look out for the dance of the fireflies!",Camping/Hiking/Wildlife/Forest/Rocky/Multi-day,7
 Mount Rinjani (Sembalun to Senaru),-8.358,116.51422,35.6,Hard,3365,Point to point,18h 59m,"Mount Rinjani is famous for its amazingly beautiful scenery, in particular Segara Anak Lake and Mount Batu Jari (often referred to as Mount Anak Rinjani). 
 
 This path will climb from Sembalun to the summit and will descend via Senaru. 
@@ -45,21 +55,11 @@ A lot of ups and downs involved so the vertical aspect of this trail should not 
 Mount Merbabu via Suwanting,-7.47385,110.40035,10.5,Hard,1713,Out & back,7h 30m,"This route is known to be quite difficult among climbers. The journey from the beginning of the entrance to the mountain is a steep uphill.
 
 The higher the up the trail, the harder it gets, with many large rocks to climb. Many hikers choose to set up camp on top of the mountain and enjoy the afternoon sunset or the next day's sunrise.",Camping/Hiking/Wildlife/Forest/Rocky/Multi-day,4
-Mount Merapi Summit Trail,-7.50335,110.45583,9.8,Hard,1253,Out & back,4h 50m,"SAFETY ALERT: Mount Merapi (Gunung Merapi) is a volcano that is active and in permanent eruption. It is therefore advisable to check the weather and geological forecasts as well as the state of the trails before walking in this area. For more information please visit the park page. 
-
-This mountain is one of the most active volcanoes in Indonesia, the climbing terrain is quite steep and it is recommended to hire a guide.
-
-The hiking trail will pass through rocky roads and forest vegetation that is not too dense. At night, look out for the dance of the fireflies!",Camping/Hiking/Wildlife/Forest/Rocky/Multi-day,7
 Mount Merbabu via Wekas,-7.43359,110.41597,9.5,Moderate,1308,Out & back,6h 14m,"The Wekas route is a Merbabu mountain climbing trail of moderate difficulty that has beautiful scenery.
 
 The Wekas route is the most popular route for Merbabu climbers and is the shortest route to the summit.
 
  Many hot springs can be seen on the path to the top.",Camping/Hiking/Wildlife/Forest/Multi-day,4
-Padar Island Trail,-8.67725,119.55549,2.6,Moderate,223,Out & back,1h 14m,"Padar Island is a small uninhabited island within the Komodo archipelago. 
-
-The topography of the island is rugged, with steep volcanic mountains and hills set against deep bays.
-
-The views at the end of this trail of the pink sand beaches and emerald green hills, contrasted with the impossibly turquoise waters make this one of the most stunning views in all of Indonesia.",Hiking/Walking/Beach,8
 Rinca Island Loop,-8.65547,119.71801,4.5,Easy,113,Loop,1h 11m,"Rinca Island and Komodo Island are the only two places on Earth where the ancient Komodo dragon can be found.
 
 It is mandatory to use the services of a ranger guide for this trail.",Hiking/Walking/Forest,8

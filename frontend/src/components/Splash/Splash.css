@@ -1,0 +1,157 @@
+.splash-search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 760px;
+    transition: background-image 2s linear ;
+    margin-bottom: 30px;
+}
+
+.splash-search-container.bgd1 {
+    background-image: url('/assets/splash-1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.splash-search-container.bgd2 {
+    background-image: url('/assets/splash-2.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.splash-search-container.bgd3 {
+    background-image: url('/assets/splash-3.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.splash-search-container.bgd4 {
+    background-image: url('/assets/splash-4.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.splash-search-header {
+    font-family: Percent, Beatrice, Arial, sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 24px;
+    /* color: #2b381f; */
+    color: #efefec;
+
+    /* opacity: 0;
+    transition: opacity 4s ease; */
+}
+        
+.splash-search-header.loaded {
+    opacity: 1;
+}
+
+.splash-search-bar {
+    font-family: Percent, Beatrice, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 24px;
+    /* color: #2b381f; */
+    color: #efefec;
+    /* opacity: 0;
+    transition: opacity 4s ease; */
+}
+
+
+
+.splash-trails-container {
+    opacity: 1;
+    /* opacity: 0;
+    transition: opacity 8s ease; */
+}
+
+.splash-trails-container.loaded {
+    opacity: 1;
+}
+
+.splash-trails-header {
+    font-family: Percent, Beatrice, Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #2b381f;
+    margin-left: 100px;
+}
+
+.splash-river {
+    margin: 100px;
+    margin-top: 0px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.splash-river-trail-card-container {
+    display: flex;
+    width: fit-content;
+}
+
+.trail-card {
+    scroll-snap-align: start;
+    width: 300px;
+    height: 270px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.trail-card:hover {
+    cursor: pointer;
+}
+
+.trail-card:hover .trail-card-image img {
+    transform: scale(5);
+}
+
+.trail-card-image {
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    
+    /* image placeholder */
+    background-image: url('/assets/bgd-large-1.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.trail-card-image img {
+    /* border-radius: 10px; */
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    transform: scale(2);
+    transition: transform 0.2s ease;
+}
+
+.trail-reviews {
+    font-family: Manrope, Arial, sans-serif;
+    font-weight: 600;
+    color: #2b381f;
+    margin: 5px;
+}
+
+.trail-name {
+        font-family: Manrope, Arial, sans-serif;
+        font-weight: 550;
+        color: #2b381f;
+        margin-left: 5px;
+}
+
+.trail-details {
+    font-family: Manrope, Arial, sans-serif;
+    color: #888d85;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+

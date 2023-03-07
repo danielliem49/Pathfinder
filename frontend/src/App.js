@@ -7,6 +7,7 @@ import SignupFormPage from "./components/SignupFormPage";
 import Navigation from "./components/Navigation";
 import TrailShow from "./components/TrailShow";
 import ParkShow from "./components/ParkShow";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -26,10 +27,16 @@ function App() {
         <Route path="/parks/:parkId">
           <ParkShow />
         </Route>
+
+        {/* <Route path="/:userId">
+          <Splash />
+        </Route> */}
+
         <Route path="/">
           <Splash />
         </Route>
       </Switch>
+      <Footer />
     </>
   );
 }

@@ -52,11 +52,12 @@ function TrailShow() {
                     <p>Elevation Gain: {trail.elevationGain}</p>
                     <p>Route Type: {trail.routeType}</p>
                     <p>Estimated Time: {trail.estimatedTime}</p>
-                    {/* <div>
+                    {/* <p>Park: {trail.park.parkName}</p> */}
+                    <div>
                         {trail.images && trail.images.map(image => (
-                            <img src={image.url} key={image.id} />
+                            <img src={image} key={image} />
                         ))}
-                    </div> */}
+                    </div>
 
                     {console.log(trail.images)}
 

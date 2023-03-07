@@ -22,6 +22,7 @@ function ParkShow() {
         dispatch(fetchPark(parkId))
     }, [dispatch, parkId])
     
+
     return (
         <>
             {park?.parkName && (
@@ -43,9 +44,7 @@ function ParkShow() {
             {park?.trails && (
                 <div>
                     <p>Trails:</p>
-                    {console.log(park.trails)}
                     {park.trails.map((trail) => (
-
                         <div key={trail.id}>
                             <span>
                                 <Link to={`/trails/${trail.id}`}>{trail.trail_name}</Link>
@@ -54,9 +53,6 @@ function ParkShow() {
                     ))}
                 </div>
             )}
-
-            
-
         </>
     )
 }
