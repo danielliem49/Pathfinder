@@ -36,7 +36,7 @@ function TrailMap(props) {
     useEffect(() => {
         if (!map && google) {
             const options = {
-                zoom: 16,
+                zoom: 14,
                 center: { lat: trail.latitude, lng: trail.longitude },
                 ...props.mapOptions,
             };
@@ -58,8 +58,9 @@ function TrailMap(props) {
 
     return (
         <div
+            className='trailshow-map'
             ref={mapRef}
-            style={{ width: '100%', height: '500px' }}
+            style={{ width: '350px', height: '350px', borderRadius: '10px' }}
         >
             Map
         </div>

@@ -12,6 +12,9 @@ function Splash() {
     const history = useHistory();
     const trails = useSelector(getTrails);
     const parks = useSelector(getParks);
+    const user = useSelector((state) => {
+        return (state.session ? state.session.user : null)
+    })
     const [isLoaded, setIsLoaded] = useState(false);
     // const user = useSelector(getUser(userId));
     const bgdRandArray = [1, 2, 3, 4];
@@ -48,8 +51,10 @@ function Splash() {
             <div className='splash-body'>
 
                 <div className={`splash-search-container bgd${bgdNum + 1}`}>
-                    <div className={`splash-search-header ${isLoaded ? 'isLoaded' : ''}`}>Find your outdoors</div>
-                    <div className={`splash-search-bar ${isLoaded ? 'isLoaded' : ''}`}>Search Bar Goes Here</div>
+                    {user ?
+                        <div className={`splash-search-header ${isLoaded ? ' isLoaded' : ''}`}>{`Today's the day, ${user.firstName}`}</div>
+                        : <div className={`splash-search-header ${isLoaded ? 'isLoaded' : ''}`}>Find your outdoors</div>}
+                    <div className={`splash-search-bar ${isLoaded ? 'isLoaded' : ''}`}>Search Bar goes here</div>
                 </div>
 
                 <div className={`splash-trails-container ${isLoaded ? ' isLoaded' : ''}`}>
@@ -63,15 +68,21 @@ function Splash() {
                                     <div className='trail-card-image'>
                                         <img src={trail.imagePreviewUrl} key={trail.imagesPreviewUrl} />
                                     </div>
-                                    <div className='trail-card-reviews'>Reviews</div>
+                                    <div className='trail-card-reviews'>
+                                        <span style={{ marginRight: '8px' }}>{trail.difficultyLevel}</span>
+                                        <span className="review-alt-coloring">•</span>
+                                        <span className="review-star" style={{ marginLeft: '8px' }}>&#9733;</span>
+                                        <span style={{ marginLeft: '3px' }}>{trail.avgRating.toFixed(1)}</span>
+                                        <span className="review-alt-coloring" style={{ marginLeft: '3px' }}>({trail.numReviews})</span>
+                                    </div>
                                     <div className='trail-card-name'>{trail.trailName}</div>
-                                    <div className='trail-card-park' onClick={(event) => event.stopPropagation()}>
-                                        <Link to={`/parks/${trail.parkId}`}>Park: {trail.parkName}</Link>
+                                    <div onClick={(event) => event.stopPropagation()}>
+                                        <Link to={`/parks/${trail.parkId}`} className='trail-card-park'>{trail.parkName}</Link>
                                     </div>
                                     <div className='trail-card-details'>
-                                        Length: {trail.length} km<span>•</span>
-                                        Est. {trail.estimatedTime}<span>•</span>
-                                        {trail.difficultyLevel}
+                                        <span>Length: {trail.length} km</span>
+                                        <span>•</span>
+                                        <span>Est. {trail.estimatedTime}</span>
                                     </div>
                                 </div>
                             )}

@@ -63,8 +63,8 @@ function LoginFormPage() {
 
                         <div className="icon"></div>
 
-                        <button className="login-button" type="submit">Log In</button>
-                        <button className="login-button" type="submit" onClick={handleDemoLogin}>Demo Log In</button>
+                        <button className="type1-button" type="submit">Log In</button>
+                        <button className="type1-button" type="submit" onClick={handleDemoLogin}>Demo Log In</button>
                     </form>
 
                     <div className="login-signup-link-group">

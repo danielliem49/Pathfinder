@@ -77,7 +77,7 @@ function SignupFormPage() {
 
                         <div className="icon"></div>
 
-                        <button className="signup-button" type="submit">Create a free account</button>
+                        <button className="type1-button" type="submit">Create a free account</button>
                     </form>
 
                     <div className="signup-login-link-group">

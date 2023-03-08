@@ -7,7 +7,14 @@ trails.each do |trail|
         json.imagePreviewUrl trail.images.attached? ? url_for(trail.images.first) : nil
         # json.images trail.images.map { |file| url_for(file) } 
         json.parkName trail.park.park_name
-        # json.avgRating
+
+        numReviews = []
+        trail.reviews.each do |review|
+            numReviews << review.rating
+        end
+
+        json.avgRating numReviews.empty? ? 0.0 : (numReviews.sum.to_f / numReviews.length).round(1)
+        json.numReviews numReviews.length
     end
 end
 

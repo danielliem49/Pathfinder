@@ -125,7 +125,7 @@
     color:#888d85;
 }
 
-.login-button {
+.type1-button {
     background-color: #0c441e;
     color: #fff;
     padding: 10px 100px;
@@ -140,7 +140,7 @@
     /* margin-right: 10px; */
 }
 
-.login-button:hover {
+.type1-button:hover {
     background-color: #253122;
 }
 

@@ -35,6 +35,7 @@
     background-position: center;
 }
 
+
 .splash-search-header {
     font-family: Percent, Beatrice, Arial, sans-serif;
     font-size: 72px;
@@ -91,6 +92,13 @@
     scroll-snap-type: x mandatory;
 }
 
+::-webkit-scrollbar {
+    height: 0;
+    /* hide the scrollbar height */
+    width: 0;
+    /* hide the scrollbar width */
+}
+
 .splash-river-trail-card-container {
     display: flex;
     width: fit-content;
@@ -99,7 +107,7 @@
 .trail-card {
     scroll-snap-align: start;
     width: 300px;
-    height: 270px;
+    height: 280px;
     border-radius: 10px;
     margin: 10px;
 }
@@ -119,7 +127,7 @@
     width: 300px;
     height: 200px;
     border-radius: 10px;
-    
+    margin-bottom: 10px;
     /* image placeholder */
     /* background-image: url('/assets/bgd-large-1.jpeg');
     background-size: cover;
@@ -136,29 +144,41 @@
 
 .trail-card-reviews {
     font-family: Manrope, Arial, sans-serif;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 400;
     color: #2b381f;
-    margin: 5px;
+}
+
+.review-star {
+    color: rgb(93, 227, 114);
+}
+
+.review-alt-coloring {
+    color: #656e5e;
 }
 
 .trail-card-name {
     font-family: Manrope, Arial, sans-serif;
     font-weight: 550;
     color: #2b381f;
-    margin-left: 5px;
+    letter-spacing: 0.4px;
+    margin-top: 7px;
+    /* margin-bottom: 3px; */
 }
 
 .trail-card-park {
-    margin-left: 5px;
+    font-family: Manrope, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #656e5e;;
 }
 
-.trail-card-details {
+.trail-card-details > * {
     font-family: Manrope, Arial, sans-serif;
+    font-size: 14px;
     color: #888d85;
-    margin-left: 5px;
     margin-right: 5px;
-    display: flex;
-    justify-content: space-between
 }
 
 /* for fade effects*/

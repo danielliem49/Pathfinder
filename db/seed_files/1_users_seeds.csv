@@ -1,5 +1,5 @@
 first_name:string,last_name:string,email:string,password:string
-Demo,Lition,demo@user.io,password
+Demo User,Lition,demo@user.io,password
 Daniel,Liem,danielliem49@gmail.com,password
 Aaron,Jung,aaronjung@gmail.com,password
 Andre,Hanna,andrehanna@gmail.com,password
