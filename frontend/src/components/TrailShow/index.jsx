@@ -52,7 +52,7 @@ function TrailShow() {
                     <p>Elevation Gain: {trail.elevationGain}</p>
                     <p>Route Type: {trail.routeType}</p>
                     <p>Estimated Time: {trail.estimatedTime}</p>
-                    {/* <p>Park: {trail.park.parkName}</p> */}
+                    <p>Park: {trail.parkName}</p>
                     <div>
                         {trail.images && trail.images.map(image => (
                             <img src={image} key={image} />
@@ -69,6 +69,10 @@ function TrailShow() {
                             markerEventHandlers={{ click: handleMarkerClick }}
                             mapEventHandlers={{ click: handleMapClick }}
                         />
+                    </div>
+
+                    <div>
+                        <p>Reviews: {trail.reviews[0].rating}</p>
                     </div>
                 </>
             )}

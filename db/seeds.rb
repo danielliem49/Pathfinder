@@ -36,12 +36,12 @@ require "open-uri"
     # end
 
     
-    class_names = [User, Park, Trail]
+    class_names = [User, Park, Trail, Review]
     # table_strings = ['users', 'parks', 'trails']
     # EasySeeds.destroy_tables(class_names, table_strings)
     EasySeeds.create_easy_seed_data(class_names)
 
-    class_image_names = [Park, Trail]
+    class_image_names = [Trail]
     EasySeeds.attach_images(class_image_names)
 
     puts "Done!"

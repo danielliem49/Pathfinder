@@ -13,11 +13,6 @@ class Api::TrailsController < ApplicationController
 
     def index
         @trails = Trail.all
-        # @trails = Trail.includes(park: :trails).all
-
-
-        # @trails = Trail.all.includes(:tags)
-        # .includes(:tags) necessary?
         
         render "/api/trails/index"
         # render :index

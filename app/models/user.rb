@@ -24,6 +24,11 @@ class User < ApplicationRecord
 
     # ABSPIREG
 
+    has_many :reviews,
+        foreign_key: :user_id,
+        class_name: :Review,
+        dependent: :destroy
+
     attr_reader :password
     before_validation :ensure_session_token
 

@@ -1,0 +1,9 @@
+user_id:bigint,trail_id:bigint,rating:integer,description:text,date_hiked:date
+2,1,5,The most beautiful beach I've ever seen!,"2023, 3, 7"
+4,2,5,What a pretty view,"2023, 1, 12"
+3,2,3,It was ok,"2023, 1, 13"
+7,3,4,Nice views but I couldn't find a bathroom,"2022, 1, 22"
+17,4,5,What a lovely trip with workmates,"2023, 2, 11"
+16,4,5,What a lovely trip with workmates,"2023, 2, 11"
+15,4,1,Get me out of here,"2023, 2, 11"
+5,5,1,Too hot,"2023, 3, 2"

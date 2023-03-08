@@ -1,19 +1,14 @@
 # N+1 problem
-trails = @trails.includes(:park)
+trails = @trails.includes(:park).includes(:reviews)
 
 trails.each do |trail|
     json.set! trail.id do
-        json.partial! 'trail', trail: trail
+        json.extract! trail, :id, :trail_name, :latitude, :longitude, :length, :difficulty_level, :elevation_gain, :route_type, :estimated_time, :description, :tags, :park_id
+        json.imagePreviewUrl trail.images.attached? ? url_for(trail.images.first) : nil
+        # json.images trail.images.map { |file| url_for(file) } 
+        json.parkName trail.park.park_name
+        # json.avgRating
     end
 end
 
-# @trails = Trail.includes(:park, :images)
 
-# @trails.each do |trail|
-#     json.set! trail.id do
-#         json.partial! 'trail', trail: trail
-#         json.park do
-#             json.extract! trail.park, :id, :park_name, :latitude, :longitude, :contact, :description, :country, :state
-#         end
-#     end
-# end
