@@ -8,7 +8,7 @@ json.extract! trail, :id, :trail_name, :latitude, :longitude, :length, :difficul
 json.images trail.images.map { |file| url_for(file) } 
 json.parkName trail.park.park_name
 json.reviews trail.reviews.map do |review| 
-    json.extract! review, :user_id, :trail_id, :rating, :description
+    json.extract! review, :id, :user_id, :trail_id, :rating, :description
     json.date_hiked review.date_hiked.strftime('%B %d, %Y')
     json.user do
         json.extract! review.user, :email, :first_name, :last_name

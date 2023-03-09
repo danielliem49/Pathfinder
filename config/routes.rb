@@ -7,11 +7,13 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :users, only: :create
     resource :session, only: [:show, :create, :destroy]
-    resources :trails, only: [:index, :show]  do
-      resources :reviews, only: [:create, :destroy]
-    end
+    # resources :trails, only: [:index, :show]  do
+    #   resources :reviews, only: [:create, :destroy]
+    # end
+    resources :trails, only: [:index, :show]
+    resources :reviews, only: [:create, :destroy, :update]
+    
     resources :parks, only: [:index, :show]
-    resources 
   end
 
   get '*path', to: "static_pages#frontend_index", constraints: ->(req) {

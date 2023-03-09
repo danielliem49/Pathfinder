@@ -24,15 +24,26 @@ function Navigation() {
     return (
         <div className='nav-container'>
 
-            <div>
+            <div className='nav-leftside'>
                 <div>
                     <NavLink to="/">
                         <div className='nav-logo'></div>
                     </NavLink>
                 </div>
+
+                <div className='nav-leftside-element'>
+                    <div>Explore</div>
+                </div>
+                <div className='nav-leftside-element'>
+                    <div>Shop</div>
+                </div>
             </div>
 
-            <div>
+
+            <div className='nav-rightside'>
+                <div className='nav-rightside-element'>
+                    <div>Help</div>
+                </div>
                 {sessionLinks}
             </div>
 

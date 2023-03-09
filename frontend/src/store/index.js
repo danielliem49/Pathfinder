@@ -3,6 +3,7 @@ import thunk from "redux-thunk"
 import session from './session';
 import trailsReducer from "./trails";
 import parksReducer from "./parks";
+import reviewsReducer from "./reviews";
 
 let enhancer;
 
@@ -15,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const rootReducer = combineReducers({
-    session, trails: trailsReducer, parks: parksReducer
+    session, trails: trailsReducer, parks: parksReducer, reviews: reviewsReducer
 });
 
 const configureStore = (preloadedState) => {

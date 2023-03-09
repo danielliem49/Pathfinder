@@ -1,4 +1,6 @@
 
+import csrfFetch from "./csrf.js";
+
 const RECEIVE_PARKS = 'parks/RECEIVE_PARKS';
 const RECEIVE_PARK = 'parks/RECEIVE_PARK';
 
@@ -11,7 +13,7 @@ const receivePark = (park) => {
 }
 
 export const fetchParks = () => async dispatch => {
-    const response = await fetch('/api/parks');
+    const response = await csrfFetch('/api/parks');
 
     if (response.ok) {
         const parks = await response.json();
@@ -20,7 +22,7 @@ export const fetchParks = () => async dispatch => {
 }
 
 export const fetchPark = (parkId) => async dispatch => {
-    const response = await fetch(`/api/parks/${parkId}`);
+    const response = await csrfFetch(`/api/parks/${parkId}`);
 
     if (response.ok) {
         const park = await response.json();

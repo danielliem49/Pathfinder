@@ -1,4 +1,7 @@
 
+import csrfFetch from "./csrf";
+
+
 const RECEIVE_TRAILS = 'trails/RECEIVE_TRAILS';
 const RECEIVE_TRAIL = 'trails/RECEIVE_TRAIL';
 
@@ -11,7 +14,7 @@ const receiveTrail = (trail) => {
 }
 
 export const fetchTrails = () => async dispatch => {
-    const response = await fetch('/api/trails');
+    const response = await csrfFetch('/api/trails');
 
     if (response.ok) {
         const trails = await response.json();
@@ -20,7 +23,7 @@ export const fetchTrails = () => async dispatch => {
 }
 
 export const fetchTrail = (trailId) => async dispatch => {
-    const response = await fetch(`/api/trails/${trailId}`);
+    const response = await csrfFetch(`/api/trails/${trailId}`);
 
     if (response.ok) {
         const trail = await response.json();

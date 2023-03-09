@@ -1,4 +1,6 @@
 
+import csrfFetch from "./csrf.js";
+
 const RECEIVE_USER = 'users/RECEIVE_USER';
 
 const receiveUser = (user) => {
@@ -6,7 +8,7 @@ const receiveUser = (user) => {
 }
 
 export const fetchUser = (userId) => async dispatch => {
-    const response = await fetch(`/api/users/${userId}`);
+    const response = await csrfFetch(`/api/users/${userId}`);
 
     if (response.ok) {
         const user = await response.json();

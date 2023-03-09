@@ -8,7 +8,7 @@
 .trailshow-card {
     overflow: hidden;
     border-radius: 16px;
-    box-shadow: 0 8px 16px -1px rgb(0 0 0 / 30%);
+    box-shadow: 0 8px 16px -1px rgb(0 0 0 / 40%);
     width: 1024px;
 }
 
@@ -16,34 +16,127 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 312px;
-    margin-bottom: 30px;
+    height: 400px;
     /* background-repeat: no-repeat; */
     background-size: cover;
     background-position: center;
+    position: relative;
+    box-shadow: 0 0px 8px rgb(0 0 0 / 50%);
 }
+
+.trailshow-card-header{
+    /* margin: 160px 560px 0px 0px; */
+    margin-top: 280px;
+    display: inline-block;
+    width: max-content;
+    padding-right: 30px;
+    /* background-color: #01352c; */
+    background-color: rgba(1, 53, 44, 0.75);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 8px 16px -1px rgb(0 0 0 / 50%);
+}
+.trailshow-card-header>* {
+    padding-left: 20px;
+}
+
+.trailshow-name {
+    font-family: Percent, Beatrice, Arial, sans-serif;
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 1.3;
+        color: #efefec;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.trailshow-header-reviews {
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #efefec;
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
 
 .trailshow-card-body-container {
     display: flex;
     justify-content: space-evenly;
 }
 
-.trailshow-card-body-container>* {
-    border: 1px solid #080808;
-}
+/* .trailshow-card-body-container>* {
+    border: 0.1px inset rgba(1, 53, 44, 0.2);
+} */
 
 .trailshow-content {
     flex: 0 0 60%;
-    /* padding: 30px; */
+    padding: 20px 10px 20px 20px
 }
 
-.trailshow-sidebar {
-    flex: 0 0 40%;
+
+.trailshow-properties-headers,
+.trailshow-properties-data {
+        display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+}
+
+.trailshow-properties-headers {
+        font-family: Manrope, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #656e5e;
+}
+
+.trailshow-properties-data {
+    font-family: Manrope, Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.5;
+        color: #2b381f;
+        width: auto;
+}
+
+.trailshow-description {
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2b381f;
+    margin-bottom: 8px;
+}
+
+.trailshow-review-summary {
+    border-top: 1px solid rgba(1, 53, 44, 0.2);
+    border-bottom: 1px solid rgba(1, 53, 44, 0.2);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.trailshow-card-avgrating-container {
+    font-family: Percent, Beatrice, Arial, sans-serif;
+    line-height: 1.3;
+    color: #2b381f;
+    font-size: 24px;
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding-top: 21px;
+}
+
+.trailshow-card-avgrating {
+    font-size: 60px;
+}
+
+.trailshow-card-numreviews {
+    font-size: 18px;
+}
+
+.review-container {
+    border-bottom: 1px solid rgba(1, 53, 44, 0.2);
 }
 
 .review-modal {
@@ -75,18 +168,109 @@
 
 .review-modal-trail-name {
     font-family: Percent, Beatrice, Arial, sans-serif;
-        font-size: 28px;
-        font-weight: 400;
-        line-height: 1.3;
-        color: #2b381f;
-        display: flex;
-        align-items: center;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #2b381f;
+    display: flex;
+    align-items: center;
 }
 
-.type1-button {
-    /* originally defined in LoginForm.css */
-    width: 300px;
+.review-modal-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-left: 20px;
 }
 
+.review-modal-rating > input {
+    display: none;
+}
 
+.review-modal-rating:not(:checked)>label {
+    float: right;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.review-modal-rating>input:checked~label {
+    color: rgb(93, 227, 114);
+}
+
+.review-modal-rating:not(:checked)>label:hover,
+.review-modal-rating:not(:checked)>label:hover~label,
+.review-modal-rating>input:checked+label:hover,
+.review-modal-rating>input:checked+label:hover~label,
+.review-modal-rating>input:checked~label:hover,
+.review-modal-rating>input:checked~label:hover~label,
+.review-modal-rating>label:hover~input:checked~label {
+    color: rgb(61, 148, 74);
+}
+
+.write-review-button {
+    /* based off button-type1 */
+    background-color: #0c441e;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 9999px;
+    border: none;
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    width: auto;
+}
+
+.write-review-button:hover {
+    background-color: #253122;
+}
+
+.review-modal-submit-button {
+    /* based off button-type1 */
+    background-color: #0c441e;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 9999px;
+    border: none;
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    width: auto;
+}
+
+.review-modal-submit-button:hover {
+    background-color: #253122;
+}
+
+.trailshow-sidebar {
+    flex: 40%;
+    padding: 20px 20px 20px 10px;
+    border-left: 1px solid rgba(1, 53, 44, 0.2);
+}
+
+.trailshow-othertrails-header {
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #2b381f;
+    padding-top: 30px;
+    padding-left: 15px;
+    text-decoration: underline;
+    text-underline-position: under;
+
+}
+
+.trailshow-othertrails-river {
+    padding-left: 15px;
+}
+
+.trailshow-othertrails-river > * {
+    margin-bottom: 40px;
+}
 

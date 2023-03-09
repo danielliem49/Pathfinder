@@ -18,6 +18,37 @@ body {
     border-bottom: 1px solid rgb(211, 211, 211);
 }
 
+.nav-leftside,
+.nav-rightside {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-leftside-element {
+    padding-left: 30px;
+    font-family: Manrope, Arial, sans-serif;
+    font-weight: 550;
+    line-height: 1.5;
+    font-size: 13px;
+    color:#2b381f;
+}
+
+.nav-rightside-element {
+    padding-right: 30px;
+    font-family: Manrope, Arial, sans-serif;
+    font-weight: 550;
+    line-height: 1.5;
+    font-size: 13px;
+    color: #2b381f;
+}
+
+.nav-leftside-element:hover,
+.nav-rightside-element:hover {
+    color: black;
+    cursor: pointer;
+}
+
 .nav-login-button {
     font-family: Manrope, Arial, sans-serif;
     font-size: 13px;
