@@ -9,7 +9,6 @@ import { ModalContext } from '.';
 
 export default function CreateReviewsModal( {trailId} ) {
     const dispatch = useDispatch();
-    // const trail = useSelector(getTrail(trailId));
     const { trail, showCreateModal, setShowCreateModal } = useContext(ModalContext);
     const user = useSelector((state) => {
         return (state.session ? state.session.user : null)

@@ -1,11 +1,11 @@
 class Api::ReviewsController < ApplicationController
 
-    before_action :require_logged_in, :set_trail
-    # before_action :require_logged_in
+    # before_action :require_logged_in, :set_trail
+    before_action :require_logged_in
 
     def create
-        @review = @trail.reviews.new(review_params)
-        # @review = Review.new(review_params)
+        # @review = @trail.reviews.new(review_params)
+        @review = Review.new(review_params)
         if @review.save
             render :show
         else
@@ -23,7 +23,7 @@ class Api::ReviewsController < ApplicationController
     end
 
     def destroy
-        @review = @trail.reviews.find(params[:id])
+        @review = Review.find_by(id: params[:id])
         @review.destroy
     end
 
@@ -34,8 +34,8 @@ class Api::ReviewsController < ApplicationController
         params.require(:review).permit(:user_id, :trail_id, :rating, :description, :date_hiked)
     end
 
-    def set_trail
-        @trail = Trail.find(params[:trail_id])
-    end
+    # def set_trail
+    #     @trail = Trail.find(params[:trail_id])
+    # end
 
 end

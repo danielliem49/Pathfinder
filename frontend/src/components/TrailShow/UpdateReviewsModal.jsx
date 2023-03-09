@@ -7,29 +7,30 @@ import { ModalContext } from '.';
 
 
 
-export default function UpdateReviewsModal({ trailId, reviewId }) {
+export default function UpdateReviewsModal({ reviewId }) {
     const dispatch = useDispatch();
-    // const trail = useSelector(getTrail(trailId));
     const { trail, showUpdateModal, setShowUpdateModal } = useContext(ModalContext);
     const user = useSelector((state) => {
         return (state.session ? state.session.user : null)
     })
 
     let review = useSelector(getReview(reviewId));
-    console.log(review)
 
     const [rating, setRating] = useState(review.rating);
     const [description, setDescription] = useState(review.description);
-    const [date_hiked, setDate_hiked] = useState(review.date_hiked);
+    const [date_hiked, setDate_hiked] = useState(review.dateHiked);
 
-    // useEffect(() => {
-    //     dispatch(fetchTrail(trailId))
-    // }, [dispatch, trailId])
+    const handleDateChange = (e) => {
+        console.log(e.target.value)
+        setDate_hiked(e.target.value)
+        console.log({ ...review, rating, description, date_hiked })
+    }
 
     // handle review form submit
     const handleUpdateReviewSubmit = (e) => {
         e.preventDefault();
         const reviewData = { ...review, rating, description, date_hiked }
+        console.log(reviewData)
         dispatch(updateReview(reviewData));
         window.location.reload(false)
     }
@@ -54,8 +55,8 @@ export default function UpdateReviewsModal({ trailId, reviewId }) {
                         <input type='radio' value='1' id='1' name='rating' onChange={(e) => setRating(e.target.value)} />
                         <label htmlFor='1'>&#9733;</label>
                     </div>
-                    <textarea value={review.description} onChange={(e) => setDescription(e.target.value)}></textarea>
-                    <input value={date_hiked} type="date" id="date" onChange={(e) => setDate_hiked(e.target.value)}  ></input>
+                    <textarea value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
+                    <input value={date_hiked} type="date" id="date" onChange={handleDateChange}  ></input>
                     <button className='review-modal-submit-button'>Submit Review</button>
                 </form>
             </div>

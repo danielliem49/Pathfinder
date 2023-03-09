@@ -19,6 +19,7 @@ function TrailShow() {
     const trails = useSelector(getTrails).filter(t => t.trailName !== trail.trailName)
         .sort(() => 0.5 - Math.random())
         .slice(0, 5);
+    const reviews = useSelector((state) => Object.values(state.reviews))
 
     const user = useSelector((state) => {
         return (state.session ? state.session.user : null)
@@ -52,7 +53,7 @@ function TrailShow() {
 
     return (
         <>
-            {trail && trails && trail.reviews && (
+            {trail && trails && reviews && (
                 <>
                     <div className='trailshow-body'>
                         {console.log(trail.description.split("\n"))}
@@ -119,7 +120,7 @@ function TrailShow() {
                                                 </ModalContext.Provider>
                                             )}
                                         </div>
-                                        {trail.reviews.sort((a, b) => {
+                                        {reviews.sort((a, b) => {
                                             return new Date(b.dateHiked) - new Date(a.dateHiked);
                                         }).map((review) =>
                                             <div key={review.id} className='review-container'>
@@ -135,10 +136,11 @@ function TrailShow() {
                                                         <span className='edit-review-button' onClick={toggleUpdateReviewModal}>Edit</span>
                                                         {showUpdateModal && (
                                                             <ModalContext.Provider value={{ trail, showUpdateModal, setShowUpdateModal }}>
-                                                                <UpdateReviewsModal trailId={trailId} reviewId={review.id} />
+                                                                <UpdateReviewsModal reviewId={review.id} />
                                                             </ModalContext.Provider>
                                                         )}
-                                                        <span className='delete-review-button' onClick={handleDeleteReviewSubmit(review.id)}>Delete</span>
+                                                        <span className='delete-review-button' onClick={handleDeleteReviewSubmit(review.id)}>Delete
+                                                        </span>
                                                     </div>
                                                 )}
                                             </div>

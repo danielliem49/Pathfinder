@@ -1,5 +1,6 @@
 
 import csrfFetch from "./csrf.js";
+import { RECEIVE_TRAIL } from "./trails.js";
 
 const RECIEVE_REVIEW = 'reviews/RECIEVE_REVIEW';
 const REMOVE_REVIEW = 'reviews/REMOVE_REVIEW';
@@ -22,6 +23,7 @@ export const createReview = (review) => async dispatch => {
     })
 
     if (response.ok) {
+        console.log("test")
         const newReview = await response.json();
         return (dispatch(receiveReview(newReview)))
     }
@@ -56,6 +58,7 @@ export const getReview = (reviewId) => (state) => {
 
 export default function reviewsReducer(oldState = {}, action) {
     const newState = { ...oldState };
+
     switch (action.type) {
         case RECIEVE_REVIEW:
             const review = action.review;
@@ -65,6 +68,8 @@ export default function reviewsReducer(oldState = {}, action) {
             const reviewId = action.review.id;
             delete newState[reviewId];
             return newState;
+        case RECEIVE_TRAIL:
+            return action.payload.reviews
         default:
             return oldState;
     }

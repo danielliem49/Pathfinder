@@ -33,4 +33,18 @@ class Trail < ApplicationRecord
 
     has_many_attached :images, dependent: :purge_later
     # has_many :tags
+
+    def calc_avg_rating
+        reviews = self.reviews
+        rating_total = 
+        if reviews.length > 0
+            reviews.map {|review|review.rating}.sum / reviews.length * 1.0
+        else
+            0.0
+        end
+    end
+
+    def num_reviews
+        return self.reviews.length
+    end
 end
