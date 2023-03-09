@@ -31,10 +31,10 @@
     width: max-content;
     padding-right: 30px;
     /* background-color: #01352c; */
-    background-color: rgba(1, 53, 44, 0.75);
+    background-color: rgba(1, 53, 44, 0.9);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: 0 8px 16px -1px rgb(0 0 0 / 50%);
+    box-shadow: 0 2px 2px 0px rgb(0 0 0 / 50%);
 }
 .trailshow-card-header>* {
     padding-left: 20px;
@@ -46,7 +46,7 @@
         font-weight: 400;
         line-height: 1.3;
         color: #efefec;
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .trailshow-header-reviews {
@@ -104,7 +104,7 @@
     font-weight: 400;
     line-height: 1.5;
     color: #2b381f;
-    margin-bottom: 8px;
+    margin: 10px 0px 8px 0px;
 }
 
 .trailshow-review-summary {
@@ -137,6 +137,7 @@
 
 .review-container {
     border-bottom: 1px solid rgba(1, 53, 44, 0.2);
+    padding-bottom: 10px;
 }
 
 .review-modal {
@@ -247,6 +248,15 @@
     background-color: #253122;
 }
 
+.review-description {
+        font-family: Manrope, Arial, sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #2b381f;
+        padding-bottom: 4px;
+}
+
 .trailshow-sidebar {
     flex: 40%;
     padding: 20px 20px 20px 10px;
@@ -258,7 +268,7 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 1.5;
-    color: #2b381f;
+    color: #253122;
     padding-top: 30px;
     padding-left: 15px;
     text-decoration: underline;
@@ -272,5 +282,34 @@
 
 .trailshow-othertrails-river > * {
     margin-bottom: 40px;
+}
+
+.edit-review-button {
+    padding-right: 10px;
+    border-right: 1px solid rgba(1, 53, 44, 0.2);
+    font-family: Manrope, Arial, sans-serif;
+    font-weight: 550;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #253122;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+.edit-review-button:hover,
+.delete-review-button:hover {
+    color: #192117;
+    cursor: pointer;
+}
+
+.delete-review-button {
+    padding-left: 10px;
+    font-family: Manrope, Arial, sans-serif;
+    font-weight: 550;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #253122;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 

@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTrail, getTrails, fetchTrail, fetchTrails } from '../../store/trails';
-import ReviewsModal from './ReviewsModal';
+import { deleteReview } from '../../store/reviews';
+import CreateReviewsModal from './CreateReviewsModal';
+import UpdateReviewsModal from './UpdateReviewsModal';
 import Sidebar from './Sidebar';
 import './TrailShow.css'
 
@@ -31,12 +33,22 @@ function TrailShow() {
 
 
     // review modal
-    const [showModal, setShowModal] = useState(false);
+    const [showCreateModal, setShowCreateModal] = useState(false);
+    const [showUpdateModal, setShowUpdateModal] = useState(false);
 
-    const toggleReviewModal = () => {
-        setShowModal(true);
+    const toggleCreateReviewModal = () => {
+        setShowCreateModal(true);
     }
 
+    const toggleUpdateReviewModal = () => {
+        setShowUpdateModal(true);
+    }
+
+    const handleDeleteReviewSubmit = (reviewId) => (e) => {
+        e.preventDefault();
+        dispatch(deleteReview(reviewId))
+        window.location.reload(false)
+    }
 
     return (
         <>
@@ -84,30 +96,32 @@ function TrailShow() {
                                     </div>
 
                                     <div className='trailshow-description'>{
-                                        trail.description.split("\n").map((para)=>
-                                        <p>{para}</p>
+                                        trail.description.split("\n").map((para) =>
+                                            <p>{para}</p>
                                         )}
                                     </div>
-                                    
-                                    <div className='trailshow-tags'>{}</div>
+
+                                    <div className='trailshow-tags'>{ }</div>
                                     <div className='trailshow-reviews'>
                                         <div className='trailshow-review-summary'>
-                                        {/* <div className='review-summary-graph'></div> */}
-                                        <div className='trailshow-card-avgrating-container'>
-                                            <div>Average Rating:</div>
-                                            <div className='trailshow-card-avgrating'>
-                                                {trail.avgRating.toFixed(1)}
+                                            {/* <div className='review-summary-graph'></div> */}
+                                            <div className='trailshow-card-avgrating-container'>
+                                                <div>Average Rating:</div>
+                                                <div className='trailshow-card-avgrating'>
+                                                    {trail.avgRating.toFixed(1)}
+                                                </div>
+                                                <div className='trailshow-card-numreviews'>{trail.numReviews} reviews</div>
                                             </div>
-                                            <div className='trailshow-card-numreviews'>{trail.numReviews} reviews</div>
+                                            <button className='write-review-button' onClick={toggleCreateReviewModal}>Write a Review</button>
+                                            {showCreateModal && (
+                                                <ModalContext.Provider value={{ trail, showCreateModal, setShowCreateModal }}>
+                                                    <CreateReviewsModal trailId={trailId} />
+                                                </ModalContext.Provider>
+                                            )}
                                         </div>
-                                        <button className='write-review-button' onClick={toggleReviewModal}>Write a Review</button>
-                                        {showModal && (
-                                            <ModalContext.Provider value={{ trail, showModal, setShowModal }}>
-                                                <ReviewsModal trailId={trailId} />
-                                            </ModalContext.Provider>
-                                        )}
-                                        </div>
-                                        {trail.reviews.map((review) =>
+                                        {trail.reviews.sort((a, b) => {
+                                            return new Date(b.dateHiked) - new Date(a.dateHiked);
+                                        }).map((review) =>
                                             <div key={review.id} className='review-container'>
                                                 <div>{review.user.firstName} {review.user.lastName}</div>
                                                 <div>{review.dateHiked}</div>
@@ -115,7 +129,18 @@ function TrailShow() {
                                                     <span key={index} className="review-star">&#9733;</span>
                                                 ))}
                                                 </div>
-                                                <div>{review.description}</div>
+                                                <div className='review-description'>{review.description}</div>
+                                                {user && review.user.email === user.email && (
+                                                    <div>
+                                                        <span className='edit-review-button' onClick={toggleUpdateReviewModal}>Edit</span>
+                                                        {showUpdateModal && (
+                                                            <ModalContext.Provider value={{ trail, showUpdateModal, setShowUpdateModal }}>
+                                                                <UpdateReviewsModal trailId={trailId} reviewId={review.id} />
+                                                            </ModalContext.Provider>
+                                                        )}
+                                                        <span className='delete-review-button' onClick={handleDeleteReviewSubmit(review.id)}>Delete</span>
+                                                    </div>
+                                                )}
                                             </div>
                                         )}
                                     </div>
