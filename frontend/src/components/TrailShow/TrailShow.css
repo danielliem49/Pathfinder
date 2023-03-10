@@ -5,6 +5,10 @@
     background-color: #efefec;
 }
 
+.trailshow-navigation {
+    height: 20px;
+}
+
 .trailshow-card {
     overflow: hidden;
     border-radius: 16px;

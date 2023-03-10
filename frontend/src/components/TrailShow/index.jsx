@@ -58,7 +58,6 @@ function TrailShow() {
                     <div className='trailshow-body'>
                         {console.log(trail.description.split("\n"))}
                         <div className='trailshow-navigation'>
-                            <div>Search Goes Here</div>
                         </div>
 
                         <div className='trailshow-card'>

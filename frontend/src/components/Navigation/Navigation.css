@@ -6,6 +6,73 @@ body {
     padding: 0;
 }
 
+.user-icon-container {
+    position: relative;
+}
+
+.user-icon {
+    background-image: url('/assets/user-icon.png');
+    background-size: cover;
+    background-position: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 9999px;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5 ease-in;
+    background-color: #fff;
+    border-radius: 10px;
+    height: auto;
+    width: auto;   
+    padding: 20px;
+    font-family: Manrope, Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 14px;
+    color: #2b381f;
+}
+
+.welcome-greeting {
+    font-family: Manrope, Arial, sans-serif;
+    font-weight: 550;
+    line-height: 1.5;
+    font-size: 18px;
+    color: #2b381f;
+}
+
+.logout-button {
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: #2b381f;
+    height: 32px;
+    border-radius: 9999px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all .2s ease-out;
+    margin-top: 10px;
+}
+
+.nav-login-button:hover {
+    background-color: #c6cac2;
+}
+
+.user-icon-container:hover {
+    cursor: pointer;
+}
+
+.user-icon-container:hover .profile-dropdown {
+    display: block;   
+    opacity: 1;
+}
+
 /* for navbar */
 .nav-container {
     display: flex;

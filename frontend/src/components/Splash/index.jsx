@@ -54,7 +54,11 @@ function Splash() {
                     {user ?
                         <div className={`splash-search-header ${isLoaded ? ' isLoaded' : ''}`}>{`Today's the day, ${user.firstName}`}</div>
                         : <div className={`splash-search-header ${isLoaded ? 'isLoaded' : ''}`}>Find your outdoors</div>}
-                    <div className={`splash-search-bar ${isLoaded ? 'isLoaded' : ''}`}>Search Bar goes here</div>
+                    <div className={`splash-search-bar-container ${isLoaded ? 'isLoaded' : ''}`}>
+                        {/* <label htmlFor="search-bar">Search:</label> */}
+                        <input type="text" id="search-bar" className='splash-search-bar'></input>
+                    </div>
+                    {/* <span className="splash-search-bar-label">Future search function goes here</span> */}
                 </div>
 
                 <div className={`splash-trails-container ${isLoaded ? ' isLoaded' : ''}`}>
@@ -80,8 +84,7 @@ function Splash() {
                                         <Link to={`/parks/${trail.parkId}`} className='trail-card-park'>{trail.parkName}</Link>
                                     </div>
                                     <div className='trail-card-details'>
-                                        <span>Length: {trail.length} km</span>
-                                        <span>•</span>
+                                        <span>Length: {trail.length} km</span><span>•</span>
                                         <span>Est. {trail.estimatedTime}</span>
                                     </div>
                                 </div>
