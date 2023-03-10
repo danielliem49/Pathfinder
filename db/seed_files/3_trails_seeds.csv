@@ -1,65 +1,65 @@
 trail_name:string,latitude:float,longitude:float,length:float,difficulty_level:string,elevation_gain:integer,route_type:string,estimated_time:string,description:text,tags:string,park_id:bigint
 Padar Island Trail,-8.67725,119.55549,2.6,Moderate,223,Out & back,1h 14m,"Padar Island is a small uninhabited island within the Komodo archipelago. 
-\n
+
 The topography of the island is rugged, with steep volcanic mountains and hills set against deep bays.
-\n
-The views at the end of this trail of pink sand beaches and emerald green hills in contrast with the impossibly turquoise waters make this one of the most stunning views in all of Southeast Asia..",Hiking/Walking/Beach,8
-Mount Batur Summit Main Trail,-8.25008,115.39797,9.3,Hard,681,Out & back,5h 30m,"Mount Batur is one of the most popular hikes in Bali. \n This is a very popular area for backpacking and hiking, so you'll likely encounter other people while exploring.
-\n
+
+The views at the end of this trail of pink sand beaches and emerald green hills in contrast with the impossibly turquoise waters make this one of the most stunning views in all of Southeast Asia.",Hiking/Walking/Beach,8
+Mount Batur Summit Main Trail,-8.25008,115.39797,9.3,Hard,681,Out & back,5h 30m,"Mount Batur is one of the most popular hikes in Bali.  This is a very popular area for backpacking and hiking, so you'll likely encounter other people while exploring.
+
 It is located an hour north of the city of Ubud.
-\n
+
 The average climber starts the climb at 2 a.m. so they can reach the top for the sunrise.
-\n
+
 Climbers are required to use the services of a road guide to climb this mountain. ",Forest/Wildlife/Hiking/Rocky/Lake,1
 Mount Rinjani (Sembalun to Senaru),-8.358,116.51422,35.6,Hard,3365,Point to point,18h 59m,"Mount Rinjani is famous for its amazingly beautiful scenery, in particular Segara Anak Lake and Mount Batu Jari (often referred to as Mount Anak Rinjani). 
-\n
+
 This path will climb from Sembalun to the summit and will descend via Senaru. 
-\n
+
 The path from Sembalun is a gentle trek through a wide expanse of grassy hills and baby-blue skies.",Camping/Hiking/No Shade/Rocky/Lake/Multi-day,3
 Ijen Crater Trail,-8.07407,114.32236,9.3,Hard,577,Out & back,3h 40m,"Mount Ijen is like no other volcano on Earth! It's home to the world's largest acidic crater lake, the site of a dangerous sulfur mining operation, and a rare natural phenomenon popularly known as blue lava.
-\n
-The path leading up to Mount Ijen is quite arduous. To hike this mountain, you need a local guide to take you to the area of blue flames and the sunrise viewpoint. \n It is also recommended to bring a special mask because of the strong smell of sulfur. ",Hiking/Walking/Rocky/No Shade/Lake,2
-Mount Merapi Summit Trail,-7.50335,110.45583,9.8,Hard,1253,Out & back,4h 50m,"SAFETY ALERT: Mount Merapi (Gunung Merapi) is a volcano that is active and in permanent eruption. \n It is therefore advisable to check the weather and geological forecasts as well as the state of the trails before walking in this area. For more information please visit the park page. 
-\n
+
+The path leading up to Mount Ijen is quite arduous. To hike this mountain, you need a local guide to take you to the area of blue flames and the sunrise viewpoint.  It is also recommended to bring a special mask because of the strong smell of sulfur. ",Hiking/Walking/Rocky/No Shade/Lake,2
+Mount Merapi Summit Trail,-7.50335,110.45583,9.8,Hard,1253,Out & back,4h 50m,"SAFETY ALERT: Mount Merapi (Gunung Merapi) is a volcano that is active and in permanent eruption.  It is therefore advisable to check the weather and geological forecasts as well as the state of the trails before walking in this area. For more information please visit the park page. 
+
 This mountain is one of the most active volcanoes in Indonesia, the climbing terrain is quite steep and it is recommended to hire a guide.
-\n
+
 The hiking trail will pass through rocky roads and forest vegetation that is not too dense. ",Camping/Hiking/Wildlife/Forest/Rocky/Multi-day,7
 Mount Batur (Southern Route),-8.26348,115.3861,8.2,Hard,630,Out & back,3h 39m,"Mount Batur is one of the most popular hikes in Bali. This is a very popular area for backpacking and hiking, so you'll likely encounter other people while exploring.
-\n
+
 It is located an hour north of the city of Ubud.
-\n
+
 The average climber starts the climb at 2 a.m. so they can reach the top for the sunrise.
-\n
+
 Climbers are required to use the services of a road guide to climb this mountain. ",Forest/Wildlife/Hiking/Rocky/Lake,1
 Mount Rinjani (from Senaru),-8.3028,116.40112,24.5,Hard,2664,Out & back,13h 38m,"Mount Rinjani is an active volcano that sprawls across the majority of the island of Lombok. 
-\n
+
 This multi-day trek can be taken with or without guides and is open from April until January, as after January the monsoon season starts where trekking can become quite dangerous. 
-\n
+
 May is the best time to visit, when the landscape is is incredibly lush  and crowds are few..",Camping/Hiking/No Shade/Rocky/Lake/Multi-day,3
 Mount Merbabu via Selo,-7.4849,110.46028,10.1,Hard,1328,Out & back,6h 45m,"Mount Merbabu is a volcano located in Central Java, near the city of Jogjakarta. Merbabu is a perfect vantage point to observe the currently active Mount Merapi.
-\n
+
 There are 2 common trails to the summit; from the north from Kopeng or Tekelan, and from the south from the village of Selo. It is recommended to rent a car with a driver from Jogjakarta to go to Selo and back.",Camping/Hiking/Wildlife/Forest/Multi-day,4
 Red Coral Waterfall Trail,-8.26258,115.06589,1.9,Easy,73,Out & back,35m,"The Red Coral Waterfall sits in a wide open clearing. 
-\n
+
 It is part of The Munduk waterfall system; a collection of four beautiful waterfalls tucked away in the jungles of Munduk.",Waterfall/Forest/Walking/Hiking/Running/Wildlife,5
 Mount Bromo Loop,-7.92629,112.96673,9.7,Hard,406,Loop,4h 40m,"Marvel at the beauty of the active crater at the summit of Mount Bromo.
-\n
+
 Many climbers choose to start the climb at 2 am in order to see the beautiful sunrise. 
-\n
+
 Mount Bromo is also famous for the ancient desert caldera nearby, and the ghostly fog that settles over it. Definitely take the time you'll spend exploring into account!
-\n
+
 You can rent the services of an off-road Jeep or horse if you want to reach the top of the mountain without having to climb.",Camping/Hiking/Desert/Wildlife,6
 Munduk Waterfalls Trail,-8.26605,115.05657,4.7,Moderate,264,Loop,1h 43m,"A mostly concrete path, with a mix of large and steep steps and some paths toward the local villages. There's a small portion of dirt trail hiking. 
-\n
+
 A lot of ups and downs involved so the vertical aspect of this trail should not be dismissed. However, the waterfalls it brings you to are beautiful, along with all the views on the way. Easily worth it!",Waterfall/Forest/Walking/Hiking/Running/Wildlife,5
 Mount Merbabu via Suwanting,-7.47385,110.40035,10.5,Hard,1713,Out & back,7h 30m,"This route is known to be quite difficult among climbers. The journey from the beginning of the entrance to the mountain is a steep uphill.
-\n
+
 The higher the up the trail, the harder it gets, with many large rocks to climb. Many hikers choose to set up camp on top of the mountain and enjoy the afternoon sunset or the next day's sunrise.",Camping/Hiking/Wildlife/Forest/Rocky/Multi-day,4
 Mount Merbabu via Wekas,-7.43359,110.41597,9.5,Moderate,1308,Out & back,6h 14m,"The Wekas route is a Merbabu mountain climbing trail of moderate difficulty that has beautiful scenery.
-\n
+
 The Wekas route is the most popular route for Merbabu climbers and is the shortest route to the summit.
-\n
+
  Many hot springs can be seen enroute to the top.",Camping/Hiking/Wildlife/Forest/Multi-day,4
 Rinca Island Loop,-8.65547,119.71801,4.5,Easy,113,Loop,1h 11m,"Rinca Island and Komodo Island are the only two places on Earth where the ancient Komodo dragon can be found.
-\n
+
 It is mandatory to use the services of a ranger guide for this trail.",Hiking/Walking/Forest,8
