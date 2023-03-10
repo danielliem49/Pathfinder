@@ -4,8 +4,7 @@ class Api::ParksController < ApplicationController
     def show
         @park = Park.find_by(id: params[:id])
         if @park
-            render "/api/parks/show"
-            # render :show
+            render :show
         else
             render json: ['Park does not exist'], status: 404
         end

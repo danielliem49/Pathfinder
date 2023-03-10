@@ -2,14 +2,14 @@
 import csrfFetch from "./csrf.js";
 
 const RECEIVE_PARKS = 'parks/RECEIVE_PARKS';
-const RECEIVE_PARK = 'parks/RECEIVE_PARK';
+export const RECEIVE_PARK = 'parks/RECEIVE_PARK';
 
 const receiveParks = (parks) => {
     return( {type: RECEIVE_PARKS, parks})
 }
 
-const receivePark = (park) => {
-    return ({ type: RECEIVE_PARK, park })
+const receivePark = (payload) => {
+    return ({ type: RECEIVE_PARK, payload })
 }
 
 export const fetchParks = () => async dispatch => {
@@ -25,8 +25,8 @@ export const fetchPark = (parkId) => async dispatch => {
     const response = await csrfFetch(`/api/parks/${parkId}`);
 
     if (response.ok) {
-        const park = await response.json();
-        return (dispatch(receivePark(park)))
+        const payload = await response.json();
+        return (dispatch(receivePark(payload)))
     }
 }
 
@@ -44,7 +44,7 @@ export default function parksReducer(oldState = {}, action) {
         case RECEIVE_PARKS:
             return action.parks;
         case RECEIVE_PARK:
-            const park = action.park;
+            const park = action.payload.park;
             newState[park.id] = park;
             return newState;
         default:

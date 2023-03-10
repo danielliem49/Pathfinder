@@ -7,7 +7,7 @@ import { ModalContext } from '.';
 
 
 
-export default function CreateReviewsModal( {trailId} ) {
+export default function CreateReviewsModal({ trailId }) {
     const dispatch = useDispatch();
     const { trail, showCreateModal, setShowCreateModal } = useContext(ModalContext);
     const user = useSelector((state) => {
@@ -40,25 +40,30 @@ export default function CreateReviewsModal( {trailId} ) {
     return (
         <div className="review-modal">
             <div className="review-modal-content">
-                <button className="review-modal-close-button" onClick={() => setShowCreateModal(false)}>X</button>
-                <h2 className="review-modal-trail-name">Create review for: {trail.trailName}</h2>
+                <button className="modal-close-button" onClick={() => setShowCreateModal(false)}>&#10005;</button>
+                <h2 className="review-modal-trail-name">{trail.trailName}</h2>
                 <form onSubmit={handleCreateReviewSubmit}>
-                    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-                    <div className='review-modal-rating'>
-                        <input type='radio' value='5' id='5' name='rating' onChange={(e) => setRating(e.target.value)} />
-                        <label htmlFor='5'>&#9733;</label>
-                        <input type='radio' value='4' id='4' name='rating' onChange={(e) => setRating(e.target.value)} />
-                        <label htmlFor='4'>&#9733;</label>
-                        <input type='radio' value='3' id='3' name='rating' onChange={(e) => setRating(e.target.value)} />
-                        <label htmlFor='3'>&#9733;</label>
-                        <input type='radio' value='2' id='2' name='rating' onChange={(e) => setRating(e.target.value)} />
-                        <label htmlFor='2'>&#9733;</label>
-                        <input type='radio' value='1' id='1' name='rating' onChange={(e) => setRating(e.target.value)} />
-                        <label htmlFor='1'>&#9733;</label>
+                    <div className="review-form">
+                        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+                        <div className='review-modal-rating'>
+                            <input type='radio' value='5' id='5' name='rating' onChange={(e) => setRating(e.target.value)} />
+                            <label htmlFor='5'>&#9733;</label>
+                            <input type='radio' value='4' id='4' name='rating' onChange={(e) => setRating(e.target.value)} />
+                            <label htmlFor='4'>&#9733;</label>
+                            <input type='radio' value='3' id='3' name='rating' onChange={(e) => setRating(e.target.value)} />
+                            <label htmlFor='3'>&#9733;</label>
+                            <input type='radio' value='2' id='2' name='rating' onChange={(e) => setRating(e.target.value)} />
+                            <label htmlFor='2'>&#9733;</label>
+                            <input type='radio' value='1' id='1' name='rating' onChange={(e) => setRating(e.target.value)} />
+                            <label htmlFor='1'>&#9733;</label>
+                        </div>
+                        <textarea className="review-modal-textarea" onChange={(e) => setDescription(e.target.value)}></textarea>
+                        <div className='review-modal-hikedate'>
+                            <span style={{ paddingRight: 15 }}>Date hiked:</span>
+                            <input value={date_hiked} type="date" id="date" onChange={(e) => setDate_hiked(e.target.value)} />
+                        </div>
+                        <button className='review-modal-submit-button'>Submit Review</button>
                     </div>
-                    <textarea onChange={(e) => setDescription(e.target.value)}></textarea>
-                    <input value={date_hiked} type="date" id="date"  onChange={(e) => setDate_hiked(e.target.value)}  ></input>
-                    <button className='review-modal-submit-button'>Submit Review</button>
                 </form>
             </div>
         </div>

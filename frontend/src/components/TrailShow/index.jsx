@@ -72,8 +72,8 @@ function TrailShow() {
                                         <span style={{ marginLeft: '4px' }}>{trail.avgRating.toFixed(1)}</span>
                                         <span className="review-alt-coloring" style={{ marginLeft: '3px', color: '#efefec' }}>({trail.numReviews})</span>
                                     </div>
-                                    <div onClick={(event) => event.stopPropagation()}>
-                                        <Link to={`/parks/${trail.parkId}`} className='trail-card-park' style={{ color: '#efefec' }}>{trail.parkName}</Link>
+                                    <div style={{ paddingBottom: 10 }} onClick={(event) => event.stopPropagation()}>
+                                        <Link to={`/parks/${trail.parkId}`} className='trail-card-park' style={{ color: '#efefec' , fontSize: 16 , paddingBottom: 10}}>{trail.parkName}</Link>
                                     </div>
                                 </div>
                             </div>
@@ -108,7 +108,8 @@ function TrailShow() {
                                             {/* <div className='review-summary-graph'></div> */}
                                             <div className='trailshow-card-avgrating-container'>
                                                 <div>Average Rating:</div>
-                                                <div className='trailshow-card-avgrating'>
+                                                <div className='trailshow-card-avgrating'>    
+                                                    <span className="review-star" style={{ fontSize: 44 , margin: 10, lineHeight: 3}}>&#9733;</span>
                                                     {trail.avgRating.toFixed(1)}
                                                 </div>
                                                 <div className='trailshow-card-numreviews'>{trail.numReviews} reviews</div>
@@ -124,10 +125,10 @@ function TrailShow() {
                                             return new Date(b.dateHiked) - new Date(a.dateHiked);
                                         }).map((review) =>
                                             <div key={review.id} className='review-container'>
-                                                <div>{review.user.firstName} {review.user.lastName}</div>
-                                                <div>{review.dateHiked}</div>
+                                                <div className='review-author'>{review.user.firstName} {review.user.lastName}</div>
+                                                <div className='review-hikedate'>{(new Date(review.dateHiked)).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}</div>
                                                 <div>{Array(review.rating).fill().map((_, index) => (
-                                                    <span key={index} className="review-star">&#9733;</span>
+                                                    <span key={index} className="review-star" style={{fontSize : 24 }}>&#9733;</span>
                                                 ))}
                                                 </div>
                                                 <div className='review-description'>{review.description}</div>

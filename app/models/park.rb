@@ -23,5 +23,13 @@ class Park < ApplicationRecord
         class_name: :Trail,
         dependent: :destroy
 
+    has_many :reviews,
+        through: :trails,
+        source: :reviews
+
     has_many_attached :images, dependent: :purge_later
+
+    def num_reviews
+        return self.reviews.length
+    end
 end

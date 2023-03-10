@@ -26,7 +26,7 @@
 
 .trailshow-card-header{
     /* margin: 160px 560px 0px 0px; */
-    margin-top: 280px;
+    margin-top: 220px;
     display: inline-block;
     width: max-content;
     padding-right: 30px;
@@ -34,7 +34,7 @@
     background-color: rgba(1, 53, 44, 0.9);
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    box-shadow: 0 2px 2px 0px rgb(0 0 0 / 50%);
+    box-shadow: 0 4px 4px 4px rgb(0 0 0 / 50%);
 }
 .trailshow-card-header>* {
     padding-left: 20px;
@@ -42,20 +42,21 @@
 
 .trailshow-name {
     font-family: Percent, Beatrice, Arial, sans-serif;
-        font-size: 34px;
-        font-weight: 400;
-        line-height: 1.3;
-        color: #efefec;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #efefec;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 .trailshow-header-reviews {
     font-family: Manrope, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #efefec;
     margin-top: 2px;
     margin-bottom: 8px;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -70,7 +71,8 @@
 
 .trailshow-content {
     flex: 0 0 60%;
-    padding: 20px 10px 20px 20px
+    padding: 20px 10px 20px 20px;
+    background-color: white;
 }
 
 
@@ -100,7 +102,7 @@
 
 .trailshow-description {
     font-family: Manrope, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 400;
     line-height: 1.5;
     color: #2b381f;
@@ -118,13 +120,14 @@
 
 .trailshow-card-avgrating-container {
     font-family: Percent, Beatrice, Arial, sans-serif;
-    line-height: 1.3;
+    /* line-height: 1.3; */
     color: #2b381f;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px 0px 10px 0px;
 }
 
 .trailshow-card-avgrating {
@@ -132,7 +135,7 @@
 }
 
 .trailshow-card-numreviews {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .review-container {
@@ -151,20 +154,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.5s cubic-bezier(.33, 1, .68, 1);
 }
 
 .review-modal-content {
     background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
 }
 
-.review-modal-close-button {
+.review-form {
+    display:flex;
+    flex-direction: column;
+}
+
+.modal-close-button {
     background-color: #fff;
     color: #2b381f;
-    height: 48px;
-    width: 48px;
+    transition: all 200ms ease-in-out 0s;
+    font-size: 28px;
+    height: 50px;
+    width: 50px;
+    border-radius: 9999px;
+    border: none;
+    fill: currentcolor;
+    padding: 0px;
+}
+
+.modal-close-button:hover {
+    transform: rotate(-90deg);
+    background-color: #c9c9c9;
+    cursor: pointer;
 }
 
 .review-modal-trail-name {
@@ -173,14 +196,14 @@
     font-weight: 400;
     line-height: 1.3;
     color: #2b381f;
-    display: flex;
-    align-items: center;
+    margin-left: 20px;
 }
 
 .review-modal-rating {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+    /* padding: 20px; */
     margin-left: 20px;
 }
 
@@ -212,6 +235,47 @@
     color: rgb(61, 148, 74);
 }
 
+.review-modal-textarea {
+    width: 400px;
+    height: 200px;
+    border: 1px solid rgba(1, 53, 44, 0.2);
+    border-radius: 20px;
+    padding: 15px;
+    font-family: Percent, Beatrice, Arial, sans-serif;
+    font-size: 18px;
+    margin: 20px;
+}
+
+.review-modal-hikedate {
+    font-family: Percent, Beatrice, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #2b381f;
+    margin-left: 20px;
+}
+
+.review-modal-submit-button {
+    /* based off button-type1 */
+    background-color: #0c441e;
+    color: #fff;
+    margin-top: 80px;
+    margin-right: 20px;
+    padding: 15px 20px;
+    border-radius: 9999px;
+    border: none;
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    width: auto;
+    align-self: flex-end;
+}
+
+.review-modal-submit-button:hover {
+    background-color: #253122;
+}
+
 .write-review-button {
     /* based off button-type1 */
     background-color: #0c441e;
@@ -230,27 +294,30 @@
     background-color: #253122;
 }
 
-.review-modal-submit-button {
-    /* based off button-type1 */
-    background-color: #0c441e;
-    color: #fff;
-    padding: 15px 20px;
-    border-radius: 9999px;
-    border: none;
+.review-author {
     font-family: Manrope, Arial, sans-serif;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s ease all;
-    width: auto;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2b381f;
+    flex: 1 0 auto;
+    padding-top: 10px;
 }
 
-.review-modal-submit-button:hover {
-    background-color: #253122;
+.review-hikedate {
+    font-family: Manrope, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2b381f;
+    color: #656e5e;
+    padding-bottom: 10px;
 }
+
 
 .review-description {
         font-family: Manrope, Arial, sans-serif;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 400;
         line-height: 1.5;
         color: #2b381f;
@@ -260,6 +327,7 @@
 .trailshow-sidebar {
     flex: 40%;
     padding: 20px 20px 20px 10px;
+    background-color: white;
     border-left: 1px solid rgba(1, 53, 44, 0.2);
 }
 

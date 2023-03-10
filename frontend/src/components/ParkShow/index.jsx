@@ -17,6 +17,7 @@ function ParkShow() {
     const dispatch = useDispatch();
     const { parkId } = useParams();
     const park = useSelector(getPark(parkId));
+    const trails = useSelector((state) => Object.values(state.trails))
     
     useEffect(() => {
         dispatch(fetchPark(parkId))
@@ -41,7 +42,7 @@ function ParkShow() {
                 )
             )} */}
 
-            {park?.trails && (
+            {/* {park?.trails && (
                 <div>
                     <p>Trails:</p>
                     {park.trails.map((trail) => (
@@ -52,7 +53,7 @@ function ParkShow() {
                         </div>
                     ))}
                 </div>
-            )}
+            )} */}
         </>
     )
 }
