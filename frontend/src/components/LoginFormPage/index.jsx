@@ -64,6 +64,7 @@ function LoginFormPage() {
                         <div className="icon"></div>
 
                         <button className="type1-button" type="submit">Log In</button>
+                            <hr />
                         <button className="type1-button" type="submit" onClick={handleDemoLogin}>Demo Log In</button>
                     </form>
 

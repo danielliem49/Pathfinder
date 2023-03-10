@@ -42,7 +42,7 @@ function Navigation() {
 
             <div className='nav-rightside'>
                 <div className='nav-rightside-element'>
-                    <div>Help</div>
+                    {/* <div>Help</div> */}
                 </div>
                 {sessionLinks}
             </div>

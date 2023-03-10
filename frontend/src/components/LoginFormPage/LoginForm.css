@@ -140,6 +140,11 @@
     /* margin-right: 10px; */
 }
 
+hr {
+    width: 280px;
+    /* border-bottom: 1px solid rgba(1, 53, 44, 0.2); */
+}
+
 .type1-button:hover {
     background-color: #253122;
 }

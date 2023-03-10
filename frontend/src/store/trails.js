@@ -1,5 +1,6 @@
 
 import csrfFetch from "./csrf";
+import { RECEIVE_PARK } from "./parks";
 
 
 const RECEIVE_TRAILS = 'trails/RECEIVE_TRAILS';
@@ -48,6 +49,8 @@ export default function trailsReducer(oldState = {}, action) {
             const trail = action.payload.trail;
             newState[trail.id] = trail;
             return newState;
+        case RECEIVE_PARK:
+            return action.payload.trails
         default:
             return oldState;
     }

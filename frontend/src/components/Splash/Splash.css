@@ -88,8 +88,8 @@
 }
 
 .splash-river {
-    margin: 100px;
-    margin-top: 0px;
+    margin: 0px 100px 0px 100px;
+    padding-bottom: 50px;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
