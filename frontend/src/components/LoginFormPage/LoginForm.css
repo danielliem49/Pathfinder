@@ -6,10 +6,10 @@
     height: 100vh;
 
     background-image:
-            url('/assets/bgd-1.jpg'),
-            url('/assets/bgd-2.jpg'),
-            url('/assets/bgd-3.jpg'),
-            url('/assets/bgd-4.jpg');
+            url('https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/login-bgd-1.jpg'),
+            url('https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/login-bgd-2.jpg'),
+            url('https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/login-bgd-3.jpg'),
+            url('https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/login-bgd-4.jpg');
         background-position:
             top left,
             top right,

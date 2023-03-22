@@ -99,26 +99,6 @@ function ParkShow() {
                 </>
             )}
 
-            {/* {park?.trails && (
-                park.trails.map((trail) =>
-                    <p>Trails: 
-                        <Link to={`/trails/${trail.id}`}>{trail.trailName}</Link>
-                    </p>
-                )
-            )} */}
-
-            {/* {park?.trails && (
-                <div>
-                    <p>Trails:</p>
-                    {park.trails.map((trail) => (
-                        <div key={trail.id}>
-                            <span>
-                                <Link to={`/trails/${trail.id}`}>{trail.trailName}</Link>
-                            </span>
-                        </div>
-                    ))}
-                </div>
-            )} */}
         </>
     )
 }
