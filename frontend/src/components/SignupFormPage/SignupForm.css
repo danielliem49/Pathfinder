@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('/assets/bgd-large-1.jpeg');
+    background-image: url('https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/signup-bgd.jpeg');
     background-size: cover;
 }
 

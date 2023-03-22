@@ -11,7 +11,7 @@ body {
 }
 
 .user-icon {
-    background-image: url('/assets/user-icon.png');
+    background-image: url('https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/user-icon.png');
     background-size: cover;
     background-position: center;
     width: 35px;
@@ -135,7 +135,7 @@ body {
 }
 
 .nav-logo {
-    background-image: url('/assets/pathfinder-logo-banner.png');
+    background-image: url('https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/pathfinder-logo-banner.png');
     background-size: 135px;
     background-repeat: no-repeat;
     width: 135px;

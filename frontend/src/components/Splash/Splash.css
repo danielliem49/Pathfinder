@@ -13,25 +13,25 @@
 }
 
 .splash-search-container.bgd1 {
-    background-image: url('/assets/splash-1.jpeg');
+    background-image: url('https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/splash-1.jpeg');
     background-size: cover;
     background-position: center;
 }
 
 .splash-search-container.bgd2 {
-    background-image: url('/assets/splash-2.jpeg');
+    background-image: url('https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/splash-2.jpeg');
     background-size: cover;
     background-position: center;
 }
 
 .splash-search-container.bgd3 {
-    background-image: url('/assets/splash-3.jpeg');
+    background-image: url('https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/splash-3.jpeg');
     background-size: cover;
     background-position: center;
 }
 
 .splash-search-container.bgd4 {
-    background-image: url('/assets/splash-4.jpeg');
+    background-image: url('https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/splash-4.jpeg');
     background-size: cover;
     background-position: center;
 }
