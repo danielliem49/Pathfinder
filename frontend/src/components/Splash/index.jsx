@@ -12,6 +12,15 @@ function Splash() {
     const dispatch = useDispatch();
     const history = useHistory();
     const trails = useSelector(getTrails);
+    const allTags = trails.reduce((tags, trail) => {
+        trail.tags.split('/').forEach((tag) => {
+            if (!tags.includes(tag.trim())) {
+                tags.push(tag.trim());
+            }
+        });
+        return tags;
+    }, []);
+
     const parks = useSelector(getParks);
     const user = useSelector((state) => {
         return (state.session ? state.session.user : null)
@@ -21,13 +30,26 @@ function Splash() {
     const bgdRandArray = [1, 2, 3, 4];
     const [bgdNum, setBgdNum] = useState(Math.floor(Math.random() * bgdRandArray.length));
 
+
+    // setting random tag for river
+    let randTag = '';
+    let randTagTrails = [];
+    if (allTags) {
+        // randTag = allTags[Math.floor(Math.random() * allTags.length)];
+        // ^reset bug?
+
+        randTag = allTags[10];
+        randTagTrails = trails.filter((trail) => { return trail.tags.split('/').includes(randTag) });
+    }
+    console.log(randTagTrails)
+
     // for bgd image changes
     useEffect(() => {
         const interval = setInterval(() => {
             setBgdNum((bgdNum + 1) % (bgdRandArray.length));
         }, 8000);
         return () => clearInterval(interval);
-    }, [bgdNum, bgdRandArray.length]);
+    }, [bgdNum]);
 
 
     // dispatch fetches
@@ -49,7 +71,7 @@ function Splash() {
 
     return (
         <>
-            <div className='splash-body'>
+            {trails && (<div className='splash-body'>
 
                 <div className={`splash-search-container bgd${bgdNum + 1}`}>
                     {user ?
@@ -95,6 +117,40 @@ function Splash() {
                 </div>
 
 
+                {randTag && (<div className='splash-trails-container' data-aos="fade-down" data-aos-duration="500">
+                    <div className='splash-trails-header'>
+                        <h2>{`Best ${randTag.toLowerCase()} trails:`}</h2>
+                    </div>
+                    <div className='splash-river'>
+                        <div className='splash-river-trail-card-container'>
+                            {randTagTrails.map((trail) =>
+                                <div key={trail.id} className='trail-card' onClick={() => handleCardClick(trail.id)} >
+                                    <div className='trail-card-image'>
+                                        <img src={trail.imagePreviewUrl} key={trail.imagesPreviewUrl} />
+                                    </div>
+                                    <div className='trail-card-reviews'>
+                                        <span style={{ marginRight: '8px' }}>{trail.difficultyLevel}</span>
+                                        <span className="review-alt-coloring">•</span>
+                                        <span className="review-star" style={{ marginLeft: '8px' }}>&#9733;</span>
+                                        <span style={{ marginLeft: '3px' }}>{trail.avgRating.toFixed(1)}</span>
+                                        <span className="review-alt-coloring" style={{ marginLeft: '3px' }}>({trail.numReviews})</span>
+                                    </div>
+                                    <div className='trail-card-name'>{trail.trailName}</div>
+                                    <div onClick={(event) => event.stopPropagation()}>
+                                        <Link to={`/parks/${trail.parkId}`} className='trail-card-park'>{trail.parkName}</Link>
+                                    </div>
+                                    <div className='trail-card-details'>
+                                        <span>Length: {trail.length} km</span><span>•</span>
+                                        <span>Est. {trail.estimatedTime}</span>
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    </div>
+                </div>
+                )}
+
+
                 {/* <div>
                     <h2>Parks</h2>
                     <ul>
@@ -107,6 +163,7 @@ function Splash() {
                 </div> */}
             </div>
 
+            )}
         </>
     )
 }

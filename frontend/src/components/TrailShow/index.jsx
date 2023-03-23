@@ -54,7 +54,6 @@ function TrailShow() {
     return (
         <>
             {trail && trails && reviews && (
-                <>
                     <div className='trailshow-body'>
                         {console.log(trail.description.split("\n"))}
                         <div className='trailshow-navigation'>
@@ -159,7 +158,6 @@ function TrailShow() {
 
 
                     </div>
-                </>
             )}
         </>
     )

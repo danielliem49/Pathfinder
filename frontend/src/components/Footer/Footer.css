@@ -36,8 +36,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #01352c;
-    height: 600px;
+    background-color: #001b0e;
+    height: 500px;
     padding: 0 50px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
