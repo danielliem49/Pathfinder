@@ -41,7 +41,6 @@ function Splash() {
         randTag = allTags[10];
         randTagTrails = trails.filter((trail) => { return trail.tags.split('/').includes(randTag) });
     }
-    console.log(randTagTrails)
 
     // for bgd image changes
     useEffect(() => {
@@ -78,8 +77,9 @@ function Splash() {
                         <div className={`splash-search-header ${isLoaded ? ' isLoaded' : ''}`}>{`Today's the day, ${user.firstName}`}</div>
                         : <div className={`splash-search-header ${isLoaded ? 'isLoaded' : ''}`}>Find your outdoors</div>}
                     <div className={`splash-search-bar-container ${isLoaded ? 'isLoaded' : ''}`}>
-                        {/* <label htmlFor="search-bar">Search:</label> */}
-                        <input type="text" id="search-bar" className='splash-search-bar'></input>
+                        <input type="text" className='splash-search-bar' required></input>
+                        <img className='splash-search-bar-icon' src='https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/search-icon.png'></img>
+                        <span className='splash-search-bar-labels'>Search</span>
                     </div>
                     {/* <span className="splash-search-bar-label">Future search function goes here</span> */}
                 </div>
