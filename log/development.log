@@ -1,0 +1,510 @@
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-23 09:36:53 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (2.9ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:21
+  [1m[36mActiveStorage::Attachment Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 2], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mPark Load (0.8ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 2]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  [1m[36mActiveStorage::Attachment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 3], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 3]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 4], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 4]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 5], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 5]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  [1m[36mActiveStorage::Attachment Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 6], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 6]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  [1m[36mActiveStorage::Attachment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 7], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 7], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 7]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 8], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 8], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 8]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  [1m[36mActiveStorage::Attachment Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 9], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 9], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mPark Load (0.6ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 9]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 10], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 10], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 10]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 11], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 11], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 11]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  [1m[36mActiveStorage::Attachment Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 12], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 12], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 12]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 13], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 13], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 13]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 14], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 14], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 14]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  [1m[36mActiveStorage::Attachment Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 ORDER BY "active_storage_attachments"."id" ASC LIMIT $4[0m  [["record_id", 1], ["record_type", "Trail"], ["name", "images"], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:24
+  [1m[36mCACHE Park Load (0.0ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:25
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 1]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  Rendered api/trails/index.json.jbuilder (Duration: 130.7ms | Allocations: 104116)
+Completed 200 OK in 164ms (Views: 102.7ms | ActiveRecord: 38.3ms | Allocations: 107009)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2c247ec0f000c0e22be94d2d7b09bed553ecfdab/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:53 -0700
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--64492663874763b88b23058566c130fa5db10576/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:53 -0700
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5a0e078310f8a6bcf83b3af8566104aa4ea19250/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:53 -0700
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--02ed4cc3f39f69f267dda706c072ab417de27edd/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6914fb32c97a3acb39a95dc06c84b6a028b81255/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2c247ec0f000c0e22be94d2d7b09bed553ecfdab", "filename"=>"1"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[36m  Disk Storage (158.0ms) [0m[34mGenerated URL for file at key: xjas5f7arqbjuyzd5e1p0vofsapb (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3BoY3pWbU4yRnljV0pxZFhsNlpEVmxNWEF3ZG05bWMyRndZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4xODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--a5102b88c21f1cdf072a28a5221b4914d8ca6de0/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3BoY3pWbU4yRnljV0pxZFhsNlpEVmxNWEF3ZG05bWMyRndZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4xODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--a5102b88c21f1cdf072a28a5221b4914d8ca6de0/1.jpeg
+Completed 302 Found in 163ms (ActiveRecord: 0.4ms | Allocations: 280386)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--86effa1c20fa41c66161d06f32d347344971dc8c/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--64492663874763b88b23058566c130fa5db10576", "filename"=>"1"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: 392upmwhlwtewb89h9xsbulvw5wd (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNemt5ZFhCdGQyaHNkM1JsZDJJNE9XZzVlSE5pZFd4MmR6VjNaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b3f9207eac73410ad1d25f4a2301b45a6f614604/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNemt5ZFhCdGQyaHNkM1JsZDJJNE9XZzVlSE5pZFd4MmR6VjNaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b3f9207eac73410ad1d25f4a2301b45a6f614604/1.jpeg
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms | Allocations: 1515)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBIdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6914fb32c97a3acb39a95dc06c84b6a028b81255", "filename"=>"1"}
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--02ed4cc3f39f69f267dda706c072ab417de27edd", "filename"=>"1"}
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5a0e078310f8a6bcf83b3af8566104aa4ea19250", "filename"=>"1"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+[36m  Disk Storage (0.2ms) [0m[34mGenerated URL for file at key: nyaq6zb8x7uxga0llykaa7um5bz8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibmxoY1RaNllqaDROM1Y0WjJFd2JHeDVhMkZoTjNWdE5XSjZPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--c98e95c8d19428c89086ab81351e4e1d018000dd/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibmxoY1RaNllqaDROM1Y0WjJFd2JHeDVhMkZoTjNWdE5XSjZPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--c98e95c8d19428c89086ab81351e4e1d018000dd/1.jpeg
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 4493)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3BoY3pWbU4yRnljV0pxZFhsNlpEVmxNWEF3ZG05bWMyRndZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4xODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--a5102b88c21f1cdf072a28a5221b4914d8ca6de0/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNemt5ZFhCdGQyaHNkM1JsZDJJNE9XZzVlSE5pZFd4MmR6VjNaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b3f9207eac73410ad1d25f4a2301b45a6f614604/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--86effa1c20fa41c66161d06f32d347344971dc8c", "filename"=>"1"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: uh56wtchkwmh4j4us69e3ty2bjw0 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkV2cxTm5kMFkyaHJkMjFvTkdvMGRYTTJPV1V6ZEhreVltcDNNQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--c4552aa894b41da8065828ce0def7727888a71fd/1.jpeg)[0m
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: aqttd5bbbmr164c4nuuihvt8pkoq (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEYwZEdRMVltSmliWEl4TmpSak5HNTFkV2xvZG5RNGNHdHZjUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a5f1857aadd0d23deb6aa341677866b8ffee2c17/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEYwZEdRMVltSmliWEl4TmpSak5HNTFkV2xvZG5RNGNHdHZjUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a5f1857aadd0d23deb6aa341677866b8ffee2c17/1.jpeg
+[36m  Disk Storage (0.2ms) [0m[34mGenerated URL for file at key: jffr7jhnczc5n1b0pn4c82c87u3a (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhbVptY2pkcWFHNWplbU0xYmpGaU1IQnVOR000TW1NNE4zVXpZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMzJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9ed6d182e29b8287a9ff99845d1c07d7a6af3584/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkV2cxTm5kMFkyaHJkMjFvTkdvMGRYTTJPV1V6ZEhreVltcDNNQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--c4552aa894b41da8065828ce0def7727888a71fd/1.jpeg
+Completed 302 Found in 25ms (ActiveRecord: 9.8ms | Allocations: 13676)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhbVptY2pkcWFHNWplbU0xYmpGaU1IQnVOR000TW1NNE4zVXpZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMzJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9ed6d182e29b8287a9ff99845d1c07d7a6af3584/1.jpeg
+Completed 302 Found in 24ms (ActiveRecord: 9.8ms | Allocations: 12429)
+
+
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 4098)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibmxoY1RaNllqaDROM1Y0WjJFd2JHeDVhMkZoTjNWdE5XSjZPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--c98e95c8d19428c89086ab81351e4e1d018000dd/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 750)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 704)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhbVptY2pkcWFHNWplbU0xYmpGaU1IQnVOR000TW1NNE4zVXpZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMzJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9ed6d182e29b8287a9ff99845d1c07d7a6af3584/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEYwZEdRMVltSmliWEl4TmpSak5HNTFkV2xvZG5RNGNHdHZjUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a5f1857aadd0d23deb6aa341677866b8ffee2c17/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkV2cxTm5kMFkyaHJkMjFvTkdvMGRYTTJPV1V6ZEhreVltcDNNQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--c4552aa894b41da8065828ce0def7727888a71fd/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--986523c2b1cff9bff1c23d959c1c91c1eca942fa/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--48e703e5e44ce51c995503a7c2bf879f3de92f3f/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 258)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 178)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0ed695db0f0523db68f68ce682094d642d8fb3d5/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBKQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--986523c2b1cff9bff1c23d959c1c91c1eca942fa", "filename"=>"1"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: 13fb4n4mcaawq40o83rmm8feqs8i (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNVE5tWWpSdU5HMWpZV0YzY1RRd2J6Z3pjbTF0T0dabGNYTTRhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yOTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--0d19d240a497e77ffe85bc80b7f51732dfd097e2/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNVE5tWWpSdU5HMWpZV0YzY1RRd2J6Z3pjbTF0T0dabGNYTTRhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yOTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--0d19d240a497e77ffe85bc80b7f51732dfd097e2/1.jpeg
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1618)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 351)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBNdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--59279fc5947951b5136f790b1c33b1c86b2c529d/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ad82b903e226fcdd3358b11329fa8e40a8ebcbd6/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNVE5tWWpSdU5HMWpZV0YzY1RRd2J6Z3pjbTF0T0dabGNYTTRhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yOTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--0d19d240a497e77ffe85bc80b7f51732dfd097e2/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBLUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--48e703e5e44ce51c995503a7c2bf879f3de92f3f", "filename"=>"1"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: 213uljhxfb7cmia33scc9d2k3kav (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNakV6ZFd4cWFIaG1ZamRqYldsaE16TnpZMk01WkRKck0ydGhkZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zMTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--7a3b65f532c098776b3eea7809cb59ceb23f7b8c/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNakV6ZFd4cWFIaG1ZamRqYldsaE16TnpZMk01WkRKck0ydGhkZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zMTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--7a3b65f532c098776b3eea7809cb59ceb23f7b8c/1.jpeg
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1276)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBQUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--91767db7ea41a0548c33eca9e262b2b40ae80f66/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBMZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0ed695db0f0523db68f68ce682094d642d8fb3d5", "filename"=>"1"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: rqf4pz42e7rtk731i49yyviq84by (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjbkZtTkhCNk5ESmxOM0owYXpjek1XazBPWGw1ZG1seE9EUmllUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zMzZaIiwicHVyIjoiYmxvYl9rZXkifX0=--21b6bf731a9e9660d13f555c60f218e7cdf4bf63/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjbkZtTkhCNk5ESmxOM0owYXpjek1XazBPWGw1ZG1seE9EUmllUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zMzZaIiwicHVyIjoiYmxvYl9rZXkifX0=--21b6bf731a9e9660d13f555c60f218e7cdf4bf63/1.jpeg
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms | Allocations: 1530)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBNdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--59279fc5947951b5136f790b1c33b1c86b2c529d", "filename"=>"1"}
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ad82b903e226fcdd3358b11329fa8e40a8ebcbd6", "filename"=>"1"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNakV6ZFd4cWFIaG1ZamRqYldsaE16TnpZMk01WkRKck0ydGhkZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zMTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--7a3b65f532c098776b3eea7809cb59ceb23f7b8c/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+  [1m[36mActiveStorage::Blob Load (3.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: cddkdq5kbd8gbjin2hesuakkxu7k (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZMlJrYTJSeE5XdGlaRGhuWW1wcGJqSm9aWE4xWVd0cmVIVTNhd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zNTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--b1b690913999e43ae0247e63b8e5274a51cd9a59/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZMlJrYTJSeE5XdGlaRGhuWW1wcGJqSm9aWE4xWVd0cmVIVTNhd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zNTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--b1b690913999e43ae0247e63b8e5274a51cd9a59/1.jpeg
+Completed 302 Found in 7ms (ActiveRecord: 3.1ms | Allocations: 1695)
+
+
+  [1m[36mActiveStorage::Blob Load (6.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: f1pvk8lytrz7ep4v2gcsyz4ckm1s (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaakZ3ZG1zNGJIbDBjbm8zWlhBMGRqSm5ZM041ZWpSamEyMHhjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zNjBaIiwicHVyIjoiYmxvYl9rZXkifX0=--f11aff1e480353ef59a9e32563a05ef40c6e541e/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaakZ3ZG1zNGJIbDBjbm8zWlhBMGRqSm5ZM041ZWpSamEyMHhjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zNjBaIiwicHVyIjoiYmxvYl9rZXkifX0=--f11aff1e480353ef59a9e32563a05ef40c6e541e/1.jpeg
+Completed 302 Found in 15ms (ActiveRecord: 6.1ms | Allocations: 3982)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjbkZtTkhCNk5ESmxOM0owYXpjek1XazBPWGw1ZG1seE9EUmllUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zMzZaIiwicHVyIjoiYmxvYl9rZXkifX0=--21b6bf731a9e9660d13f555c60f218e7cdf4bf63/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 150)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBQUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--91767db7ea41a0548c33eca9e262b2b40ae80f66", "filename"=>"1"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZMlJrYTJSeE5XdGlaRGhuWW1wcGJqSm9aWE4xWVd0cmVIVTNhd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zNTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--b1b690913999e43ae0247e63b8e5274a51cd9a59/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: cyvircfrbdjjbjgyjjz3oh7xigo9 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZM2wyYVhKalpuSmlaR3BxWW1wbmVXcHFlak52YURkNGFXZHZPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40MDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--28a16a853490b58146125e22201bd29c6195dd2d/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZM2wyYVhKalpuSmlaR3BxWW1wbmVXcHFlak52YURkNGFXZHZPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40MDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--28a16a853490b58146125e22201bd29c6195dd2d/1.jpeg
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms | Allocations: 1622)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaakZ3ZG1zNGJIbDBjbm8zWlhBMGRqSm5ZM041ZWpSamEyMHhjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zNjBaIiwicHVyIjoiYmxvYl9rZXkifX0=--f11aff1e480353ef59a9e32563a05ef40c6e541e/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZM2wyYVhKalpuSmlaR3BxWW1wbmVXcHFlak52YURkNGFXZHZPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40MDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--28a16a853490b58146125e22201bd29c6195dd2d/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 176)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 222)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--932119432ca846012d21161b50e56c784faa5a6d/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 511)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--230b98357f4d60287cd5ef1dec629570f83a22a5/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 186)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 202)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBSdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--230b98357f4d60287cd5ef1dec629570f83a22a5", "filename"=>"1"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+[36m  Disk Storage (0.2ms) [0m[34mGenerated URL for file at key: jhopqea5pay38du20zpq1wjoz9wr (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhbWh2Y0hGbFlUVndZWGt6T0dSMU1qQjZjSEV4ZDJwdmVqbDNjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40NzBaIiwicHVyIjoiYmxvYl9rZXkifX0=--b43929b115f08bdc81dfe01aa8a0337ec07c8cc1/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhbWh2Y0hGbFlUVndZWGt6T0dSMU1qQjZjSEV4ZDJwdmVqbDNjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40NzBaIiwicHVyIjoiYmxvYl9rZXkifX0=--b43929b115f08bdc81dfe01aa8a0337ec07c8cc1/1.jpeg
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1350)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--932119432ca846012d21161b50e56c784faa5a6d", "filename"=>"1"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: o257yxui1qdr2rxk0bx5tpo1jg7o (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiekkxTjNsNGRXa3hjV1J5TW5KNGF6QmllRFYwY0c4eGFtYzNid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40NzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--923715642bb1ed63ad341fdccd242f77f7103d13/1.jpeg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiekkxTjNsNGRXa3hjV1J5TW5KNGF6QmllRFYwY0c4eGFtYzNid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40NzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--923715642bb1ed63ad341fdccd242f77f7103d13/1.jpeg
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1270)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhbWh2Y0hGbFlUVndZWGt6T0dSMU1qQjZjSEV4ZDJwdmVqbDNjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40NzBaIiwicHVyIjoiYmxvYl9rZXkifX0=--b43929b115f08bdc81dfe01aa8a0337ec07c8cc1/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiekkxTjNsNGRXa3hjV1J5TW5KNGF6QmllRFYwY0c4eGFtYzNid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40NzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--923715642bb1ed63ad341fdccd242f77f7103d13/1.jpeg" for 127.0.0.1 at 2023-03-23 09:36:54 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 217)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 150)
+
+
+Started GET "/api/trails/11" for 127.0.0.1 at 2023-03-23 09:37:18 -0700
+Started GET "/trails/pathfinder-icon.png" for 127.0.0.1 at 2023-03-23 09:37:18 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNakV6ZFd4cWFIaG1ZamRqYldsaE16TnpZMk01WkRKck0ydGhkZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zMTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--7a3b65f532c098776b3eea7809cb59ceb23f7b8c/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:18 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNemt5ZFhCdGQyaHNkM1JsZDJJNE9XZzVlSE5pZFd4MmR6VjNaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b3f9207eac73410ad1d25f4a2301b45a6f614604/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:18 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiekkxTjNsNGRXa3hjV1J5TW5KNGF6QmllRFYwY0c4eGFtYzNid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40NzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--923715642bb1ed63ad341fdccd242f77f7103d13/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:18 -0700
+Processing by Api::TrailsController#show as JSON
+  Parameters: {"id"=>"11"}
+  [1m[36mTrail Load (2.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/api/trails_controller.rb:5:in `show'
+  Rendering api/trails/show.json.jbuilder
+Processing by StaticPagesController#frontend_index as PNG
+  Parameters: {"path"=>"trails/pathfinder-icon"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1188)
+
+
+
+ArgumentError - File /Users/hung/Library/CloudStorage/OneDrive-Personal/Desktop/AppAcademy/Projects/Pathfinder_FS/Pathfinder/public/index.html does not exist:
+  app/controllers/static_pages_controller.rb:3:in `frontend_index'
+
+  [1m[36mActiveStorage::Attachment Load (3.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3[0m  [["record_id", 11], ["record_type", "Trail"], ["name", "images"]]
+  ↳ app/views/api/trails/show.json.jbuilder:28
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  ↳ app/views/api/trails/show.json.jbuilder:28
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/views/api/trails/show.json.jbuilder:28
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/api/trails/show.json.jbuilder:28
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/views/api/trails/show.json.jbuilder:28
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/views/api/trails/show.json.jbuilder:28
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/trails/show.json.jbuilder:29
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."trail_id" = $1[0m  [["trail_id", 11]]
+  ↳ app/models/trail.rb:40:in `calc_avg_rating'
+  Rendered api/trails/show.json.jbuilder (Duration: 26.9ms | Allocations: 17496)
+Completed 200 OK in 63ms (Views: 35.3ms | ActiveRecord: 10.5ms | Allocations: 21712)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEYwZEdRMVltSmliWEl4TmpSak5HNTFkV2xvZG5RNGNHdHZjUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a5f1857aadd0d23deb6aa341677866b8ffee2c17/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:19 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 179)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 143)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhbWh2Y0hGbFlUVndZWGt6T0dSMU1qQjZjSEV4ZDJwdmVqbDNjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40NzBaIiwicHVyIjoiYmxvYl9rZXkifX0=--b43929b115f08bdc81dfe01aa8a0337ec07c8cc1/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:19 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 153)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNakV6ZFd4cWFIaG1ZamRqYldsaE16TnpZMk01WkRKck0ydGhkZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zMTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--7a3b65f532c098776b3eea7809cb59ceb23f7b8c/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:19 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNemt5ZFhCdGQyaHNkM1JsZDJJNE9XZzVlSE5pZFd4MmR6VjNaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--b3f9207eac73410ad1d25f4a2301b45a6f614604/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:19 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZWEYwZEdRMVltSmliWEl4TmpSak5HNTFkV2xvZG5RNGNHdHZjUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMzFaIiwicHVyIjoiYmxvYl9rZXkifX0=--a5f1857aadd0d23deb6aa341677866b8ffee2c17/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:19 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhbWh2Y0hGbFlUVndZWGt6T0dSMU1qQjZjSEV4ZDJwdmVqbDNjZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40NzBaIiwicHVyIjoiYmxvYl9rZXkifX0=--b43929b115f08bdc81dfe01aa8a0337ec07c8cc1/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:19 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiekkxTjNsNGRXa3hjV1J5TW5KNGF6QmllRFYwY0c4eGFtYzNid1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40NzNaIiwicHVyIjoiYmxvYl9rZXkifX0=--923715642bb1ed63ad341fdccd242f77f7103d13/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:19 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhbVptY2pkcWFHNWplbU0xYmpGaU1IQnVOR000TW1NNE4zVXpZUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMzJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9ed6d182e29b8287a9ff99845d1c07d7a6af3584/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:20 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3BoY3pWbU4yRnljV0pxZFhsNlpEVmxNWEF3ZG05bWMyRndZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4xODVaIiwicHVyIjoiYmxvYl9rZXkifX0=--a5102b88c21f1cdf072a28a5221b4914d8ca6de0/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:20 -0700
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkV2cxTm5kMFkyaHJkMjFvTkdvMGRYTTJPV1V6ZEhreVltcDNNQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMjlaIiwicHVyIjoiYmxvYl9rZXkifX0=--c4552aa894b41da8065828ce0def7727888a71fd/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:20 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 144)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 143)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibmxoY1RaNllqaDROM1Y0WjJFd2JHeDVhMkZoTjNWdE5XSjZPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yMTBaIiwicHVyIjoiYmxvYl9rZXkifX0=--c98e95c8d19428c89086ab81351e4e1d018000dd/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:20 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaakZ3ZG1zNGJIbDBjbm8zWlhBMGRqSm5ZM041ZWpSamEyMHhjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zNjBaIiwicHVyIjoiYmxvYl9rZXkifX0=--f11aff1e480353ef59a9e32563a05ef40c6e541e/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:20 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjbkZtTkhCNk5ESmxOM0owYXpjek1XazBPWGw1ZG1seE9EUmllUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zMzZaIiwicHVyIjoiYmxvYl9rZXkifX0=--21b6bf731a9e9660d13f555c60f218e7cdf4bf63/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:20 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNVE5tWWpSdU5HMWpZV0YzY1RRd2J6Z3pjbTF0T0dabGNYTTRhUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4yOTRaIiwicHVyIjoiYmxvYl9rZXkifX0=--0d19d240a497e77ffe85bc80b7f51732dfd097e2/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:20 -0700
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZMlJrYTJSeE5XdGlaRGhuWW1wcGJqSm9aWE4xWVd0cmVIVTNhd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC4zNTVaIiwicHVyIjoiYmxvYl9rZXkifX0=--b1b690913999e43ae0247e63b8e5274a51cd9a59/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:20 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZM2wyYVhKalpuSmlaR3BxWW1wbmVXcHFlak52YURkNGFXZHZPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpTjJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpFdWFuQmxaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuTVM1cWNHVm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUTZFWE5sY25acFkyVmZibUZ0WlRvS2JHOWpZV3c9IiwiZXhwIjoiMjAyMy0wMy0yM1QxNjo0MTo1NC40MDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--28a16a853490b58146125e22201bd29c6195dd2d/1.jpeg" for 127.0.0.1 at 2023-03-23 09:37:20 -0700
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 156)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 141)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"1"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms | Allocations: 139)
+
+
