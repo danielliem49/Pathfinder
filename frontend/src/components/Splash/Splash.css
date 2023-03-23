@@ -8,8 +8,6 @@
     transition: background-image 2s linear ;
     box-shadow: 0px 2px 3px 2px rgb(0 0 0 / 50%);
     margin-bottom: 30px;
-
-    /* should I make background image fade in??? */
 }
 
 .splash-search-container.bgd1 {
@@ -101,28 +99,17 @@
 }
 
 
-
-
-.splash-trails-container {
-    opacity: 1;
-
-    /* opacity: 0;
-    transition: opacity 1s ease-out;
-    transition-delay: 2s; */
-}
-
-
 .splash-trails-header {
     font-family: Percent, Beatrice, Arial, sans-serif;
     font-size: 38px;
     font-weight: 400;
     line-height: 1.3;
     color: #2b381f;
-    margin-left: 100px;
+    margin-left: 330px;
 }
 
 .splash-river {
-    margin: 0px 100px 0px 100px;
+    margin: 0px 330px 0px 330px;
     padding-bottom: 50px;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -221,8 +208,7 @@
 /* for fade effects*/
 
 .splash-search-header.isLoaded,
-.splash-search-bar-container.isLoaded,
-.splash-trails-container.isLoaded {
+.splash-search-bar-container.isLoaded {
     opacity: 1;
 }
 

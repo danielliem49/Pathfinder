@@ -34,15 +34,12 @@ function Navigation() {
                 <div className='nav-leftside-element'>
                     <div>Explore</div>
                 </div>
-                <div className='nav-leftside-element'>
-                    <div>Shop</div>
-                </div>
             </div>
 
 
             <div className='nav-rightside'>
                 <div className='nav-rightside-element'>
-                    {/* <div>Help</div> */}
+                    <div>About</div>
                 </div>
                 {sessionLinks}
             </div>

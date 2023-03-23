@@ -5,6 +5,7 @@ import { getParks, fetchParks } from '../../store/parks';
 // import { getUser, fetchUser } from '../../store/user';
 import { Link, useHistory } from 'react-router-dom';
 import './Splash.css';
+import 'aos/dist/aos.css';
 
 
 function Splash() {
@@ -61,7 +62,7 @@ function Splash() {
                     {/* <span className="splash-search-bar-label">Future search function goes here</span> */}
                 </div>
 
-                <div className={`splash-trails-container ${isLoaded ? ' isLoaded' : ''}`}>
+                <div className='splash-trails-container' data-aos="fade-down" data-aos-duration="500">
                     <div className='splash-trails-header'>
                         <h2>Local trails near you:</h2>
                     </div>
