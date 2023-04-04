@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 1020px;
+    height: 700px;
     transition: background-image 2s linear ;
     box-shadow: 0px 2px 3px 2px rgb(0 0 0 / 50%);
     margin-bottom: 60px;
@@ -241,7 +241,6 @@
 }
 
 /* for fade effects*/
-
 .splash-search-header.isLoaded,
 .splash-search-bar-container.isLoaded {
     opacity: 1;
