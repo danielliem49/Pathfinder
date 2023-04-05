@@ -33,11 +33,9 @@ function ProfileButton({ user }) {
             <div className={"user-icon-container"}>
                 <div className="profile-dropdown">
                     <div className="welcome-greeting">Welcome,</div>
-                    <div>{`${user.firstName} ${user.lastName}`}</div>
-                    <div>{user.email}</div>
-                    <div>
-                        <button className="logout-button" onClick={logout}>Log Out</button>
-                    </div>
+                    <div style={{ fontSize: '24px', marginLeft: '6px' }}>{`${user.firstName} ${user.lastName}`}</div>
+                    <div style={{ marginLeft: '6px' }}>{user.email}</div>
+                    <button className="logout-button" onClick={logout}>Log Out</button>
                 </div>
                 <div className="user-icon">
                 </div>
