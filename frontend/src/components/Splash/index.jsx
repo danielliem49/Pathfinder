@@ -73,7 +73,7 @@ function Splash() {
     const moveRiverLeft = (elementClass) => {
         const river = document.getElementsByClassName(elementClass)[0];
         // let scrollLeft = river.scrollWidth - river.offsetWidth;
-        river.scrollLeft -= 500;
+        river.scrollLeft -= 150;
     }
 
     const moveRiverRight = (elementClass) => {
@@ -97,7 +97,6 @@ function Splash() {
                         <img className='splash-search-bar-icon' src='https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/search-icon.png'></img>
                         <span className='splash-search-bar-labels'>Search</span>
                     </div>
-                    {/* <span className="splash-search-bar-label">Future search function goes here</span> */}
                 </div>
 
                 <div className='splash-trails-container' data-aos="fade-down" data-aos-duration="500">
