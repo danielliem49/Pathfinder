@@ -1,0 +1,32 @@
+#modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    animation: fadeIn .5s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards; 
+    z-index: 15;
+  }
+  
+  #modal-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(212, 206, 206, 0.7);
+    opacity: 0.8;
+  }
+  
+  #modal-content {
+    position: absolute;
+    background-color: transparent; 
+    box-shadow: rgba(41, 135, 189, 0.15) 0px 2px 15px;
+    z-index: 99;
+  }

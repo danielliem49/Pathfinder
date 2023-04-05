@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
 import { Redirect, NavLink } from 'react-router-dom';
+import logo from '../../assets/pathfinder-icon.png'
 import './LoginForm.css';
 
 function LoginFormPage() {
@@ -61,7 +62,7 @@ function LoginFormPage() {
                             <span className="login-input-labels">Password</span>
                         </div>
 
-                        <div className="icon"></div>
+                        <img class="icon" src={logo} width="100" height="100" alt="Pathfinder Icon"></img>
 
                         <button className="type1-button" type="submit">Log In</button>
                             <hr />

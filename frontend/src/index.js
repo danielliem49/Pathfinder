@@ -5,7 +5,8 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import configureStore from './store';
-import csrfFetch, {restoreCSRF} from './store/csrf';
+import { ModalProvider } from './context/modal';
+import csrfFetch, { restoreCSRF } from './store/csrf';
 import * as sessionActions from './store/session';
 
 const store = configureStore();
@@ -28,11 +29,13 @@ const renderApplication = () => {
 
 function Root() {
   return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Provider>
+    <ModalProvider>
+      <Provider store={store}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Provider>
+    </ModalProvider>
   );
 }
 

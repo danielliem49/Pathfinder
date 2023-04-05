@@ -4,10 +4,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@googlemaps/react-wrapper": "^1.1.35",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.16",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "aos": "^3.0.0-beta.6",
     "query-string": "^8.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -15,8 +20,7 @@
     "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
     "redux": "^4.2.1",
-    "redux-thunk": "^2.4.2",
-    "aos": "^3.0.0-beta.6"
+    "redux-thunk": "^2.4.2"
   },
   "scripts": {
     "start": "react-scripts start",

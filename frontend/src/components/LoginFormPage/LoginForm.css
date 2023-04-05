@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-
+    padding-bottom: 10vh;
     background-image:
             url('https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/login-bgd-1.jpg'),
             url('https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/login-bgd-2.jpg'),
@@ -180,14 +180,4 @@ hr {
     font-weight: 530;
     line-height: 1.3;
     color: #2b381f;
-}
-
-/* icon */
-.icon {
-    background-image: url(/assets/pathfinder-icon.png);
-    background-size: 100px;
-    background-repeat: no-repeat;
-    width: 100px;
-    height: 100px;
-    /* margin: 0px; */
 }

@@ -4,6 +4,8 @@ import { getTrails, fetchTrails } from '../../store/trails';
 import { getParks, fetchParks } from '../../store/parks';
 // import { getUser, fetchUser } from '../../store/user';
 import { Link, useHistory } from 'react-router-dom';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import './Splash.css';
 import 'aos/dist/aos.css';
 
@@ -68,6 +70,20 @@ function Splash() {
         history.push(`/trails/${trailId}`);
     };
 
+    const moveRiverLeft = (elementClass) => {
+        const river = document.getElementsByClassName(elementClass)[0];
+        // let scrollLeft = river.scrollWidth - river.offsetWidth;
+        river.scrollLeft -= 150;
+    }
+
+    const moveRiverRight = (elementClass) => {
+        const river = document.getElementsByClassName(elementClass)[0];
+        // let scrollLeft = river.scrollWidth - river.offsetWidth;
+        console.log('hitting');
+        river.scrollLeft += 150;
+        console.log(river.scrollLeft)
+    }
+
     return (
         <>
             {trails && (<div className='splash-body'>
@@ -81,37 +97,44 @@ function Splash() {
                         <img className='splash-search-bar-icon' src='https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/search-icon.png'></img>
                         <span className='splash-search-bar-labels'>Search</span>
                     </div>
-                    {/* <span className="splash-search-bar-label">Future search function goes here</span> */}
                 </div>
 
                 <div className='splash-trails-container' data-aos="fade-down" data-aos-duration="500">
                     <div className='splash-trails-header'>
                         <h2>Local trails near you:</h2>
                     </div>
-                    <div className='splash-river'>
-                        <div className='splash-river-trail-card-container'>
-                            {trails.map((trail) =>
-                                <div key={trail.id} className='trail-card' onClick={() => handleCardClick(trail.id)} >
-                                    <div className='trail-card-image'>
-                                        <img src={trail.imagePreviewUrl} key={trail.imagesPreviewUrl} />
+                    <div className='splash-river-container'>
+                        <div className='left-river-arrow' onClick={() => moveRiverLeft('splash-river')}>
+                            <ChevronLeftIcon />
+                        </div>
+                        <div className='splash-river'>
+                            <div className='splash-river-trail-card-container'>
+                                {trails.map((trail) =>
+                                    <div key={trail.id} className='trail-card' onClick={() => handleCardClick(trail.id)} >
+                                        <div className='trail-card-image'>
+                                            <img src={trail.imagePreviewUrl} key={trail.imagesPreviewUrl} />
+                                        </div>
+                                        <div className='trail-card-reviews'>
+                                            <span style={{ marginRight: '8px' }}>{trail.difficultyLevel}</span>
+                                            <span className="review-alt-coloring">•</span>
+                                            <span className="review-star" style={{ marginLeft: '8px' }}>&#9733;</span>
+                                            <span style={{ marginLeft: '3px' }}>{trail.avgRating.toFixed(1)}</span>
+                                            <span className="review-alt-coloring" style={{ marginLeft: '3px' }}>({trail.numReviews})</span>
+                                        </div>
+                                        <div className='trail-card-name'>{trail.trailName}</div>
+                                        <div onClick={(event) => event.stopPropagation()}>
+                                            <Link to={`/parks/${trail.parkId}`} className='trail-card-park'>{trail.parkName}</Link>
+                                        </div>
+                                        <div className='trail-card-details'>
+                                            <span>Length: {trail.length} km</span><span>•</span>
+                                            <span>Est. {trail.estimatedTime}</span>
+                                        </div>
                                     </div>
-                                    <div className='trail-card-reviews'>
-                                        <span style={{ marginRight: '8px' }}>{trail.difficultyLevel}</span>
-                                        <span className="review-alt-coloring">•</span>
-                                        <span className="review-star" style={{ marginLeft: '8px' }}>&#9733;</span>
-                                        <span style={{ marginLeft: '3px' }}>{trail.avgRating.toFixed(1)}</span>
-                                        <span className="review-alt-coloring" style={{ marginLeft: '3px' }}>({trail.numReviews})</span>
-                                    </div>
-                                    <div className='trail-card-name'>{trail.trailName}</div>
-                                    <div onClick={(event) => event.stopPropagation()}>
-                                        <Link to={`/parks/${trail.parkId}`} className='trail-card-park'>{trail.parkName}</Link>
-                                    </div>
-                                    <div className='trail-card-details'>
-                                        <span>Length: {trail.length} km</span><span>•</span>
-                                        <span>Est. {trail.estimatedTime}</span>
-                                    </div>
-                                </div>
-                            )}
+                                )}
+                            </div>
+                        </div>
+                        <div className='right-river-arrow' onClick={() => moveRiverRight('splash-river')}>
+                            <ChevronRightIcon />
                         </div>
                     </div>
                 </div>
@@ -121,31 +144,40 @@ function Splash() {
                     <div className='splash-trails-header'>
                         <h2>{`Best ${randTag.toLowerCase()} trails:`}</h2>
                     </div>
-                    <div className='splash-river'>
-                        <div className='splash-river-trail-card-container'>
-                            {randTagTrails.map((trail) =>
-                                <div key={trail.id} className='trail-card' onClick={() => handleCardClick(trail.id)} >
-                                    <div className='trail-card-image'>
-                                        <img src={trail.imagePreviewUrl} key={trail.imagesPreviewUrl} />
+                    <div className='splash-river-container'>
+                        {randTagTrails.length > 4 ? <div className='left-river-arrow' onClick={() => moveRiverLeft('splash-river')}>
+                            <ChevronLeftIcon />
+                        </div> : <div className='empty-arrow'></div>}
+                        
+                        <div className='splash-river'>
+                            <div className='splash-river-trail-card-container'>
+                                {randTagTrails.map((trail) =>
+                                    <div key={trail.id} className='trail-card' onClick={() => handleCardClick(trail.id)} >
+                                        <div className='trail-card-image'>
+                                            <img src={trail.imagePreviewUrl} key={trail.imagesPreviewUrl} />
+                                        </div>
+                                        <div className='trail-card-reviews'>
+                                            <span style={{ marginRight: '8px' }}>{trail.difficultyLevel}</span>
+                                            <span className="review-alt-coloring">•</span>
+                                            <span className="review-star" style={{ marginLeft: '8px' }}>&#9733;</span>
+                                            <span style={{ marginLeft: '3px' }}>{trail.avgRating.toFixed(1)}</span>
+                                            <span className="review-alt-coloring" style={{ marginLeft: '3px' }}>({trail.numReviews})</span>
+                                        </div>
+                                        <div className='trail-card-name'>{trail.trailName}</div>
+                                        <div onClick={(event) => event.stopPropagation()}>
+                                            <Link to={`/parks/${trail.parkId}`} className='trail-card-park'>{trail.parkName}</Link>
+                                        </div>
+                                        <div className='trail-card-details'>
+                                            <span>Length: {trail.length} km</span><span>•</span>
+                                            <span>Est. {trail.estimatedTime}</span>
+                                        </div>
                                     </div>
-                                    <div className='trail-card-reviews'>
-                                        <span style={{ marginRight: '8px' }}>{trail.difficultyLevel}</span>
-                                        <span className="review-alt-coloring">•</span>
-                                        <span className="review-star" style={{ marginLeft: '8px' }}>&#9733;</span>
-                                        <span style={{ marginLeft: '3px' }}>{trail.avgRating.toFixed(1)}</span>
-                                        <span className="review-alt-coloring" style={{ marginLeft: '3px' }}>({trail.numReviews})</span>
-                                    </div>
-                                    <div className='trail-card-name'>{trail.trailName}</div>
-                                    <div onClick={(event) => event.stopPropagation()}>
-                                        <Link to={`/parks/${trail.parkId}`} className='trail-card-park'>{trail.parkName}</Link>
-                                    </div>
-                                    <div className='trail-card-details'>
-                                        <span>Length: {trail.length} km</span><span>•</span>
-                                        <span>Est. {trail.estimatedTime}</span>
-                                    </div>
-                                </div>
-                            )}
+                                )}
+                            </div>
                         </div>
+                        {randTagTrails.length > 4 ? <div className='right-river-arrow' onClick={() => moveRiverRight('splash-river')}>
+                            <ChevronRightIcon />
+                        </div> : <div className='empty-arrow'></div>}
                     </div>
                 </div>
                 )}
