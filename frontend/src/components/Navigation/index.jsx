@@ -1,12 +1,17 @@
 
 import React from 'react';
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
+import { AboutModalContext } from '../../App';
+import { IncompleteModalContext } from '../../App';
 
 function Navigation() {
     const sessionUser = useSelector(state => state.session.user);
+    const { showAboutModal, setShowAboutModal } = useContext(AboutModalContext)
+    const { showIncompleteModal, setShowIncompleteModal } = useContext(IncompleteModalContext)
 
     let sessionLinks;
     if (sessionUser) {
@@ -36,14 +41,14 @@ function Navigation() {
                 </div>
 
                 <div className='nav-leftside-element'>
-                    <div>Pathfinder+</div>
+                    <div onClick={() => setShowIncompleteModal(true)}>Pathfinder+</div>
                 </div>
             </div>
 
 
             <div className='nav-rightside'>
                 <div className='nav-rightside-element'>
-                    <div>About</div>
+                    <div onClick={() => setShowAboutModal(true)}>About</div>
                 </div>
                 {sessionLinks}
             </div>

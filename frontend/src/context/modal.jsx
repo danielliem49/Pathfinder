@@ -37,18 +37,3 @@ export function Modal({ onClose, children }) {
     );
 }
 
-
-// export function BoardCreateModal({ onClose, children }) {
-//     const modalBoardCreateNode = useContext(ModalContext);
-//     if (!modalBoardCreateNode) return null;
-
-//     return ReactDOM.createPortal(
-//         <div id="board-create-modal">
-//         <div id="board-create-modal-background" onClick={onClose} />
-//         <div id="board-create-modal-content">
-//             {children}
-//         </div>
-//         </div>,
-//         modalBoardCreateNode
-//     );
-// }

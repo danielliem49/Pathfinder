@@ -16,8 +16,8 @@
 
 .footer1-donate-button {
     align-self: flex-start;
-    background-color: rgb(96, 186, 86);
-    color: rgb(0, 0, 0);
+    background-color: rgb(70, 175, 59);
+    color: white;
     padding: 15px 25px;
     border-radius: 9999px;
     border: none;
@@ -103,10 +103,13 @@
 .footer-mobileapp-links {
     height: 30px;
     width: auto;
+    margin-right:16px;
+    transition: all 0.2s ease-in-out;
 }
 
 .footer-mobileapp-links:hover {
     cursor: pointer;
+    transform: translateY(-7px);
 }
 
 .footer-lower-container {
