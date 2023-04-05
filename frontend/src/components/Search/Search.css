@@ -1,0 +1,76 @@
+.search-bar {
+    font-family: Percent, Beatrice, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #2b381f;
+    border-radius: 20px;
+    border: none;
+    width: 400px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 2px;
+    padding-left: 55px;
+    position: relative;
+    transition: all 0.2s ease-in
+}
+
+.search-bar:focus {
+    outline: none;
+    background-color: white;
+    outline: none;
+}
+
+.search-bar:hover {
+    background-color: white;
+    outline: none;
+}
+
+.search-bar-icon {
+    position: absolute;
+    pointer-events: none;
+    height: 25px;
+    left: 16px;
+    top: 14px;
+    transition: 0.2s ease all;
+    background-color: transparent;
+}
+
+.search-bar:focus~.search-bar-icon {
+    filter: invert(1);
+}
+
+.search-bar:hover~.search-bar-icon {
+    filter: invert(1);
+}
+
+.search-bar-labels {
+    position: absolute;
+    pointer-events: none;
+    top: 16px;
+    left: 50px;
+    font-size: 22px;
+    transition: 0.2s ease all;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    background-color: transparent;
+}
+
+.search-bar:focus~.search-bar-labels {
+    left: 100px;
+    /* top: -12px; */
+    font-size: 22px;
+    opacity: 0;
+    /* transition: color 0.3s ease; */
+}
+
+.search-bar:valid~.search-bar-labels {
+    display: none;
+}
+
+.search-bar:valid:not(:focus) {
+    color: white;
+}
+
+.search-bar:valid:hover {
+    color: #2b381f;
+}

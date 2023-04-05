@@ -6,6 +6,7 @@ import { getParks, fetchParks } from '../../store/parks';
 import { Link, useHistory } from 'react-router-dom';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import Search from '../Search/Search';
 import './Splash.css';
 import 'aos/dist/aos.css';
 
@@ -93,9 +94,7 @@ function Splash() {
                         <div className={`splash-search-header ${isLoaded ? ' isLoaded' : ''}`}>{`Today's the day, ${user.firstName}`}</div>
                         : <div className={`splash-search-header ${isLoaded ? 'isLoaded' : ''}`}>Find your outdoors</div>}
                     <div className={`splash-search-bar-container ${isLoaded ? 'isLoaded' : ''}`}>
-                        <input type="text" className='splash-search-bar' required></input>
-                        <img className='splash-search-bar-icon' src='https://danielliem49-pathfinder-seeds.s3.us-west-1.amazonaws.com/Pathfinder-seed-images/frontendAssets/search-icon.png'></img>
-                        <span className='splash-search-bar-labels'>Search</span>
+                        <Search />
                     </div>
                 </div>
 
