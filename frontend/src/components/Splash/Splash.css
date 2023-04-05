@@ -1,11 +1,10 @@
-
 .splash-search-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 700px;
-    transition: background-image 2s linear ;
+    transition: background-image 2s linear;
     box-shadow: 0px 2px 3px 2px rgb(0 0 0 / 50%);
     margin-bottom: 60px;
 }
@@ -60,7 +59,7 @@
     font-family: Percent, Beatrice, Arial, sans-serif;
     font-size: 22px;
     font-weight: 400;
-    color:#2b381f;
+    color: #2b381f;
     border-radius: 20px;
     border: none;
     width: 400px;
@@ -143,8 +142,41 @@
     margin-left: 210px;
 }
 
+.splash-river-container {
+    margin: 0px 160px 0px 160px;
+    display: flex;
+}
+
+.left-river-arrow,
+.right-river-arrow {
+    height: 80px;
+    width: 25px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 10px 0 10px;
+    transition: all ease-in-out 0.2s;
+}
+
+.left-river-arrow:hover,
+.right-river-arrow:hover {
+    background-color: #01352c31;
+}
+
+.empty-arrow {
+    height: 80px;
+    width: 25px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0);
+    margin: 60px 10px 0 10px;
+}
+
 .splash-river {
-    margin: 0px 210px 0px 210px;
     padding-bottom: 50px;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -231,10 +263,11 @@
     font-weight: 500;
     font-size: 12px;
     line-height: 1.5;
-    color: #656e5e;;
+    color: #656e5e;
+    ;
 }
 
-.trail-card-details > * {
+.trail-card-details>* {
     font-family: Manrope, Arial, sans-serif;
     font-size: 12px;
     color: #888d85;
@@ -246,4 +279,3 @@
 .splash-search-bar-container.isLoaded {
     opacity: 1;
 }
-
