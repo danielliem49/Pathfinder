@@ -34,6 +34,10 @@ function Navigation() {
                 <div className='nav-leftside-element'>
                     <div>Explore</div>
                 </div>
+
+                <div className='nav-leftside-element'>
+                    <div>Pathfinder+</div>
+                </div>
             </div>
 
 
