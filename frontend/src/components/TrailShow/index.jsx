@@ -25,12 +25,18 @@ function TrailShow() {
         return (state.session ? state.session.user : null)
     })
 
-    // make more efficient in jbuilder
+    // make more efficient in jbuilder?
     useEffect(() => {
         dispatch(fetchTrails()).then(() => {
             dispatch(fetchTrail(trailId))
         })
     }, [dispatch, trailId])
+
+    // begin at top
+    useEffect(() => {
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        document.body.scrollTop = 0; // For Safari
+    }, []);
 
 
     // review modal
@@ -107,7 +113,7 @@ function TrailShow() {
                                             <div className='trailshow-card-avgrating-container'>
                                                 <div>Average Rating:</div>
                                                 <div className='trailshow-card-avgrating'>    
-                                                    <span className="review-star" style={{ fontSize: 44 , margin: 10, lineHeight: 3}}>&#9733;</span>
+                                                    <span className="review-star" style={{ fontSize: 36 , margin: 10, lineHeight: 3}}>&#9733;</span>
                                                     {trail.avgRating.toFixed(1)}
                                                 </div>
                                                 <div className='trailshow-card-numreviews'>{trail.numReviews} reviews</div>
@@ -126,7 +132,7 @@ function TrailShow() {
                                                 <div className='review-author'>{review.user.firstName} {review.user.lastName}</div>
                                                 <div className='review-hikedate'>{(new Date(review.dateHiked)).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}</div>
                                                 <div>{Array(review.rating).fill().map((_, index) => (
-                                                    <span key={index} className="review-star" style={{fontSize : 24 }}>&#9733;</span>
+                                                    <span key={index} className="review-star" style={{fontSize : 18 }}>&#9733;</span>
                                                 ))}
                                                 </div>
                                                 <div className='review-description'>{review.description}</div>
