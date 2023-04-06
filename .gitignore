@@ -2,3 +2,4 @@
 /storage/*
 !/storage/.keep 
 /config/master.key
+/log/*
