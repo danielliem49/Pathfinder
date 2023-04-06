@@ -117,6 +117,7 @@
 /* errors */
 .signup-errors {
     color: red;
+    font-family: Percent, Beatrice, Arial, sans-serif;
     list-style: none;
     margin: 0;
     padding: 0;
