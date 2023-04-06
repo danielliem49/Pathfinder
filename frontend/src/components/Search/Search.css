@@ -1,0 +1,114 @@
+
+.search-bar-container {
+    position: relative;
+}
+
+.search-bar {
+    font-family: Percent, Beatrice, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #2b381f;
+    border-radius: 9999px;
+    border: none;
+    width: 400px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 2px;
+    padding-left: 55px;
+    position: relative;
+    transition: all 0.2s ease-in
+}
+
+.search-bar:focus {
+    outline: none;
+    background-color: white;
+    outline: none;
+}
+
+.search-bar:hover {
+    background-color: white;
+    outline: none;
+}
+
+.search-bar-icon {
+    position: absolute;
+    pointer-events: none;
+    height: 25px;
+    left: 16px;
+    top: 15px;
+    transition: 0.2s ease all;
+    background-color: transparent;
+}
+
+.search-bar:focus~.search-bar-icon {
+    filter: invert(1);
+}
+
+.search-bar:hover~.search-bar-icon {
+    filter: invert(1);
+}
+
+.search-bar-labels {
+    position: absolute;
+    pointer-events: none;
+    top: 17px;
+    left: 54px;
+    font-size: 22px;
+    transition: 0.2s ease all;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #f9f9f9b0;
+    background-color: transparent;
+}
+
+.search-bar:hover~.search-bar-labels {
+    color:white;
+}
+
+.search-bar:focus~.search-bar-labels {
+    left: 100px;
+    /* top: -12px; */
+    font-size: 22px;
+    opacity: 0;
+    /* transition: color 0.3s ease; */
+}
+
+.search-bar:valid~.search-bar-labels {
+    display: none;
+}
+
+.search-bar:valid:not(:focus) {
+    color: white;
+}
+
+
+
+.search-bar:valid:hover {
+    color: #2b381f;
+}
+
+.search-button {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    background-color: #f9f9f929;
+    color: white;
+    transition: 0.2s ease all;
+}
+
+/* .search-button:hover, */
+.search-bar:focus~.search-button,
+.search-bar:hover~.search-button,
+.search-bar:valid~.search-button {
+    background-color: #01352c;
+}
+
+
+

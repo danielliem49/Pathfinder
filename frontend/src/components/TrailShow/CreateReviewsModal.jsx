@@ -40,7 +40,7 @@ export default function CreateReviewsModal({ trailId }) {
     return (
         <div className="review-modal">
             <div className="review-modal-content">
-                <button className="modal-close-button" onClick={() => setShowCreateModal(false)}>&#10005;</button>
+                <button className="review-modal-close-button" onClick={() => setShowCreateModal(false)}>&#10005;</button>
                 <h2 className="review-modal-trail-name">{trail.trailName}</h2>
                 <form onSubmit={handleCreateReviewSubmit}>
                     <div className="review-form">

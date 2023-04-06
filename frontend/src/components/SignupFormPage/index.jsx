@@ -66,12 +66,12 @@ function SignupFormPage() {
                         </div>
 
                         <div className='signup-form-input-group'>
-                            <input className="signup-inputs" type="text" value={password} onChange={(e) => setPassword(e.target.value)} required />
+                            <input className="signup-inputs" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
                             <span className="signup-input-labels">Password</span>
                         </div>
 
                         <div className='signup-form-input-group'>
-                            <input className="signup-inputs" type="text" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
+                            <input className="signup-inputs" type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
                             <span className="signup-input-labels">Confirm Password</span>
                         </div>
 

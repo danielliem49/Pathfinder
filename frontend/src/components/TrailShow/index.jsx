@@ -7,6 +7,7 @@ import { deleteReview } from '../../store/reviews';
 import CreateReviewsModal from './CreateReviewsModal';
 import UpdateReviewsModal from './UpdateReviewsModal';
 import Sidebar from './Sidebar';
+import MiniSearch from '../Search/MiniSearch';
 import './TrailShow.css'
 
 // context for modal
@@ -60,10 +61,10 @@ function TrailShow() {
     return (
         <>
             {trail && trails && reviews && (
+                <>
+                    <MiniSearch/>
                     <div className='trailshow-body'>
                         {console.log(trail.description.split("\n"))}
-                        <div className='trailshow-navigation'>
-                        </div>
 
                         <div className='trailshow-card'>
                             <div className='trailshow-card-header-container' style={trail.images && trail.images.length > 0 ? { backgroundImage: `url(${trail.images[0]})` } : null}>
@@ -77,7 +78,7 @@ function TrailShow() {
                                         <span className="review-alt-coloring" style={{ marginLeft: '3px', color: '#efefec' }}>({trail.numReviews})</span>
                                     </div>
                                     <div style={{ paddingBottom: 10 }} onClick={(event) => event.stopPropagation()}>
-                                        <Link to={`/parks/${trail.parkId}`} className='trail-card-park' style={{ color: '#efefec' , fontSize: 16 , paddingBottom: 10}}>{trail.parkName}</Link>
+                                        <Link to={`/parks/${trail.parkId}`} className='trail-card-park' style={{ color: '#efefec', fontSize: 16, paddingBottom: 10 }}>{trail.parkName}</Link>
                                     </div>
                                 </div>
                             </div>
@@ -112,8 +113,8 @@ function TrailShow() {
                                             {/* <div className='review-summary-graph'></div> */}
                                             <div className='trailshow-card-avgrating-container'>
                                                 <div>Average Rating:</div>
-                                                <div className='trailshow-card-avgrating'>    
-                                                    <span className="review-star" style={{ fontSize: 36 , margin: 10, lineHeight: 3}}>&#9733;</span>
+                                                <div className='trailshow-card-avgrating'>
+                                                    <span className="review-star" style={{ fontSize: 36, margin: 10, lineHeight: 3 }}>&#9733;</span>
                                                     {trail.avgRating.toFixed(1)}
                                                 </div>
                                                 <div className='trailshow-card-numreviews'>{trail.numReviews} reviews</div>
@@ -132,7 +133,7 @@ function TrailShow() {
                                                 <div className='review-author'>{review.user.firstName} {review.user.lastName}</div>
                                                 <div className='review-hikedate'>{(new Date(review.dateHiked)).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}</div>
                                                 <div>{Array(review.rating).fill().map((_, index) => (
-                                                    <span key={index} className="review-star" style={{fontSize : 18 }}>&#9733;</span>
+                                                    <span key={index} className="review-star" style={{ fontSize: 18 }}>&#9733;</span>
                                                 ))}
                                                 </div>
                                                 <div className='review-description'>{review.description}</div>
@@ -152,18 +153,14 @@ function TrailShow() {
                                         )}
                                     </div>
                                 </div>
-
                                 <ModalContext.Provider value={{ trail, trails }}>
                                     <Sidebar trailId={trailId} />
                                 </ModalContext.Provider>
 
-
                             </div>
                         </div>
-
-
-
                     </div>
+                </>
             )}
         </>
     )

@@ -37,13 +37,13 @@ export default function AboutModal() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="agi-description">A full stack engineer with a background in the aerospace industry. I have a strong love for coding, innovation, and designing swanky web applications.
+                            <div className="agi-description">A full stack engineer with a background in the aerospace industry, I'm really passionate about coding, innovation, and designing swanky web applications.
                             <br></br>
                             <br></br>
                             In my free time you can find me playing chess, exercising with friends, or dabbling in art and music.
                             <br></br>
                             <br></br>
-                            Please reach out if you want to get in touch!
+                            Please don't hesitate to reach out!
                             </div>
                         </div>
                     </div>

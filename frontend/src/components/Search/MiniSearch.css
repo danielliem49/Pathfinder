@@ -1,0 +1,95 @@
+.minisearch-container {
+    width: 980px;
+    margin: auto;
+    position: relative;
+    }
+
+.minisearch-bar {
+    font-family: Percent, Beatrice, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #2b381f;
+    border-radius: 9999px;
+    border: solid #bebebe 1px;
+    width: 325px;
+    height: 35px;
+    background-color: white;
+    padding-top: 2px;
+    padding-left: 20px;
+    position: absolute;
+    right: 0px;
+    /* transition: all 0.2s ease-in; */
+    margin: 20px 0px 50px 0px;
+}
+
+.minisearch-bar:focus {
+    outline: none;
+    background-color: white;
+    outline: none;
+}
+
+.minisearch-bar:hover {
+    background-color: white;
+    outline: none;
+}
+
+.minisearch-bar:focus~.minisearch-bar-icon {
+    filter: invert(1);
+}
+
+.minisearch-bar:hover~.minisearch-bar-icon {
+    filter: invert(1);
+}
+
+.minisearch-bar-labels {
+    position: absolute;
+    pointer-events: none;
+    top: 33px;
+    right: 210px;
+    font-size: 16px;
+    transition: 0.2s ease all;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #8e8e8e;
+    background-color: transparent;
+}
+
+.minisearch-bar:hover~.minisearch-bar-labels {
+    color: white;
+}
+
+.minisearch-bar:focus~.minisearch-bar-labels {
+    color: white;
+    right: 200px;
+    opacity: 0;
+}
+
+.minisearch-bar:focus {
+    border: solid #01352c 1px;
+}
+
+.minisearch-bar:valid~.minisearch-bar-labels {
+    display: none;
+}
+
+.minisearch-button {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    display: flex;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 50px;
+    
+    border: none;
+    cursor: pointer;
+    background-color: #01352c;
+    color: white;
+    transition: 0.2s ease all;
+}
+
+.minisearch-button:hover {
+    background-color: rgb(26, 40, 23);
+}

@@ -1,3 +1,5 @@
+
+
 .trailshow-body {
     display: flex;
     flex-direction: column;
@@ -5,22 +7,20 @@
     background-color: #efefec;
 }
 
-.trailshow-navigation {
-    height: 20px;
-}
 
 .trailshow-card {
     overflow: hidden;
     border-radius: 16px;
     box-shadow: 0 8px 16px -1px rgb(0 0 0 / 40%);
-    width: 1024px;
+    width: 980px;
+    margin: 80px 0 100px 0
 }
 
 .trailshow-card-header-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 400px;
+    height: 380px;
     /* background-repeat: no-repeat; */
     background-size: cover;
     background-position: center;
@@ -30,7 +30,7 @@
 
 .trailshow-card-header{
     /* margin: 160px 560px 0px 0px; */
-    margin-top: 220px;
+    margin-top: 200px;
     display: inline-block;
     width: max-content;
     padding-right: 30px;
@@ -46,7 +46,7 @@
 
 .trailshow-name {
     font-family: Percent, Beatrice, Arial, sans-serif;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 400;
     line-height: 1.3;
     color: #efefec;
@@ -75,12 +75,12 @@
 
 .trailshow-content {
     flex: 0 0 60%;
-    padding: 20px 10px 20px 20px;
+    padding: 0px 0px 20px 30px;
     background-color: white;
 }
 
 .trailshow-properties {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .trailshow-properties-headers,
@@ -109,11 +109,12 @@
 
 .trailshow-description {
     font-family: Manrope, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
+    letter-spacing: 0.5px;
     color: #2b381f;
-    margin: 30px 100px 120px 0px;
+    margin: 30px 100px 80px 0px;
 }
 
 .trailshow-review-summary {
@@ -178,7 +179,7 @@
     flex-direction: column;
 }
 
-.modal-close-button {
+.review-modal-close-button {
     background-color: #fff;
     color: #2b381f;
     transition: all 200ms ease-in-out 0s;
@@ -191,7 +192,7 @@
     padding: 0px;
 }
 
-.modal-close-button:hover {
+.review-modal-close-button:hover {
     transform: rotate(-90deg);
     background-color: #c9c9c9;
     cursor: pointer;
@@ -333,7 +334,7 @@
 
 .trailshow-sidebar {
     flex: 40%;
-    padding: 20px 20px 20px 10px;
+    padding: 30px 10px 20px 7px;
     background-color: white;
     border-left: 1px solid rgba(1, 53, 44, 0.2);
 }

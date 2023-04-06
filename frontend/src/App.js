@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Splash from "./components/Splash";
 import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
+import SearchResultsPage from "./components/SearchResultsPage/SearchResultsPage";
 import Navigation from "./components/Navigation";
 import TrailShow from "./components/TrailShow";
 import ParkShow from "./components/ParkShow";
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path="/trails/:trailId">
               <TrailShow />
+            </Route>
+            <Route path="/search/:searchQuery">
+              <SearchResultsPage />
             </Route>
             <Route path="/parks/:parkId">
               <ParkShow />
