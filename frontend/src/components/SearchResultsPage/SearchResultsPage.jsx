@@ -9,7 +9,11 @@ import MiniSearch from "../Search/MiniSearch";
 export default function SearchResultsPage() {
     const history = useHistory();
     const { searchQuery } = useParams();
-    const trailResults = useSelector(getTrails).filter(t => t.trailName.toLowerCase().split(" ").join('').includes(searchQuery.split(" ").join('').toLowerCase()))
+    const trailResults = useSelector(getTrails).filter(t => 
+        (t.trailName.toLowerCase().split(" ").join('').includes(searchQuery.split(" ").join('').toLowerCase())) ||
+        (t.tags.toLowerCase().split("/").join('').includes(searchQuery.split(" ").join('').toLowerCase())) ||
+        (t.parkName.toLowerCase().split(" ").join('').includes(searchQuery.split(" ").join('').toLowerCase()))
+        )
 
     const handleCardClick = (trailId, event) => {
         // event.stopPropagation();

@@ -11,7 +11,7 @@
     color: #2b381f;
     border-radius: 9999px;
     border: solid #bebebe 1px;
-    width: 325px;
+    width: 370px;
     height: 35px;
     background-color: white;
     padding-top: 2px;
@@ -45,7 +45,7 @@
     position: absolute;
     pointer-events: none;
     top: 33px;
-    right: 210px;
+    right: 155px;
     font-size: 16px;
     transition: 0.2s ease all;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
