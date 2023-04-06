@@ -23,7 +23,6 @@ export const createReview = (review) => async dispatch => {
     })
 
     if (response.ok) {
-        console.log("test")
         const newReview = await response.json();
         return (dispatch(receiveReview(newReview)))
     }

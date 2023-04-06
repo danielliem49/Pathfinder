@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTrail, getTrails, fetchTrail, fetchTrails } from '../../store/trails';
 import { deleteReview } from '../../store/reviews';
@@ -14,6 +14,7 @@ import './TrailShow.css'
 export const ModalContext = React.createContext();
 
 function TrailShow() {
+    const history = useHistory();
     const dispatch = useDispatch();
     const { trailId } = useParams();
     const trail = useSelector(getTrail(trailId));
@@ -58,11 +59,16 @@ function TrailShow() {
         window.location.reload(false)
     }
 
+    const handleTagClick = (e, tag) => {
+        e.preventDefault();
+        history.push(`/search/${tag}`);
+    }
+
     return (
         <>
             {trail && trails && reviews && (
                 <>
-                    <MiniSearch/>
+                    <MiniSearch />
                     <div className='trailshow-body'>
                         {console.log(trail.description.split("\n"))}
 
@@ -107,7 +113,15 @@ function TrailShow() {
                                         )}
                                     </div>
 
-                                    <div className='trailshow-tags'>{ }</div>
+                                    <div className='trailshow-tags-container'>
+                                        <div className='trailshow-tags-header'> Tags:</div>
+                                        <div className='trailshow-tags'>
+                                        {
+                                            trail.tags.split("/").map((tag) =>
+                                            <div className='trailshow-tag' onClick={(e) => handleTagClick(e, tag)}>{tag}</div>
+                                            )}
+                                            </div>
+                                    </div>
                                     <div className='trailshow-reviews'>
                                         <div className='trailshow-review-summary'>
                                             {/* <div className='review-summary-graph'></div> */}
