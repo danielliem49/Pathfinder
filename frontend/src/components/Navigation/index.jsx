@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
@@ -9,6 +9,7 @@ import { AboutModalContext } from '../../App';
 import { IncompleteModalContext } from '../../App';
 
 function Navigation() {
+    const history = useHistory();
     const sessionUser = useSelector(state => state.session.user);
     const { showAboutModal, setShowAboutModal } = useContext(AboutModalContext)
     const { showIncompleteModal, setShowIncompleteModal } = useContext(IncompleteModalContext)
@@ -26,6 +27,11 @@ function Navigation() {
         );
     }
 
+    const handleExploreClick = (e) => {
+        e.preventDefault();
+        history.push(`/search/${'Hiking'}`);
+    }
+
     return (
         <div className='nav-container'>
 
@@ -37,7 +43,7 @@ function Navigation() {
                 </div>
 
                 <div className='nav-leftside-element'>
-                    <div onClick={() => setShowIncompleteModal(true)}>Explore</div>
+                    <div onClick={(e) => handleExploreClick(e)}>Explore</div>
                 </div>
 
                 <div className='nav-leftside-element'>

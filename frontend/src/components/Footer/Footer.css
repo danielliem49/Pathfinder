@@ -16,7 +16,7 @@
 
 .footer1-donate-button {
     align-self: flex-start;
-    background-color: rgb(48, 121, 40);
+    background-color: rgb(56, 106, 51);
     color: white;
     padding: 15px 25px;
     border-radius: 9999px;
@@ -29,7 +29,7 @@
 }
 
 .footer1-donate-button:hover {
-    background-color: rgb(74, 158, 66);
+    background-color: rgb(59, 136, 52);
 }
 
 .footer1-column {
