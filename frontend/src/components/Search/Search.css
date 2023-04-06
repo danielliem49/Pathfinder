@@ -1,3 +1,8 @@
+
+.search-bar-container {
+    position: relative;
+}
+
 .search-bar {
     font-family: Percent, Beatrice, Arial, sans-serif;
     font-size: 22px;

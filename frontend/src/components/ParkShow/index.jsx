@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPark, fetchPark } from '../../store/parks';
+import MiniSearch from '../Search/MiniSearch';
 import './ParkShow.css'
 
 function ParkShow() {
@@ -32,6 +33,7 @@ function ParkShow() {
 
             {park && trails && (
                 <>
+                    <MiniSearch />
                     <div className='parkshow-body'>
                         <div className='parkshow-content'>
                             <div className='parkshow-header'>{park.parkName}</div>

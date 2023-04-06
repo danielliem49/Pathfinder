@@ -5,15 +5,13 @@
     background-color: #efefec;
 }
 
-.trailshow-navigation {
-    height: 20px;
-}
 
 .trailshow-card {
     overflow: hidden;
     border-radius: 16px;
     box-shadow: 0 8px 16px -1px rgb(0 0 0 / 40%);
     width: 1024px;
+    margin-top: 90px;
 }
 
 .trailshow-card-header-container {

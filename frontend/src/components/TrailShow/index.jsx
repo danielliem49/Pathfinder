@@ -7,6 +7,7 @@ import { deleteReview } from '../../store/reviews';
 import CreateReviewsModal from './CreateReviewsModal';
 import UpdateReviewsModal from './UpdateReviewsModal';
 import Sidebar from './Sidebar';
+import MiniSearch from '../Search/MiniSearch';
 import './TrailShow.css'
 
 // context for modal
@@ -60,10 +61,10 @@ function TrailShow() {
     return (
         <>
             {trail && trails && reviews && (
+                <> 
+                    <MiniSearch />
                     <div className='trailshow-body'>
                         {console.log(trail.description.split("\n"))}
-                        <div className='trailshow-navigation'>
-                        </div>
 
                         <div className='trailshow-card'>
                             <div className='trailshow-card-header-container' style={trail.images && trail.images.length > 0 ? { backgroundImage: `url(${trail.images[0]})` } : null}>
@@ -152,18 +153,14 @@ function TrailShow() {
                                         )}
                                     </div>
                                 </div>
-
                                 <ModalContext.Provider value={{ trail, trails }}>
                                     <Sidebar trailId={trailId} />
                                 </ModalContext.Provider>
 
-
                             </div>
                         </div>
-
-
-
                     </div>
+                </>
             )}
         </>
     )

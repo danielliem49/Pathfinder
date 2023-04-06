@@ -4,6 +4,7 @@ import { getTrails } from "../../store/trails";
 import './SearchResultsPage.css'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import MiniSearch from "../Search/MiniSearch";
 
 export default function SearchResultsPage() {
     const history = useHistory();
@@ -27,6 +28,7 @@ export default function SearchResultsPage() {
 
     return (
         <>
+            <MiniSearch />
             <div className="searchresults-container">
                 <div className='searchresults-header'>{`Search results for "${searchQuery}" :`}</div>
                 {trailResults.length > 0 ?
@@ -68,7 +70,7 @@ export default function SearchResultsPage() {
                         </div>
                     </div>
                     :
-                    <div>Sorry, your search didn't return any results</div>
+                    <div className="searchresults-sorry">Sorry, your search didn't return any results</div>
                 }
             </div>
         </>

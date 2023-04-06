@@ -1,0 +1,102 @@
+.minisearch-container {
+    position: relative;
+    }
+
+.minisearch-bar {
+    font-family: Percent, Beatrice, Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #2b381f;
+    border-radius: 9999px;
+    border: solid #01352c 2px;
+    width: 250px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 2px;
+    padding-left: 55px;
+    position: absolute;
+    right: 20px;
+    transition: all 0.2s ease-in;
+    margin: 20px 0px 50px 0px;
+}
+
+.minisearch-bar:focus {
+    outline: none;
+    background-color: white;
+    outline: none;
+}
+
+.minisearch-bar:hover {
+    background-color: white;
+    outline: none;
+}
+
+.minisearch-bar:focus~.minisearch-bar-icon {
+    filter: invert(1);
+}
+
+.minisearch-bar:hover~.minisearch-bar-icon {
+    filter: invert(1);
+}
+
+.minisearch-bar-labels {
+    position: absolute;
+    pointer-events: none;
+    top: 14px;
+    right: 200px;
+    font-size: 18px;
+    transition: 0.2s ease all;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #f9f9f9b0;
+    background-color: transparent;
+}
+
+.minisearch-bar:hover~.minisearch-bar-labels {
+    color: white;
+}
+
+.minisearch-bar:focus~.minisearch-bar-labels {
+    left: 100px;
+    /* top: -12px; */
+    font-size: 22px;
+    opacity: 0;
+    /* transition: color 0.3s ease; */
+}
+
+.minisearch-bar:valid~.minisearch-bar-labels {
+    display: none;
+}
+
+.minisearch-bar:valid:not(:focus) {
+    color: white;
+}
+
+.minisearch-bar:valid:hover {
+    color: #2b381f;
+}
+
+.minisearch-button {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    background-color: #f9f9f929;
+    color: white;
+    transition: 0.2s ease all;
+}
+
+.minisearch-bar:focus~.minisearch-button,
+.minisearch-bar:hover~.minisearch-button {
+    background-color: #01352c;
+}
+
+.minisearch-bar:valid~.minisearch-button {
+    background-color: #01352ce9;
+}
