@@ -47,7 +47,7 @@ function Footer() {
                         </img>
                     </div>
                     <div>
-                        <a className='footer-contact-link' href="https://github.com/Edbeans/Orcastra" target='_blank'>
+                        <a className='footer-contact-link' href="https://github.com/danielliem49/Pathfinder" target='_blank'>
                             Github
                         </a>
                         <span style={{ padding: '0px 14px 0px 14px', fontSize: '10px' }}> | </span>

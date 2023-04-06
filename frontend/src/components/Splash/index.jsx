@@ -73,16 +73,12 @@ function Splash() {
 
     const moveRiverLeft = (elementClass) => {
         const river = document.getElementsByClassName(elementClass)[0];
-        // let scrollLeft = river.scrollWidth - river.offsetWidth;
         river.scrollLeft -= 150;
     }
 
     const moveRiverRight = (elementClass) => {
         const river = document.getElementsByClassName(elementClass)[0];
-        // let scrollLeft = river.scrollWidth - river.offsetWidth;
-        console.log('hitting');
         river.scrollLeft += 150;
-        console.log(river.scrollLeft)
     }
 
     return (

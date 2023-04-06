@@ -1,0 +1,13 @@
+.searchresults-container {
+    margin: 50px 0px
+}
+
+.searchresults-header {
+    padding-bottom: 40px;
+    margin-left: 160px;
+    font-family: Percent, Beatrice, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #2b381f;
+}
