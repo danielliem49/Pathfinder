@@ -16,6 +16,8 @@ export default function CreateReviewsModal({ trailId }) {
     const [rating, setRating] = useState(0);
     const [description, setDescription] = useState('');
     const [date_hiked, setDate_hiked] = useState("2023-03-10")
+    const [errors, setErrors] = useState([]);
+
     let review = {
         user_id: user ? user.id : null,
         trail_id: trailId,
@@ -24,16 +26,35 @@ export default function CreateReviewsModal({ trailId }) {
         date_hiked: ""
     };
 
-    // useEffect(() => {
-    //     dispatch(fetchTrail(trailId))
-    // }, [dispatch, trailId])
+    // // old handle review form submit
+    // const handleCreateReviewSubmit = (e) => {
+    //     e.preventDefault();
+    //     const reviewData = { ...review, rating, description, date_hiked }
+    //     dispatch(createReview(reviewData));
+    //     window.location.reload(false)
+    // }
 
-    // handle review form submit
+    // handle review form submit with error handling
     const handleCreateReviewSubmit = (e) => {
         e.preventDefault();
+        setErrors([]);
         const reviewData = { ...review, rating, description, date_hiked }
-        dispatch(createReview(reviewData));
-        window.location.reload(false)
+        return dispatch(createReview(reviewData))
+            .then(() => {
+                window.location.reload(false);
+            })
+            .catch(async (res) => {
+                let data;
+                try {
+                    // .clone() essentially allows you to read the response body twice
+                    data = await res.clone().json();
+                } catch {
+                    data = await res.text(); // Will hit this case if the server is down
+                }
+                if (data?.errors) setErrors(data.errors);       
+                else if (data) setErrors([data]) ;
+                else setErrors([res.statusText]);
+            });
     }
 
 
@@ -61,6 +82,9 @@ export default function CreateReviewsModal({ trailId }) {
                         <div className='review-modal-hikedate'>
                             <span style={{ paddingRight: 15 }}>Date hiked:</span>
                             <input value={date_hiked} type="date" id="date" onChange={(e) => setDate_hiked(e.target.value)} />
+                        </div>
+                        <div className="review-errors">
+                            {errors.length > 0 ? errors[0].map((error) => <div className="review-error" key={error}>{error}</div>) : <div className="review-error"></div>}
                         </div>
                         <button className='review-modal-submit-button'>Submit Review</button>
                     </div>

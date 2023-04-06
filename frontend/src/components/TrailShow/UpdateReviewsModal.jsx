@@ -19,27 +19,54 @@ export default function UpdateReviewsModal({ reviewId }) {
     const [rating, setRating] = useState(review.rating);
     const [description, setDescription] = useState(review.description);
     const [date_hiked, setDate_hiked] = useState(review.dateHiked);
+    const [errors, setErrors] = useState([]);
 
     const handleDateChange = (e) => {
         console.log(e.target.value)
         setDate_hiked(e.target.value)
-        console.log({ ...review, rating, description, date_hiked })
     }
 
-    // handle review form submit
+    // // handle review form submit
+    // const handleUpdateReviewSubmit = (e) => {
+    //     e.preventDefault();
+    //     const reviewData = { ...review, rating, description, date_hiked }
+    //     console.log(reviewData)
+    //     dispatch(updateReview(reviewData));
+    //     window.location.reload(false)
+    // }
+
     const handleUpdateReviewSubmit = (e) => {
         e.preventDefault();
+        setErrors([]);
         const reviewData = { ...review, rating, description, date_hiked }
-        console.log(reviewData)
-        dispatch(updateReview(reviewData));
-        window.location.reload(false)
+        return dispatch(updateReview(reviewData))
+            .then(() => {
+                window.location.reload(false);
+            })
+            .catch(async (res) => {
+                let data;
+                try {
+                    // .clone() essentially allows you to read the response body twice
+                    data = await res.clone().json();
+                } catch {
+                    data = await res.text(); // Will hit this case if the server is down
+                }
+                if (data?.errors) setErrors(data.errors);
+                else if (data) setErrors([data]);
+                else setErrors([res.statusText]);
+            });
     }
+
+    useEffect(() => {
+        let radioButton = document.getElementById(rating)
+        radioButton.checked = true;
+    }, [])
 
 
     return (
         <div className="review-modal">
             <div className="review-modal-content">
-                <button className="modal-close-button" onClick={() => setShowUpdateModal(false)}>&#10005;</button>
+                <button className="review-modal-close-button" onClick={() => setShowUpdateModal(false)}>&#10005;</button>
                 <h2 className="review-modal-trail-name">{trail.trailName}</h2>
                 <form onSubmit={handleUpdateReviewSubmit}>
                     <div className="review-form">
@@ -59,7 +86,10 @@ export default function UpdateReviewsModal({ reviewId }) {
                         <textarea value={description} className="review-modal-textarea" onChange={(e) => setDescription(e.target.value)}></textarea>
                         <div className='review-modal-hikedate'>
                             <span style={{ paddingRight: 15 }}>Date hiked:</span>
-                            <input value={date_hiked} type="date" id="date" onChange={handleDateChange} />
+                            <input value={date_hiked} type="date" id="date" onChange={(e) => setDate_hiked(e.target.value)} />
+                        </div>
+                        <div className="review-errors">
+                            {errors.length > 0 ? errors[0].map((error) => <div className="review-error" key={error}>{error}</div>) : <div className="review-error"></div>}
                         </div>
                         <button className='review-modal-submit-button'>Submit Review</button>
                     </div>

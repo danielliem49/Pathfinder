@@ -70,7 +70,6 @@ function TrailShow() {
                 <>
                     <MiniSearch />
                     <div className='trailshow-body'>
-                        {console.log(trail.description.split("\n"))}
 
                         <div className='trailshow-card'>
                             <div className='trailshow-card-header-container' style={trail.images && trail.images.length > 0 ? { backgroundImage: `url(${trail.images[0]})` } : null}>
