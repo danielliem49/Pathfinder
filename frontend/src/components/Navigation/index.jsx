@@ -37,7 +37,7 @@ function Navigation() {
                 </div>
 
                 <div className='nav-leftside-element'>
-                    <div>Explore</div>
+                    <div onClick={() => setShowIncompleteModal(true)}>Explore</div>
                 </div>
 
                 <div className='nav-leftside-element'>

@@ -80,6 +80,8 @@
     color: white;
 }
 
+
+
 .search-bar:valid:hover {
     color: #2b381f;
 }
@@ -101,10 +103,12 @@
     transition: 0.2s ease all;
 }
 
-.search-button:hover,
+/* .search-button:hover, */
 .search-bar:focus~.search-button,
 .search-bar:hover~.search-button,
 .search-bar:valid~.search-button {
     background-color: #01352c;
 }
+
+
 
