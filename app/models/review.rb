@@ -12,9 +12,9 @@
 #  updated_at  :datetime         not null
 #
 class Review < ApplicationRecord
-    validates_presence_of :user_id, :trail_id, :rating, :description, :date_hiked
+    validates_presence_of :user_id, :trail_id
     validates :user_id, uniqueness: {scope: :trail_id, message: "You've already reviewed this trail!"}
-    validates :rating, inclusion: {in: 1..5,  message: "Rating must be between 1 and 5"}
+    validates :rating, inclusion: {in: 1..5,  message: "Rating must be between 1 and 5"}, presence: { message: "Rating must be between 1 and 5"}
     validates :description, presence: {message: "Description can't be blank"}
     validates :date_hiked, presence: {message: "Date can't be blank"}
 
