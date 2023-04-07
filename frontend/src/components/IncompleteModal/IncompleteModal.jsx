@@ -23,7 +23,7 @@ export default function IncompleteModal() {
                                 </div>
                                 <br></br>
                                 <div style={{ textAlign: 'center' }}>
-                                    Our team is working on getting this feature to you as soon as we can.
+                                    We're working on getting this feature to you as soon as we can.
                                 </div>
                             </div>
                         </div>
