@@ -76,11 +76,13 @@ function TrailShow() {
                                 <div className='trailshow-card-header'>
                                     <div className='trailshow-name'>{trail.trailName} </div>
                                     <div className='trailshow-header-reviews'>
-                                        <span style={{ marginRight: '8px' }}>{trail.difficultyLevel}</span>
-                                        <span className="review-alt-coloring">•</span>
-                                        <span className="review-star" style={{ marginLeft: '6px' }}>&#9733;</span>
+                                        <span >{trail.difficultyLevel}</span>
+                                        <span className="review-alt-coloring" style={{ marginLeft: '8px', marginRight: '8px' }}>•</span>
+                                        <span className="review-star">&#9733;</span>
                                         <span style={{ marginLeft: '4px' }}>{trail.avgRating.toFixed(1)}</span>
-                                        <span className="review-alt-coloring" style={{ marginLeft: '3px', color: '#efefec' }}>({trail.numReviews})</span>
+                                        <span className="review-alt-coloring" style={{ marginLeft: '3px', color: '#ddddddca' }}>({trail.numReviews})</span>
+                                        <span className="review-alt-coloring" style={{ marginLeft: '8px', marginRight: '8px' }}>•</span>
+                                        <span className="review-alt-coloring" style={{ color: '#efefec' }}>Est. {trail.estimatedTime}</span>
                                     </div>
                                     <div style={{ paddingBottom: 10 }} onClick={(event) => event.stopPropagation()}>
                                         <Link to={`/parks/${trail.parkId}`} className='trail-card-park' style={{ color: '#efefec', fontSize: 16, paddingBottom: 10 }}>{trail.parkName}</Link>
@@ -132,7 +134,7 @@ function TrailShow() {
                                                 </div>
                                                 <div className='trailshow-card-numreviews'>{trail.numReviews} reviews</div>
                                             </div>
-                                            <button className='write-review-button' onClick={toggleCreateReviewModal}>Write a Review</button>
+                                            {user && <button className='write-review-button' onClick={toggleCreateReviewModal}>Write a Review</button>}
                                             {showCreateModal && (
                                                 <ModalContext.Provider value={{ trail, showCreateModal, setShowCreateModal }}>
                                                     <CreateReviewsModal trailId={trailId} />
@@ -144,7 +146,7 @@ function TrailShow() {
                                         }).map((review) =>
                                             <div key={review.id} className='review-container'>
                                                 <div className='review-author'>{review.user.firstName} {review.user.lastName}</div>
-                                                <div className='review-hikedate'>{(new Date(review.dateHiked)).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+                                                <div className='review-hikedate'>{(new Date(review.dateHiked + 'T00:00:00')).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}</div>
                                                 <div>{Array(review.rating).fill().map((_, index) => (
                                                     <span key={index} className="review-star" style={{ fontSize: 18 }}>&#9733;</span>
                                                 ))}

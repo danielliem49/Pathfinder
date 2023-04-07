@@ -15,7 +15,7 @@ export default function CreateReviewsModal({ trailId }) {
     })
     const [rating, setRating] = useState(0);
     const [description, setDescription] = useState('');
-    const [date_hiked, setDate_hiked] = useState("2023-03-10")
+    const [date_hiked, setDate_hiked] = useState('')
     const [errors, setErrors] = useState([]);
 
     let review = {

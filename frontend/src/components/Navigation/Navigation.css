@@ -32,7 +32,7 @@ body {
     background-color: #fff;
     border-radius: 10px;
     height: auto;
-    width: 180px;   
+    width: 240px;   
     padding: 20px;
     font-family: Manrope, Arial, sans-serif;
     line-height: 1.5;
@@ -74,10 +74,6 @@ body {
     background-color: rgb(26, 40, 23);
 }
 
-/* .user-icon-container:hover .profile-dropdown {
-    display: flex;   
-    opacity: 1;
-} */
 
 /* for navbar */
 .nav-container {
