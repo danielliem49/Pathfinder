@@ -26,7 +26,8 @@ body {
     top: 100%;
     right: 0;
     z-index: 1;
-    opacity: 0;
+    /* opacity: 0; */
+    opacity: 1;
     transition: opacity 0.5 ease-in;
     background-color: #fff;
     border-radius: 10px;
@@ -37,6 +38,10 @@ body {
     line-height: 1.5;
     font-size: 18px;
     color: #2b381f;
+}
+
+.disabled {
+    display: none;
 }
 
 .welcome-greeting {
@@ -69,14 +74,10 @@ body {
     background-color: rgb(26, 40, 23);
 }
 
-.user-icon-container:hover {
-    cursor: pointer;
-}
-
-.user-icon-container:hover .profile-dropdown {
+/* .user-icon-container:hover .profile-dropdown {
     display: flex;   
     opacity: 1;
-}
+} */
 
 /* for navbar */
 .nav-container {

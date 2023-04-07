@@ -22,14 +22,19 @@ export default function SearchResultsPage() {
 
     const moveRiverLeft = (elementClass) => {
         const river = document.getElementsByClassName(elementClass)[0];
-        river.scrollLeft -= 150;
-    }
+        river.scrollTo({
+            left: river.scrollLeft - 500,
+            behavior: 'smooth' // adds smooth scrolling effect
+        });
+    };
 
     const moveRiverRight = (elementClass) => {
         const river = document.getElementsByClassName(elementClass)[0];
-        river.scrollLeft += 150;
-    }
-
+        river.scrollTo({
+            left: river.scrollLeft + 500,
+            behavior: 'smooth' // adds smooth scrolling effect
+        });
+    };
     return (
         <>
             <MiniSearch />
@@ -74,7 +79,7 @@ export default function SearchResultsPage() {
                         </div>
                     </div>
                     :
-                    <div className="searchresults-sorry">Sorry, your search didn't return any results</div>
+                    <div className="searchresults-sorry">Sorry! Your search didn't return any results</div>
                 }
             </div>
         </>

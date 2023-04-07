@@ -65,13 +65,14 @@
 }
 
 .splash-river-container {
-    margin: 0px 160px 0px 160px;
+    margin: 0px 145px 0px 145px;
     display: flex;
 }
 
 .left-river-arrow,
 .right-river-arrow {
-    height: 80px;
+    transform: scale(2);
+    height: 60px;
     width: 25px;
     border-radius: 30px;
     background-color: rgba(255, 255, 255, 0);
@@ -81,7 +82,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 60px 10px 0 10px;
+    margin: 70px 20px 0 20px;
     transition: all ease-in-out 0.2s;
 }
 

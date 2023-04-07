@@ -4,24 +4,15 @@ import * as sessionActions from '../../store/session';
 
 function ProfileButton({ user }) {
     const dispatch = useDispatch();
-    const [showMenu, setShowMenu] = useState(false);
+    const [isHovering, setIsHovering] = useState(false);
 
-    // const openMenu = () => {
-    //     if (showMenu) return;
-    //     setShowMenu(true);
-    // };
+    const handleMouseEnter = () => {
+        setIsHovering(true);
+    };
 
-    useEffect(() => {
-        if (!showMenu) return;
-
-        const closeMenu = () => {
-            setShowMenu(false);
-        };
-
-        document.addEventListener('click', closeMenu);
-
-        return () => document.removeEventListener("click", closeMenu);
-    }, [showMenu]);
+    const handleMouseLeave = () => {
+        setIsHovering(false);
+    };
 
     const logout = (e) => {
         e.preventDefault();
@@ -30,14 +21,14 @@ function ProfileButton({ user }) {
 
     return (
         <>
-            <div className={"user-icon-container"}>
-                <div className="profile-dropdown">
+            <div className="user-icon-container" onMouseLeave={handleMouseLeave}>
+                <div className="user-icon" onMouseEnter={handleMouseEnter}>
+                </div>
+                <div className={isHovering ? "profile-dropdown" : "profile-dropdown disabled"}>
                     <div className="welcome-greeting">Welcome,</div>
                     <div style={{ fontSize: '24px', marginLeft: '6px' }}>{`${user.firstName} ${user.lastName}`}</div>
                     <div style={{ marginLeft: '6px' }}>{user.email}</div>
                     <button className="logout-button" onClick={logout}>Log Out</button>
-                </div>
-                <div className="user-icon">
                 </div>
             </div>
         </>

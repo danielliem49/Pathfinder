@@ -5,7 +5,7 @@
     background-color: #092800;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     height: auto;
-    padding: 0 170px 50px;
+    padding: 0 180px 50px;
 }
 
 .footer1-upper-container {
@@ -62,8 +62,9 @@
     align-items: center;
     background-color: #001b0e;
     height: auto;
-    padding: 0 50px;
+    padding: 0 180px 30px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .footer-logo {
@@ -71,16 +72,36 @@
     object-position: center;
     max-width: 100px;
     height: auto;
-    padding: 20px;
+    position: absolute;
+    top: 50px;
 }
 
-.footer-links-container {
+.footer2-upper-container {
     color: white;
-    width: 1100px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-bottom: 20px;
+    margin-top: 160px;
+    padding-bottom: 5px;
+}
+
+.footer-contact-links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.footer-credit {
+    font-size: 20px;
+    margin-bottom: 10px;
+    align-self: flex-end;
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+}
+
+.footer-contact-links {
+    padding-bottom: 10px;
 }
 
 .footer-contact-link {
@@ -98,29 +119,31 @@
     width: 200px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10px;
 }
 
-.footer-mobileapp-links {
+.footer-mobileapp-container>* {
     height: 30px;
     width: auto;
     margin-right:16px;
     transition: all 0.2s ease-in-out;
 }
 
-.footer-mobileapp-links:hover {
+.footer-mobileapp-container>*:hover {
     cursor: pointer;
     transform: translateY(-7px);
 }
 
-.footer-lower-container {
-    width: 1100px;
-    padding: 20px 0px 50px 0px;
+.footer2-lower-container {
+    width: 100%;
+    padding: 20px 0px 0px 0px;
     border-top: 1px solid rgb(180, 180, 180);
     display: flex;
     justify-content: space-between;
 }
 
-.footer-lower {
+.footer2-lower-left {
     display: flex;
     flex-direction: column;
     color: white;
@@ -140,6 +163,12 @@
 
 .brand-policies-item:hover {
     cursor: pointer;
+}
+
+.footer2-lower-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .footer-language-dropdown {

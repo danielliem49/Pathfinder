@@ -5,12 +5,12 @@
 
 .search-bar {
     font-family: Percent, Beatrice, Arial, sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
     color: #2b381f;
     border-radius: 9999px;
     border: none;
-    width: 450px;
+    width: 460px;
     height: 50px;
     background-color: rgba(0, 0, 0, 0.6);
     padding-top: 2px;
@@ -51,17 +51,17 @@
 .search-bar-labels {
     position: absolute;
     pointer-events: none;
-    top: 18px;
+    top: 19px;
     left: 54px;
-    font-size: 20px;
+    font-size: 18px;
     transition: 0.2s ease all;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #f9f9f9ca;
+    color: #f9f9f9bf;
     background-color: transparent;
 }
 
 .search-bar:hover~.search-bar-labels {
-    color:white;
+    color:rgb(0, 0, 0);
 }
 
 .search-bar:focus~.search-bar-labels {

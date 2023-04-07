@@ -39,26 +39,45 @@ function Footer() {
 
                 <img className="footer-logo" src={logo} ></img>
 
-                <div className="footer-links-container">
+                <div className="footer2-upper-container">
                     <div className="footer-mobileapp-container">
                         <img src="https://cdn-assets.alltrails.com/assets/images/stores/apple-app-store-en-US.svg" className="footer-mobileapp-links" onClick={() => setShowIncompleteModal(true)}>
                         </img>
                         <img src="https://cdn-assets.alltrails.com/assets/images/stores/google-play-badge-en-US.svg" className="footer-mobileapp-links" onClick={() => setShowIncompleteModal(true)}>
                         </img>
                     </div>
-                    <div>
-                        <a className='footer-contact-link' href="https://github.com/danielliem49/Pathfinder" target='_blank'>
-                            Github
-                        </a>
-                        <span style={{ padding: '0px 14px 0px 14px', fontSize: '10px' }}> | </span>
-                        <span className="footer-contact-link" onClick={() => setShowAboutModal(true)}>
-                            About
-                        </span>
+                    <div className='footer-contact-links-container'>
+                        <div className='footer-credit'>
+                            Created by Daniel Liem
+                        </div>
+                        <div className='footer-contact-links'>
+                            <a className='footer-contact-link' href="https://github.com/danielliem49" target='_blank'>
+                                Github
+                            </a>
+                            <span style={{ padding: '0px 12px 0px 12px', fontSize: '10px' }}> | </span>
+                            <a className='footer-contact-link' href="https://www.linkedin.com/in/danielliem49/" target='_blank'>
+                                LinkedIn
+                            </a>
+                            <span style={{ padding: '0px 12px 0px 12px', fontSize: '10px' }}> | </span>
+                            <a className='footer-contact-link' href="https://danielliem49.github.io/" target='_blank'>
+                                Portfolio
+                            </a>
+                            
+                        </div>
+                        <div className='footer-contact-links'>
+                            <span className="footer-contact-link" onClick={() => setShowAboutModal(true)}>
+                                About
+                            </span>
+                            <span style={{ padding: '0px 12px 0px 12px', fontSize: '10px' }}> | </span>
+                            <a className='footer-contact-link' href="https://github.com/danielliem49/Pathfinder" target='_blank'>
+                                Project Repository
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <div className="footer-lower-container">
-                    <div className="footer-lower">
+                <div className="footer2-lower-container">
+                    <div className="footer2-lower-left">
                         <div className="brand-rights">
                             2023 Pathfinder, LLC All Rights Reserved
                         </div>
@@ -73,9 +92,11 @@ function Footer() {
                             <span className="brand-policies-item" onClick={() => setShowIncompleteModal(true)}>Cookie Policy</span>
                         </div>
                     </div>
-                    <select className="footer-language-dropdown" onClick={() => setShowIncompleteModal(true)}>
-                        <option value="" disabled selected>English (US)</option>
-                    </select>
+                    <div className='footer2-lower-right'>
+                        <select className="footer-language-dropdown" onClick={() => setShowIncompleteModal(true)}>
+                            <option value="" disabled selected>English (US)</option>
+                        </select>
+                    </div>
                 </div>
 
             </div>
