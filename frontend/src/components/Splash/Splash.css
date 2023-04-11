@@ -112,6 +112,14 @@
     /* hide the scrollbar width */
 }
 
+.splash-river::-webkit-scrollbar {
+    display: none;
+}
+
+.splash-river {
+    scrollbar-width: none;
+}
+
 .splash-river-trail-card-container {
     display: flex;
     width: fit-content;
