@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0; 
+    /* opacity: 0;  */
     animation: fadeIn .5s;
     animation-delay: 0s;
     animation-fill-mode: forwards; 
