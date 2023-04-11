@@ -17,7 +17,7 @@ export default function MiniSearch() {
             <div className='minisearch-container'>
                 <form onSubmit={handleSearchSubmit}>
                     <input type="text" className='minisearch-bar' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} required></input>
-                    <span className='minisearch-bar-labels'>Search by trail, park, or activity</span>
+                    <span className='minisearch-bar-labels'>Search Indonesia for trails, parks, or activities</span>
                     <button className="minisearch-button" type="submit">
                         <ArrowRightAltIcon />
                     </button>
