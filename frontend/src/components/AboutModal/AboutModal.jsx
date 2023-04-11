@@ -16,7 +16,7 @@ export default function AboutModal() {
         <>
             {showAboutModal && (
                 <Modal onClose={() => setShowAboutModal(false)}>
-                    <div className="modal-background" style={{ width: '600px', height: '650px' }}>
+                    <div className="modal-background" style={{ width: '600px', height: '550px' }}>
                         <button className="modal-close-button" onClick={() => setShowAboutModal(false)}>&#10005;</button>
                         <div className="about-container">
                             <div className="about-meetme">Meet the creator:</div>
