@@ -138,3 +138,13 @@ table {
 body {
     font-family: Manrope, Arial, sans-serif;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
