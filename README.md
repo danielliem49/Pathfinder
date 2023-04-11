@@ -6,6 +6,7 @@
 
 Pathfinder is a fullstack clone (with a few stylish twists) of the outdoor activities site AllTrails, and geared towards exploring the beautiful, yet mostly unexplored nature of Indonesia!
 
+<img src="readme-assets/pathfinder-github.gif" alt="text" width="800"/>
 
 
 The main content on Pathfinder comes in the form of various trails, which are suitable for hiking, running, cycling, and other outdoor activities. Users are able to view maps, photos, park info, and reviews for various trails, as well as write and edit reviews of their own.
