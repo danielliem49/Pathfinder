@@ -35,6 +35,8 @@ The main content on Pathfinder comes in the form of various trails, which are su
 <img src="readme-assets/createreview-ss.png" alt="text" width="800"/> 
 
 ### Search for Trails, Parks, or Tags
+<img src="readme-assets/search-gif.gif" alt="text" width="800"/>
+
 
 ## Future Features 
 * Saved - Users will be able to save trails
