@@ -22,18 +22,8 @@ export default function UpdateReviewsModal({ reviewId }) {
     const [errors, setErrors] = useState([]);
 
     const handleDateChange = (e) => {
-        console.log(e.target.value)
         setDate_hiked(e.target.value)
     }
-
-    // // handle review form submit
-    // const handleUpdateReviewSubmit = (e) => {
-    //     e.preventDefault();
-    //     const reviewData = { ...review, rating, description, date_hiked }
-    //     console.log(reviewData)
-    //     dispatch(updateReview(reviewData));
-    //     window.location.reload(false)
-    // }
 
     const handleUpdateReviewSubmit = (e) => {
         e.preventDefault();
