@@ -1,4 +1,5 @@
 /public
+/node_modules
 /storage/*
 !/storage/.keep 
 /config/master.key
