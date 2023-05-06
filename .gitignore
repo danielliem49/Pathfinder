@@ -1,7 +1,7 @@
 /public
 /node_modules
-/storage/*
+/storage
 !/storage/.keep 
 /config/master.key
-/log/*
-/tmp/*
+/log
+/tmp
