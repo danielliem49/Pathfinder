@@ -5,3 +5,4 @@
 /config/master.key
 /log
 /tmp
+.DS_Store
