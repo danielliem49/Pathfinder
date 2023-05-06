@@ -3,3 +3,4 @@
 !/storage/.keep 
 /config/master.key
 /log/*
+/tmp/*
