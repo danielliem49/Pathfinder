@@ -48,7 +48,7 @@ function Footer() {
                     </div>
                     <div className='footer-contact-links-container'>
                         <div className='footer-credit'>
-                            Created by Daniel Liem
+                            Created by Daniel Liem 👨‍💻
                         </div>
                         <div className='footer-contact-links'>
                             <a className='footer-contact-link' href="https://github.com/danielliem49" target='_blank'>
