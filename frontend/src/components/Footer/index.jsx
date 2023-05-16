@@ -23,7 +23,7 @@ function Footer() {
                     <div className='footer1-column'>
                         <img className='footer1-column-icon' src='https://cdn-assets.alltrails.com/assets/packs/1f1ca79c343b9453fa26.svg'></img>
                         <div className='footer1-column-header'>10,000 trees (and counting)</div>
-                        <div className='footer1-column-text'>From new member invites to employee anniversaries, we celebrate by giving to One Tree Planted.</div>
+                        <div className='footer1-column-text'>From new member invites to employee anniversaries, we celebrate by giving to One Tree Planted</div>
                     </div>
                     <div className='footer1-column'>
                         <img className='footer1-column-icon' src='https://cdn-assets.alltrails.com/assets/packs/523a835c8893649bf889.svg'></img>
