@@ -27,7 +27,7 @@ function Footer() {
                     </div>
                     <div className='footer1-column'>
                         <img className='footer1-column-icon' src='https://cdn-assets.alltrails.com/assets/packs/523a835c8893649bf889.svg'></img>
-                        <div className='footer1-column-header'>No trace on the trail</div>
+                        <div className='footer1-column-header'>No trace on the tral</div>
                         <div className='footer1-column-text'>As a Leave No Trace partner, we're committed to keeping outdoor spaces clean, safe, and kind.</div>
                     </div>
                 </div>
