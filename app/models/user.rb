@@ -81,5 +81,4 @@ class User < ApplicationRecord
         session_token = SecureRandom.urlsafe_base64
         return session_token unless User.exists?(session_token: session_token)
     end
-
 end
