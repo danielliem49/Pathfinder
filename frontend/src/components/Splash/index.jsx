@@ -169,7 +169,7 @@ function Splash() {
                                             <Link to={`/parks/${trail.parkId}`} className='trail-card-park'>{trail.parkName}</Link>
                                         </div>
                                         <div className='trail-card-details'>
-                                            <span>Length: {trail.length} km</span><span>•</span>
+                                            <span>Length {trail.length} km</span><span>•</span>
                                             <span>Est. {trail.estimatedTime}</span>
                                         </div>
                                     </div>
