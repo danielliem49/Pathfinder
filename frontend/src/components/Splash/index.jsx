@@ -10,7 +10,6 @@ import Search from '../Search/Search';
 import './Splash.css';
 import 'aos/dist/aos.css';
 
-// redeploy for google maps api
 function Splash() {
     const dispatch = useDispatch();
     const history = useHistory();
