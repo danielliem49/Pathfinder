@@ -128,7 +128,7 @@ function Splash() {
                                         </div>
                                         <div className='trail-card-details'>
                                             <span>Length: {trail.length} km</span><span>•</span>
-                                            <span>Est {trail.estimatedTime}</span>
+                                            <span>Est. {trail.estimatedTime}</span>
                                         </div>
                                     </div>
                                 )}
