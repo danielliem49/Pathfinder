@@ -20,7 +20,6 @@
 }
 
 .search-bar:focus {
-    outline: none;
     background-color: white;
     outline: none;
 }
