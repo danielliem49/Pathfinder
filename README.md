@@ -4,7 +4,7 @@
 
 ## Background 
 
-Pathfinder is a fullstack clone (with a few stylish twists) of the outdoor activities site AllTrails, and geared towards exploring the beautiful, yet mostly unexplored nature of Indonesia!
+Pathfinder is a fullstack clone (with a few stylish twists) of the outdoor activities site AllTrails, and geared towards exploring the beautiful yet mostly unexplored nature of Indonesia!
 
 <img src="readme-assets/pathfinder-github.gif" alt="text" width="800"/>
 
